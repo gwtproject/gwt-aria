@@ -17,61 +17,61 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ListRole;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
-import org.gwtproject.aria.client.SelectRole;
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
- * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#listbox">listbox</a>
- * role in the ARIA specification.
+ * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#listbox">listbox</a> role
+ * in the ARIA specification.
  *
  * @see Role
  * @see Roles
  */
-public interface ListboxRole extends ListRole, SelectRole {
+public interface ListboxRole
+    extends ListRole,
+    SelectRole {
+
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-multiselectable">
-   * aria-multiselectable</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-multiselectable</a> attribute for the {@code element} or "" if no such attribute is
+   * present.
    */
-  String getAriaMultiselectableProperty(HTMLElement element);
+  String getAriaMultiselectableProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">
-   * aria-required</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-required</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaRequiredProperty(HTMLElement element);
+  String getAriaRequiredProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-multiselectable">
    * aria-multiselectable</a> attribute from the {@code element}.
    */
-  void removeAriaMultiselectableProperty(HTMLElement element);
+  void removeAriaMultiselectableProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">
    * aria-required</a> attribute from the {@code element}.
    */
-  void removeAriaRequiredProperty(HTMLElement element);
+  void removeAriaRequiredProperty(Element element);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-multiselectable">
    * aria-multiselectable</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaMultiselectableProperty(HTMLElement element, boolean value);
+  void setAriaMultiselectableProperty(Element element,
+      boolean value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">
    * aria-required</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaRequiredProperty(HTMLElement element, boolean value);
+  void setAriaRequiredProperty(Element element,
+      boolean value);
 }

@@ -18,15 +18,15 @@ package org.gwtproject.aria.client;
 /////////////////////////////////////////////////////////
 
 
-import org.gwtproject.aria.client.Attribute;
-
 /**
- * Defines additional attributes that are interpreted by readers. Such an attribute is
- * 'tabindex' which indicates the tab order position of the element.
+ * Defines additional attributes that are interpreted by readers. Such an attribute is 'tabindex'
+ * which indicates the tab order position of the element.
  */
 public final class ExtraAttribute {
+
   public static final Attribute<Integer> TABINDEX =
-      new PrimitiveValueAttribute<Integer>("tabIndex", "");
+      new PrimitiveValueAttribute<Integer>("tabIndex",
+          "");
 
   private ExtraAttribute() {
   }

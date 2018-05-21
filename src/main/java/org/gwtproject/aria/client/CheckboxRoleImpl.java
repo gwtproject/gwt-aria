@@ -17,31 +17,33 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.CheckboxRole;
-import org.gwtproject.aria.client.CheckedValue;
-import org.gwtproject.aria.client.State;
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * <p>Implements {@link CheckboxRole}.</p>
  */
-class CheckboxRoleImpl extends RoleImpl implements CheckboxRole {
+class CheckboxRoleImpl
+    extends RoleImpl
+    implements CheckboxRole {
+
   CheckboxRoleImpl(String roleName) {
     super(roleName);
   }
 
   @Override
-  public String getAriaCheckedState(HTMLElement element) {
+  public String getAriaCheckedState(Element element) {
     return State.CHECKED.get(element);
   }
 
   @Override
-  public void removeAriaCheckedState(HTMLElement element) {
+  public void removeAriaCheckedState(Element element) {
     State.CHECKED.remove(element);
   }
 
   @Override
-  public void setAriaCheckedState(HTMLElement element, CheckedValue value) {
-    State.CHECKED.set(element, value);
+  public void setAriaCheckedState(Element element,
+      CheckedValue value) {
+    State.CHECKED.set(element,
+        value);
   }
 }

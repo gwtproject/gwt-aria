@@ -18,11 +18,15 @@ package org.gwtproject.aria.client;
 /////////////////////////////////////////////////////////
 
 /**
- * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#select">select</a>
- * role in the ARIA specification.
+ * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#select">select</a> role
+ * in the ARIA specification.
  *
  * @see Role
  * @see Roles
  */
-public interface SelectRole extends CompositeRole, GroupRole, InputRole {
+public interface SelectRole
+    extends CompositeRole,
+    GroupRole,
+    InputRole {
+
 }

@@ -17,14 +17,12 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-
-import org.gwtproject.aria.client.OrientationValue;
-
 /**
  * <p>Class that contains constants for all ARIA properties as defined by the W3C specification
  * <a href="http://www.w3.org/TR/wai-aria/">W3C ARIA specification</a>.</p>
  *
- * <p>An ARIA property is a characteristic feature of a widget/control that can change over time but
+ * <p>An ARIA property is a characteristic feature of a widget/control that can change over time
+ * but
  * more rare than the ARIA state and is often not changed as a result of user action.<p>
  *
  * <p>The following groups of properties exist:
@@ -32,9 +30,9 @@ import org.gwtproject.aria.client.OrientationValue;
  * <li>Widget properties -- specific to common user interface elements found on GUI systems or
  * in rich Internet applications which receive user input and process user actions</li>
  * <li>Live Region properties -- specific to live regions in rich Internet applications; may be
- * applied to any element; indicate that content changes may occur without the element having
- * focus, and provides assistive technologies with information on how to process those content
- * updates. </li>
+ * applied to any element; indicate that content changes may occur without the element having focus,
+ * and provides assistive technologies with information on how to process those content updates.
+ * </li>
  * <li>Drag-and-drop states -- indicates information about draggable elements and their drop
  * targets</li>
  * <li>Relationship properties -- indicates relationships or associations between elements which
@@ -43,83 +41,110 @@ import org.gwtproject.aria.client.OrientationValue;
  * </p>
  */
 public final class Property {
+
   public static final Attribute<Id> ACTIVEDESCENDANT =
-      new AriaValueAttribute<Id>("aria-activedescendant", "");
+      new AriaValueAttribute<Id>("aria-activedescendant",
+          "");
 
   public static final Attribute<Boolean> ATOMIC =
-      new PrimitiveValueAttribute<Boolean>("aria-atomic", "false");
+      new PrimitiveValueAttribute<Boolean>("aria-atomic",
+          "false");
 
   public static final Attribute<AutocompleteValue> AUTOCOMPLETE =
-      new AriaValueAttribute<AutocompleteValue>("aria-autocomplete", "none");
+      new AriaValueAttribute<AutocompleteValue>("aria-autocomplete",
+          "none");
 
   public static final Attribute<Id> CONTROLS =
-      new AriaValueAttribute<Id>("aria-controls", "");
+      new AriaValueAttribute<Id>("aria-controls",
+          "");
 
   public static final Attribute<Id> DESCRIBEDBY =
-      new AriaValueAttribute<Id>("aria-describedby", "");
+      new AriaValueAttribute<Id>("aria-describedby",
+          "");
 
   public static final Attribute<DropeffectValue> DROPEFFECT =
-      new AriaValueAttribute<DropeffectValue>("aria-dropeffect", "none");
+      new AriaValueAttribute<DropeffectValue>("aria-dropeffect",
+          "none");
 
   public static final Attribute<Id> FLOWTO =
-      new AriaValueAttribute<Id>("aria-flowto", "");
+      new AriaValueAttribute<Id>("aria-flowto",
+          "");
 
   public static final Attribute<Boolean> HASPOPUP =
-      new PrimitiveValueAttribute<Boolean>("aria-haspopup", "false");
+      new PrimitiveValueAttribute<Boolean>("aria-haspopup",
+          "false");
 
   public static final Attribute<String> LABEL =
-      new PrimitiveValueAttribute<String>("aria-label", "");
+      new PrimitiveValueAttribute<String>("aria-label",
+          "");
 
   public static final Attribute<Id> LABELLEDBY =
-      new AriaValueAttribute<Id>("aria-labelledby", "");
+      new AriaValueAttribute<Id>("aria-labelledby",
+          "");
 
   public static final Attribute<Integer> LEVEL =
-      new PrimitiveValueAttribute<Integer>("aria-level", "");
+      new PrimitiveValueAttribute<Integer>("aria-level",
+          "");
 
   public static final Attribute<LiveValue> LIVE =
-      new AriaValueAttribute<LiveValue>("aria-live", "off");
+      new AriaValueAttribute<LiveValue>("aria-live",
+          "off");
 
   public static final Attribute<Boolean> MULTILINE =
-      new PrimitiveValueAttribute<Boolean>("aria-multiline", "false");
+      new PrimitiveValueAttribute<Boolean>("aria-multiline",
+          "false");
 
   public static final Attribute<Boolean> MULTISELECTABLE =
-      new PrimitiveValueAttribute<Boolean>("aria-multiselectable", "false");
+      new PrimitiveValueAttribute<Boolean>("aria-multiselectable",
+          "false");
 
   public static final Attribute<OrientationValue> ORIENTATION =
-      new AriaValueAttribute<OrientationValue>("aria-orientation", "vertical");
+      new AriaValueAttribute<OrientationValue>("aria-orientation",
+          "vertical");
 
   public static final Attribute<Id> OWNS =
-      new AriaValueAttribute<Id>("aria-owns", "");
+      new AriaValueAttribute<Id>("aria-owns",
+          "");
 
   public static final Attribute<Integer> POSINSET =
-      new PrimitiveValueAttribute<Integer>("aria-posinset", "");
+      new PrimitiveValueAttribute<Integer>("aria-posinset",
+          "");
 
   public static final Attribute<Boolean> READONLY =
-      new PrimitiveValueAttribute<Boolean>("aria-readonly", "false");
+      new PrimitiveValueAttribute<Boolean>("aria-readonly",
+          "false");
 
   public static final Attribute<RelevantValue> RELEVANT =
-      new AriaValueAttribute<RelevantValue>("aria-relevant", "additions text");
+      new AriaValueAttribute<RelevantValue>("aria-relevant",
+          "additions text");
 
   public static final Attribute<Boolean> REQUIRED =
-      new PrimitiveValueAttribute<Boolean>("aria-required", "false");
+      new PrimitiveValueAttribute<Boolean>("aria-required",
+          "false");
 
   public static final Attribute<Integer> SETSIZE =
-      new PrimitiveValueAttribute<Integer>("aria-setsize", "");
+      new PrimitiveValueAttribute<Integer>("aria-setsize",
+          "");
 
   public static final Attribute<SortValue> SORT =
-      new AriaValueAttribute<SortValue>("aria-sort", "none");
+      new AriaValueAttribute<SortValue>("aria-sort",
+          "none");
 
   public static final Attribute<Number> VALUEMAX =
-      new PrimitiveValueAttribute<Number>("aria-valuemax", "");
+      new PrimitiveValueAttribute<Number>("aria-valuemax",
+          "");
 
   public static final Attribute<Number> VALUEMIN =
-      new PrimitiveValueAttribute<Number>("aria-valuemin", "");
+      new PrimitiveValueAttribute<Number>("aria-valuemin",
+          "");
 
   public static final Attribute<Number> VALUENOW =
-      new PrimitiveValueAttribute<Number>("aria-valuenow", "");
+      new PrimitiveValueAttribute<Number>("aria-valuenow",
+          "");
 
   public static final Attribute<String> VALUETEXT =
-      new PrimitiveValueAttribute<String>("aria-valuetext", "");
+      new PrimitiveValueAttribute<String>("aria-valuetext",
+          "");
 
   private Property() {
   }

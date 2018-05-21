@@ -14,34 +14,24 @@
 
 package org.gwtproject.aria.client;
 
-import elemental2.dom.DomGlobal;
-import elemental2.dom.HTMLDivElement;
-import org.gwtproject.aria.client.AriaValueAttribute;
-import org.gwtproject.aria.client.Attribute;
-import org.gwtproject.aria.client.Id;
-import org.gwtproject.aria.client.OrientationValue;
-import org.gwtproject.aria.client.PrimitiveValueAttribute;
-import org.gwtproject.aria.client.RelevantValue;
-import elemental2.dom.Document;
-import elemental2.dom.HTMLElement;
 import com.google.gwt.junit.client.GWTTestCase;
-
-import static elemental2.dom.DomGlobal.*;
+import org.gwtproject.dom.client.DivElement;
+import org.gwtproject.dom.client.Document;
 
 /**
- * Tests {@link org.gwtproject.aria.client.Attribute} ARIA class
+ * Tests {@link Attribute} ARIA class
  */
 public class AttributeTest extends GWTTestCase {
-  private HTMLDivElement div;
-  private org.gwtproject.aria.client.Attribute<org.gwtproject.aria.client.OrientationValue> attribute1;
-  private org.gwtproject.aria.client.Attribute<Boolean> attribute2;
-  private org.gwtproject.aria.client.Attribute<String> attribute3;
-  private org.gwtproject.aria.client.Attribute<org.gwtproject.aria.client.RelevantValue> attribute4;
-  private Attribute<org.gwtproject.aria.client.Id> attribute5;
+  private DivElement div;
+  private Attribute<OrientationValue> attribute1;
+  private Attribute<Boolean> attribute2;
+  private Attribute<String> attribute3;
+  private Attribute<RelevantValue> attribute4;
+  private Attribute<Id> attribute5;
 
   @Override
   public String getModuleName() {
-    return "org.gwtproject.aria.client.AriaTest";
+    return "org.gwtproject.aria.AriaTest";
   }
 
   public void testSetGetRemove_booleanValue() {
@@ -57,39 +47,39 @@ public class AttributeTest extends GWTTestCase {
 
   public void testSetGetRemove_tokenValue() {
     attribute1.setDefault(div);
-    assertEquals(org.gwtproject.aria.client.OrientationValue.VERTICAL.getAriaValue(), attribute1.get(div));
+    assertEquals(OrientationValue.VERTICAL.getAriaValue(), attribute1.get(div));
     attribute1.remove(div);
     assertEquals("", attribute1.get(div));
-    attribute1.set(div, org.gwtproject.aria.client.OrientationValue.HORIZONTAL);
-    assertEquals(org.gwtproject.aria.client.OrientationValue.HORIZONTAL.getAriaValue(), attribute1.get(div));
+    attribute1.set(div, OrientationValue.HORIZONTAL);
+    assertEquals(OrientationValue.HORIZONTAL.getAriaValue(), attribute1.get(div));
   }
 
   public void testSetGetRemove_tokenListValue() {
     attribute4.setDefault(div);
-    assertEquals(org.gwtproject.aria.client.RelevantValue.ADDITIONS.getAriaValue() + " " + org.gwtproject.aria.client.RelevantValue.TEXT.getAriaValue(),
+    assertEquals(RelevantValue.ADDITIONS.getAriaValue() + " " + RelevantValue.TEXT.getAriaValue(),
         attribute4.get(div));
     attribute4.remove(div);
     assertEquals("", attribute1.get(div));
-    attribute4.set(div, org.gwtproject.aria.client.RelevantValue.REMOVALS);
-    assertEquals(org.gwtproject.aria.client.RelevantValue.REMOVALS.getAriaValue(), attribute4.get(div));
+    attribute4.set(div, RelevantValue.REMOVALS);
+    assertEquals(RelevantValue.REMOVALS.getAriaValue(), attribute4.get(div));
   }
 
   public void testSetGetRemove_idrefValue() {
-    attribute5.set(div, org.gwtproject.aria.client.Id.of("1"), org.gwtproject.aria.client.Id.of("2"));
+    attribute5.set(div, Id.of("1"), Id.of("2"));
     assertEquals("1 2", attribute5.get(div));
     attribute5.remove(div);
     assertEquals("", attribute5.get(div));
 
-    HTMLDivElement ref1 = createDiv();
-    ref1.id="ref1";
-    HTMLDivElement ref2 = createDiv();
-    ref2.id="ref2";
-    attribute5.set(div, org.gwtproject.aria.client.Id.of(ref1), org.gwtproject.aria.client.Id.of(ref2));
+    DivElement ref1 = createDiv();
+    ref1.setId("ref1");
+    DivElement ref2 = createDiv();
+    ref2.setId("ref2");
+    attribute5.set(div, Id.of(ref1), Id.of(ref2));
     assertEquals("ref1 ref2", attribute5.get(div));
   }
 
-  private HTMLDivElement createDiv() {
-    return (HTMLDivElement) document.createElement("div");
+  private DivElement createDiv() {
+    return Document.get().createDivElement();
   }
 
   public void testSetDefaultValue_noSet() {
@@ -106,17 +96,17 @@ public class AttributeTest extends GWTTestCase {
     super.gwtSetUp();
     div = createDiv();
     div.setAttribute("id", "test1");
-    document.body.appendChild(div);
-    attribute1 = new org.gwtproject.aria.client.AriaValueAttribute<OrientationValue>("attr1", "vertical");
-    attribute2 = new org.gwtproject.aria.client.PrimitiveValueAttribute<Boolean>("attr2", "true");
-    attribute3 = new org.gwtproject.aria.client.PrimitiveValueAttribute<String>("attr3");
-    attribute4 = new org.gwtproject.aria.client.AriaValueAttribute<RelevantValue>("attr4", "additions text");
-    attribute5 = new org.gwtproject.aria.client.AriaValueAttribute<Id>("attr5", "");
+    Document.get().getBody().appendChild(div);
+    attribute1 = new AriaValueAttribute<>("attr1", "vertical");
+    attribute2 = new PrimitiveValueAttribute<>("attr2", "true");
+    attribute3 = new PrimitiveValueAttribute<>("attr3");
+    attribute4 = new AriaValueAttribute<>("attr4", "additions text");
+    attribute5 = new AriaValueAttribute<>("attr5", "");
   }
 
   @Override
   protected void gwtTearDown() throws Exception {
     super.gwtTearDown();
-    div.parentNode.removeChild(div);
+    div.getParentElement().removeChild(div);
   }
 }

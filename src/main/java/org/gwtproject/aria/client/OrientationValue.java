@@ -17,21 +17,21 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.AriaAttributeType;
-
 /**
  * Property enum for 'aria-orientation' values.
  */
-public enum OrientationValue implements AriaAttributeType {
-   HORIZONTAL, VERTICAL;
+public enum OrientationValue
+    implements AriaAttributeType {
+  HORIZONTAL,
+  VERTICAL;
 
   @Override
   public String getAriaValue() {
     switch (this) {
-        case HORIZONTAL:
-          return "horizontal";
-        case VERTICAL:
-          return "vertical";
+      case HORIZONTAL:
+        return "horizontal";
+      case VERTICAL:
+        return "vertical";
     }
     return null; // not reachable
   }

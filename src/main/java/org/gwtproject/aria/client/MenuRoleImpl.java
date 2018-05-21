@@ -17,48 +17,50 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.Id;
-import org.gwtproject.aria.client.MenuRole;
-import org.gwtproject.aria.client.Property;
-import org.gwtproject.aria.client.State;
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * <p>Implements {@link MenuRole}.</p>
  */
-class MenuRoleImpl extends org.gwtproject.aria.client.RoleImpl implements MenuRole {
+class MenuRoleImpl
+    extends RoleImpl
+    implements MenuRole {
+
   MenuRoleImpl(String roleName) {
     super(roleName);
   }
 
   @Override
-  public String getAriaActivedescendantProperty(HTMLElement element) {
+  public String getAriaActivedescendantProperty(Element element) {
     return Property.ACTIVEDESCENDANT.get(element);
   }
 
   @Override
-  public String getAriaExpandedState(HTMLElement element) {
-    return State.EXPANDED.get(element);
-  }
-
-  @Override
-  public void removeAriaActivedescendantProperty(HTMLElement element) {
+  public void removeAriaActivedescendantProperty(Element element) {
     Property.ACTIVEDESCENDANT.remove(element);
   }
 
   @Override
-  public void removeAriaExpandedState(HTMLElement element) {
+  public void setAriaActivedescendantProperty(Element element,
+      Id value) {
+    Property.ACTIVEDESCENDANT.set(element,
+        value);
+  }
+
+  @Override
+  public String getAriaExpandedState(Element element) {
+    return State.EXPANDED.get(element);
+  }
+
+  @Override
+  public void removeAriaExpandedState(Element element) {
     State.EXPANDED.remove(element);
   }
 
   @Override
-  public void setAriaActivedescendantProperty(HTMLElement element, Id value) {
-    Property.ACTIVEDESCENDANT.set(element, value);
-  }
-
-  @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaExpandedState(Element element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 }

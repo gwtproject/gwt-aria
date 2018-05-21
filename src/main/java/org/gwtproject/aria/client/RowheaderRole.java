@@ -17,11 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.GridcellRole;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
-import org.gwtproject.aria.client.WidgetRole;
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#rowheader">rowheader</a>
@@ -30,26 +26,30 @@ import elemental2.dom.HTMLElement;
  * @see Role
  * @see Roles
  */
-public interface RowheaderRole extends GridcellRole, SectionheadRole, WidgetRole {
+public interface RowheaderRole
+    extends GridcellRole,
+    SectionheadRole,
+    WidgetRole {
+
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-sort">
-   * aria-sort</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-sort</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaSortProperty(HTMLElement element);
+  String getAriaSortProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-sort">
    * aria-sort</a> attribute from the {@code element}.
    */
-  void removeAriaSortProperty(HTMLElement element);
+  void removeAriaSortProperty(Element element);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-sort">
    * aria-sort</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaSortProperty(HTMLElement element, SortValue value);
+  void setAriaSortProperty(Element element,
+      SortValue value);
 }

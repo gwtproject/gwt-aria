@@ -17,83 +17,83 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.CompositeRole;
-import org.gwtproject.aria.client.RegionRole;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
- * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#grid">grid</a>
- * role in the ARIA specification.
+ * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#grid">grid</a> role in
+ * the ARIA specification.
  *
  * @see Role
  * @see Roles
  */
-public interface GridRole extends CompositeRole, RegionRole {
+public interface GridRole
+    extends CompositeRole,
+    RegionRole {
+
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-level">
-   * aria-level</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-level</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaLevelProperty(HTMLElement element);
+  String getAriaLevelProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-multiselectable">
-   * aria-multiselectable</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-multiselectable</a> attribute for the {@code element} or "" if no such attribute is
+   * present.
    */
-  String getAriaMultiselectableProperty(HTMLElement element);
+  String getAriaMultiselectableProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-readonly">
-   * aria-readonly</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-readonly</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaReadonlyProperty(HTMLElement element);
+  String getAriaReadonlyProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-level">
    * aria-level</a> attribute from the {@code element}.
    */
-  void removeAriaLevelProperty(HTMLElement element);
+  void removeAriaLevelProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-multiselectable">
    * aria-multiselectable</a> attribute from the {@code element}.
    */
-  void removeAriaMultiselectableProperty(HTMLElement element);
+  void removeAriaMultiselectableProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-readonly">
    * aria-readonly</a> attribute from the {@code element}.
    */
-  void removeAriaReadonlyProperty(HTMLElement element);
+  void removeAriaReadonlyProperty(Element element);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-level">
    * aria-level</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaLevelProperty(HTMLElement element, int value);
+  void setAriaLevelProperty(Element element,
+      int value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-multiselectable">
    * aria-multiselectable</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaMultiselectableProperty(HTMLElement element, boolean value);
+  void setAriaMultiselectableProperty(Element element,
+      boolean value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-readonly">
    * aria-readonly</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaReadonlyProperty(HTMLElement element, boolean value);
+  void setAriaReadonlyProperty(Element element,
+      boolean value);
 }

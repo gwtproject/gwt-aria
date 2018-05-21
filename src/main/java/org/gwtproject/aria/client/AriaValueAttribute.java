@@ -17,15 +17,16 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.AriaAttributeType;
-import org.gwtproject.aria.client.Attribute;
-
 /**
- *  ARIA specific type attribute.
+ * ARIA specific type attribute.
  */
-class AriaValueAttribute<T extends AriaAttributeType> extends Attribute<T> {
-  public AriaValueAttribute(String name, String defaultValue) {
-    super(name, defaultValue);
+class AriaValueAttribute<T extends AriaAttributeType>
+    extends Attribute<T> {
+
+  public AriaValueAttribute(String name,
+      String defaultValue) {
+    super(name,
+        defaultValue);
   }
 
   public AriaValueAttribute(String name) {

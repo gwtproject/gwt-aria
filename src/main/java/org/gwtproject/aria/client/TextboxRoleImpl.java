@@ -17,88 +17,101 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * <p>Implements {@link TextboxRole}.</p>
  */
-class TextboxRoleImpl extends RoleImpl implements TextboxRole {
+class TextboxRoleImpl
+    extends RoleImpl
+    implements TextboxRole {
+
   TextboxRoleImpl(String roleName) {
     super(roleName);
   }
 
   @Override
-  public String getAriaActivedescendantProperty(HTMLElement element) {
+  public String getAriaActivedescendantProperty(Element element) {
     return Property.ACTIVEDESCENDANT.get(element);
   }
 
   @Override
-  public String getAriaAutocompleteProperty(HTMLElement element) {
+  public String getAriaAutocompleteProperty(Element element) {
     return Property.AUTOCOMPLETE.get(element);
   }
 
   @Override
-  public String getAriaMultilineProperty(HTMLElement element) {
+  public String getAriaMultilineProperty(Element element) {
     return Property.MULTILINE.get(element);
   }
 
   @Override
-  public String getAriaReadonlyProperty(HTMLElement element) {
+  public String getAriaReadonlyProperty(Element element) {
     return Property.READONLY.get(element);
   }
 
   @Override
-  public String getAriaRequiredProperty(HTMLElement element) {
+  public String getAriaRequiredProperty(Element element) {
     return Property.REQUIRED.get(element);
   }
 
   @Override
-  public void removeAriaActivedescendantProperty(HTMLElement element) {
+  public void removeAriaActivedescendantProperty(Element element) {
     Property.ACTIVEDESCENDANT.remove(element);
   }
 
   @Override
-  public void removeAriaAutocompleteProperty(HTMLElement element) {
+  public void removeAriaAutocompleteProperty(Element element) {
     Property.AUTOCOMPLETE.remove(element);
   }
 
   @Override
-  public void removeAriaMultilineProperty(HTMLElement element) {
+  public void removeAriaMultilineProperty(Element element) {
     Property.MULTILINE.remove(element);
   }
 
   @Override
-  public void removeAriaReadonlyProperty(HTMLElement element) {
+  public void removeAriaReadonlyProperty(Element element) {
     Property.READONLY.remove(element);
   }
 
   @Override
-  public void removeAriaRequiredProperty(HTMLElement element) {
+  public void removeAriaRequiredProperty(Element element) {
     Property.REQUIRED.remove(element);
   }
 
   @Override
-  public void setAriaActivedescendantProperty(HTMLElement element, Id value) {
-    Property.ACTIVEDESCENDANT.set(element, value);
+  public void setAriaActivedescendantProperty(Element element,
+      Id value) {
+    Property.ACTIVEDESCENDANT.set(element,
+        value);
   }
 
   @Override
-  public void setAriaAutocompleteProperty(HTMLElement element, AutocompleteValue value) {
-    Property.AUTOCOMPLETE.set(element, value);
+  public void setAriaAutocompleteProperty(Element element,
+      AutocompleteValue value) {
+    Property.AUTOCOMPLETE.set(element,
+        value);
   }
 
   @Override
-  public void setAriaMultilineProperty(HTMLElement element, boolean value) {
-    Property.MULTILINE.set(element, value);
+  public void setAriaMultilineProperty(Element element,
+      boolean value) {
+    Property.MULTILINE.set(element,
+        value);
   }
 
   @Override
-  public void setAriaReadonlyProperty(HTMLElement element, boolean value) {
-    Property.READONLY.set(element, value);
+  public void setAriaReadonlyProperty(Element element,
+      boolean value) {
+    Property.READONLY.set(element,
+        value);
   }
 
   @Override
-  public void setAriaRequiredProperty(HTMLElement element, boolean value) {
-    Property.REQUIRED.set(element, value);
+  public void setAriaRequiredProperty(Element element,
+      boolean value) {
+    Property.REQUIRED.set(element,
+        value);
   }
 }

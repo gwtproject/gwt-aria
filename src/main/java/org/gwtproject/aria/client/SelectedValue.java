@@ -17,16 +17,17 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.AriaAttributeType;
-
 /**
  * State enum for 'aria-selected' values.
  */
-public enum SelectedValue implements AriaAttributeType {
-  TRUE, FALSE, UNDEFINED;
+public enum SelectedValue
+    implements AriaAttributeType {
+  TRUE,
+  FALSE,
+  UNDEFINED;
+
   /**
-   * Gets the enum constant corresponding to {@code value} for the token type
-   * SelectedValue.
+   * Gets the enum constant corresponding to {@code value} for the token type SelectedValue.
    *
    * @param value Boolean value for which we want to get the corresponding enum constant.
    */
@@ -37,12 +38,12 @@ public enum SelectedValue implements AriaAttributeType {
   @Override
   public String getAriaValue() {
     switch (this) {
-        case TRUE:
-          return "true";
-        case FALSE:
-          return "false";
-        case UNDEFINED:
-          return "undefined";
+      case TRUE:
+        return "true";
+      case FALSE:
+        return "false";
+      case UNDEFINED:
+        return "undefined";
     }
     return null; // not reachable
   }

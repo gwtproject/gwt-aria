@@ -17,14 +17,12 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.GrabbedValue;
-import org.gwtproject.aria.client.InvalidValue;
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * A generic ARIA Role. This interface defines generic methods for setting, getting, and removing
- * attributes on DOM Elements so that they can be identified by screen readers. Subtypes
- * define methods for specific roles.
+ * attributes on DOM Elements so that they can be identified by screen readers. Subtypes define
+ * methods for specific roles.
  *
  * <p>The ARIA specification defines a hierarchy of roles, which is mirrored here as
  * a hierarchy of Java interfaces. Some roles are abstract and define methods that are common to
@@ -35,133 +33,118 @@ import elemental2.dom.HTMLElement;
  * in the ARIA specification.</p>
  */
 public interface Role {
+
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-atomic">
-   * aria-atomic</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-atomic</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaAtomicProperty(HTMLElement element);
+  String getAriaAtomicProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-busy">
-   * aria-busy</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-busy</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaBusyState(HTMLElement element);
+  String getAriaBusyState(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-controls">
-   * aria-controls</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-controls</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaControlsProperty(HTMLElement element);
+  String getAriaControlsProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby">
-   * aria-describedby</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-describedby</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaDescribedbyProperty(HTMLElement element);
+  String getAriaDescribedbyProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-disabled">
-   * aria-disabled</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-disabled</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaDisabledState(HTMLElement element);
+  String getAriaDisabledState(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect">
-   * aria-dropeffect</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-dropeffect</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaDropeffectProperty(HTMLElement element);
+  String getAriaDropeffectProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-flowto">
-   * aria-flowto</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-flowto</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaFlowtoProperty(HTMLElement element);
+  String getAriaFlowtoProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-grabbed">
-   * aria-grabbed</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-grabbed</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaGrabbedState(HTMLElement element);
+  String getAriaGrabbedState(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-haspopup">
-   * aria-haspopup</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-haspopup</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaHaspopupProperty(HTMLElement element);
+  String getAriaHaspopupProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-hidden">
-   * aria-hidden</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-hidden</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaHiddenState(HTMLElement element);
+  String getAriaHiddenState(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid">
-   * aria-invalid</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-invalid</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaInvalidState(HTMLElement element);
+  String getAriaInvalidState(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby">
-   * aria-labelledby</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-labelledby</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaLabelledbyProperty(HTMLElement element);
+  String getAriaLabelledbyProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-label">
-   * aria-label</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-label</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaLabelProperty(HTMLElement element);
+  String getAriaLabelProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-live">
-   * aria-live</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-live</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaLiveProperty(HTMLElement element);
+  String getAriaLiveProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-owns">
-   * aria-owns</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-owns</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaOwnsProperty(HTMLElement element);
+  String getAriaOwnsProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-relevant">
-   * aria-relevant</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-relevant</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaRelevantProperty(HTMLElement element);
+  String getAriaRelevantProperty(Element element);
 
   /**
    * Gets the ARIA 'role' attribute name as defined in the
@@ -174,261 +157,276 @@ public interface Role {
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#tabIndex">
-   * tabIndex</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * tabIndex</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getTabindexExtraAttribute(HTMLElement element);
+  String getTabindexExtraAttribute(Element element);
 
   /**
    * Removes the 'role' attribute from the {@code element}.
    *
    * @see <a href="http://www.w3.org/TR/wai-aria/roles">Roles documentation</a>
    */
-  void remove(HTMLElement element);
+  void remove(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-atomic">
    * aria-atomic</a> attribute from the {@code element}.
    */
-  void removeAriaAtomicProperty(HTMLElement element);
+  void removeAriaAtomicProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-busy">
    * aria-busy</a> attribute from the {@code element}.
    */
-  void removeAriaBusyState(HTMLElement element);
+  void removeAriaBusyState(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-controls">
    * aria-controls</a> attribute from the {@code element}.
    */
-  void removeAriaControlsProperty(HTMLElement element);
+  void removeAriaControlsProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby">
    * aria-describedby</a> attribute from the {@code element}.
    */
-  void removeAriaDescribedbyProperty(HTMLElement element);
+  void removeAriaDescribedbyProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-disabled">
    * aria-disabled</a> attribute from the {@code element}.
    */
-  void removeAriaDisabledState(HTMLElement element);
+  void removeAriaDisabledState(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect">
    * aria-dropeffect</a> attribute from the {@code element}.
    */
-  void removeAriaDropeffectProperty(HTMLElement element);
+  void removeAriaDropeffectProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-flowto">
    * aria-flowto</a> attribute from the {@code element}.
    */
-  void removeAriaFlowtoProperty(HTMLElement element);
+  void removeAriaFlowtoProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-grabbed">
    * aria-grabbed</a> attribute from the {@code element}.
    */
-  void removeAriaGrabbedState(HTMLElement element);
+  void removeAriaGrabbedState(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-haspopup">
    * aria-haspopup</a> attribute from the {@code element}.
    */
-  void removeAriaHaspopupProperty(HTMLElement element);
+  void removeAriaHaspopupProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-hidden">
    * aria-hidden</a> attribute from the {@code element}.
    */
-  void removeAriaHiddenState(HTMLElement element);
+  void removeAriaHiddenState(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid">
    * aria-invalid</a> attribute from the {@code element}.
    */
-  void removeAriaInvalidState(HTMLElement element);
+  void removeAriaInvalidState(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby">
    * aria-labelledby</a> attribute from the {@code element}.
    */
-  void removeAriaLabelledbyProperty(HTMLElement element);
+  void removeAriaLabelledbyProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-label">
    * aria-label</a> attribute from the {@code element}.
    */
-  void removeAriaLabelProperty(HTMLElement element);
+  void removeAriaLabelProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-live">
    * aria-live</a> attribute from the {@code element}.
    */
-  void removeAriaLiveProperty(HTMLElement element);
+  void removeAriaLiveProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-owns">
    * aria-owns</a> attribute from the {@code element}.
    */
-  void removeAriaOwnsProperty(HTMLElement element);
+  void removeAriaOwnsProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-relevant">
    * aria-relevant</a> attribute from the {@code element}.
    */
-  void removeAriaRelevantProperty(HTMLElement element);
+  void removeAriaRelevantProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#tabIndex">
    * tabIndex</a> attribute from the {@code element}.
    */
-  void removeTabindexExtraAttribute(HTMLElement element);
+  void removeTabindexExtraAttribute(Element element);
 
   /**
-   * Sets the 'role' attribute of the given {@code element} to the appropriate
-   * value for this role.
+   * Sets the 'role' attribute of the given {@code element} to the appropriate value for this role.
    *
    * @see <a href="http://www.w3.org/TR/wai-aria/roles">Roles documentation</a>
    */
-  void set(HTMLElement element);
+  void set(Element element);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-atomic">
    * aria-atomic</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaAtomicProperty(HTMLElement element, boolean value);
+  void setAriaAtomicProperty(Element element,
+      boolean value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-busy">
    * aria-busy</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaBusyState(HTMLElement element, boolean value);
+  void setAriaBusyState(Element element,
+      boolean value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-controls">
    * aria-controls</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaControlsProperty(HTMLElement element, Id... value);
+  void setAriaControlsProperty(Element element,
+      Id... value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby">
    * aria-describedby</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaDescribedbyProperty(HTMLElement element, Id... value);
+  void setAriaDescribedbyProperty(Element element,
+      Id... value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-disabled">
    * aria-disabled</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaDisabledState(HTMLElement element, boolean value);
+  void setAriaDisabledState(Element element,
+      boolean value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-dropeffect">
    * aria-dropeffect</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaDropeffectProperty(HTMLElement element, DropeffectValue... value);
+  void setAriaDropeffectProperty(Element element,
+      DropeffectValue... value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-flowto">
    * aria-flowto</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaFlowtoProperty(HTMLElement element, Id... value);
+  void setAriaFlowtoProperty(Element element,
+      Id... value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-grabbed">
    * aria-grabbed</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaGrabbedState(HTMLElement element, GrabbedValue value);
+  void setAriaGrabbedState(Element element,
+      GrabbedValue value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-haspopup">
    * aria-haspopup</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaHaspopupProperty(HTMLElement element, boolean value);
+  void setAriaHaspopupProperty(Element element,
+      boolean value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-hidden">
    * aria-hidden</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaHiddenState(HTMLElement element, boolean value);
+  void setAriaHiddenState(Element element,
+      boolean value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-invalid">
    * aria-invalid</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaInvalidState(HTMLElement element, InvalidValue value);
+  void setAriaInvalidState(Element element,
+      InvalidValue value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby">
    * aria-labelledby</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaLabelledbyProperty(HTMLElement element, Id... value);
+  void setAriaLabelledbyProperty(Element element,
+      Id... value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-label">
    * aria-label</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaLabelProperty(HTMLElement element, String value);
+  void setAriaLabelProperty(Element element,
+      String value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-live">
    * aria-live</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaLiveProperty(HTMLElement element, LiveValue value);
+  void setAriaLiveProperty(Element element,
+      LiveValue value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-owns">
    * aria-owns</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaOwnsProperty(HTMLElement element, Id... value);
+  void setAriaOwnsProperty(Element element,
+      Id... value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-relevant">
    * aria-relevant</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaRelevantProperty(HTMLElement element, RelevantValue... value);
+  void setAriaRelevantProperty(Element element,
+      RelevantValue... value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#tabIndex">
    * tabIndex</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setTabindexExtraAttribute(HTMLElement element, int value);
+  void setTabindexExtraAttribute(Element element,
+      int value);
 }

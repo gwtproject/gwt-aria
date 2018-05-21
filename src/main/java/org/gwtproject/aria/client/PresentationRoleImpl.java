@@ -17,12 +17,13 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.PresentationRole;
-
 /**
  * <p>Implements {@link PresentationRole}.</p>
  */
-class PresentationRoleImpl extends org.gwtproject.aria.client.RoleImpl implements PresentationRole {
+class PresentationRoleImpl
+    extends RoleImpl
+    implements PresentationRole {
+
   PresentationRoleImpl(String roleName) {
     super(roleName);
   }

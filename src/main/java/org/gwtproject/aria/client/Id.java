@@ -17,58 +17,57 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.AriaAttributeType;
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
- * Id reference attribute type
+ * Id reference attribute type.
  */
-public class Id implements AriaAttributeType {
-  /**
-   * Creates an Id instance for the {@code element} by getting
-   * the element 'id' attribute.
-   *
-   * @param element A DOM element which should have a
-   *        non empty, unique 'id' attribute set.
-   */
-  public static org.gwtproject.aria.client.Id of(HTMLElement element) {
-    return new org.gwtproject.aria.client.Id(element);
-  }
-
-  /**
-   * Creates an Id instance from the {@code elementId}.
-   *
-   * @param elementId A string identifier that should correspond
-   *        to the 'id' attribute value of a DOM element.
-   */
-  public static org.gwtproject.aria.client.Id of(String elementId) {
-    return new org.gwtproject.aria.client.Id(elementId);
-  }
+public class Id
+    implements AriaAttributeType {
 
   private String id;
 
   /**
-   * An instance of {@link org.gwtproject.aria.client.Id} is created.
+   * An instance of {@link Id} is created.
    *
    * @param element Element with a unique id value set
    */
-  private Id(HTMLElement element) {
+  private Id(Element element) {
     assert element != null : "Element cannot be null";
-    init(element.id);
+    init(element.getId());
   }
 
   private Id(String elementId) {
     init(elementId);
   }
 
-  @Override
-  public String getAriaValue() {
-    return id;
+  /**
+   * Creates an Id instance for the {@code element} by getting the element 'id' attribute.
+   *
+   * @param element A DOM element which should have a non empty, unique 'id' attribute set.
+   */
+  public static Id of(Element element) {
+    return new Id(element);
+  }
+
+  /**
+   * Creates an Id instance from the {@code elementId}.
+   *
+   * @param elementId A string identifier that should correspond to the 'id' attribute value of a
+   * DOM element.
+   */
+  public static Id of(String elementId) {
+    return new Id(elementId);
   }
 
   private void init(String elementId) {
     assert elementId != null || elementId.equals("") :
-      "Invalid elementId: cannot be null or empty.";
+        "Invalid elementId: cannot be null or empty.";
     this.id = elementId;
+  }
+
+  @Override
+  public String getAriaValue() {
+    return id;
   }
 }

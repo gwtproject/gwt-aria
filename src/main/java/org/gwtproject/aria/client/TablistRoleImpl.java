@@ -17,63 +17,67 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.Id;
-import org.gwtproject.aria.client.Property;
-import org.gwtproject.aria.client.State;
-import org.gwtproject.aria.client.TablistRole;
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * <p>Implements {@link TablistRole}.</p>
  */
-class TablistRoleImpl extends org.gwtproject.aria.client.RoleImpl implements TablistRole {
+class TablistRoleImpl
+    extends RoleImpl
+    implements TablistRole {
+
   TablistRoleImpl(String roleName) {
     super(roleName);
   }
 
   @Override
-  public String getAriaActivedescendantProperty(HTMLElement element) {
+  public String getAriaActivedescendantProperty(Element element) {
     return Property.ACTIVEDESCENDANT.get(element);
   }
 
   @Override
-  public String getAriaExpandedState(HTMLElement element) {
-    return State.EXPANDED.get(element);
-  }
-
-  @Override
-  public String getAriaLevelProperty(HTMLElement element) {
-    return Property.LEVEL.get(element);
-  }
-
-  @Override
-  public void removeAriaActivedescendantProperty(HTMLElement element) {
+  public void removeAriaActivedescendantProperty(Element element) {
     Property.ACTIVEDESCENDANT.remove(element);
   }
 
   @Override
-  public void removeAriaExpandedState(HTMLElement element) {
+  public void setAriaActivedescendantProperty(Element element,
+      Id value) {
+    Property.ACTIVEDESCENDANT.set(element,
+        value);
+  }
+
+  @Override
+  public String getAriaExpandedState(Element element) {
+    return State.EXPANDED.get(element);
+  }
+
+  @Override
+  public void removeAriaExpandedState(Element element) {
     State.EXPANDED.remove(element);
   }
 
   @Override
-  public void removeAriaLevelProperty(HTMLElement element) {
+  public void setAriaExpandedState(Element element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
+  }
+
+  @Override
+  public String getAriaLevelProperty(Element element) {
+    return Property.LEVEL.get(element);
+  }
+
+  @Override
+  public void removeAriaLevelProperty(Element element) {
     Property.LEVEL.remove(element);
   }
 
   @Override
-  public void setAriaActivedescendantProperty(HTMLElement element, Id value) {
-    Property.ACTIVEDESCENDANT.set(element, value);
-  }
-
-  @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
-  }
-
-  @Override
-  public void setAriaLevelProperty(HTMLElement element, int value) {
-    Property.LEVEL.set(element, value);
+  public void setAriaLevelProperty(Element element,
+      int value) {
+    Property.LEVEL.set(element,
+        value);
   }
 }

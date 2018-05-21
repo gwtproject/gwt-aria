@@ -17,44 +17,50 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * <p>Implements {@link ButtonRole}.</p>
  */
-class ButtonRoleImpl extends RoleImpl implements ButtonRole {
+class ButtonRoleImpl
+    extends RoleImpl
+    implements ButtonRole {
+
   ButtonRoleImpl(String roleName) {
     super(roleName);
   }
 
   @Override
-  public String getAriaExpandedState(HTMLElement element) {
+  public String getAriaExpandedState(Element element) {
     return State.EXPANDED.get(element);
   }
 
   @Override
-  public String getAriaPressedState(HTMLElement element) {
+  public String getAriaPressedState(Element element) {
     return State.PRESSED.get(element);
   }
 
   @Override
-  public void removeAriaExpandedState(HTMLElement element) {
+  public void removeAriaExpandedState(Element element) {
     State.EXPANDED.remove(element);
   }
 
   @Override
-  public void removeAriaPressedState(HTMLElement element) {
+  public void removeAriaPressedState(Element element) {
     State.PRESSED.remove(element);
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaExpandedState(Element element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 
   @Override
-  public void setAriaPressedState(HTMLElement element, PressedValue value) {
-    State.PRESSED.set(element, value);
+  public void setAriaPressedState(Element element,
+      PressedValue value) {
+    State.PRESSED.set(element,
+        value);
   }
 }

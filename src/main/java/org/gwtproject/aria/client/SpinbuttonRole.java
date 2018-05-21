@@ -17,11 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.InputRole;
-import org.gwtproject.aria.client.RangeRole;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#spinbutton">spinbutton</a>
@@ -30,26 +26,29 @@ import elemental2.dom.HTMLElement;
  * @see Role
  * @see Roles
  */
-public interface SpinbuttonRole extends InputRole, RangeRole {
+public interface SpinbuttonRole
+    extends InputRole,
+    RangeRole {
+
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">
-   * aria-required</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-required</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaRequiredProperty(HTMLElement element);
+  String getAriaRequiredProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">
    * aria-required</a> attribute from the {@code element}.
    */
-  void removeAriaRequiredProperty(HTMLElement element);
+  void removeAriaRequiredProperty(Element element);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">
    * aria-required</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaRequiredProperty(HTMLElement element, boolean value);
+  void setAriaRequiredProperty(Element element,
+      boolean value);
 }

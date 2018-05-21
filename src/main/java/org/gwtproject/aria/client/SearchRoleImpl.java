@@ -17,31 +17,33 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.SearchRole;
-import org.gwtproject.aria.client.State;
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * <p>Implements {@link SearchRole}.</p>
  */
-class SearchRoleImpl extends RoleImpl implements SearchRole {
+class SearchRoleImpl
+    extends RoleImpl
+    implements SearchRole {
+
   SearchRoleImpl(String roleName) {
     super(roleName);
   }
 
   @Override
-  public String getAriaExpandedState(HTMLElement element) {
+  public String getAriaExpandedState(Element element) {
     return State.EXPANDED.get(element);
   }
 
   @Override
-  public void removeAriaExpandedState(HTMLElement element) {
+  public void removeAriaExpandedState(Element element) {
     State.EXPANDED.remove(element);
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaExpandedState(Element element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 }

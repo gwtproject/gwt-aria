@@ -17,11 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.CheckedValue;
-import org.gwtproject.aria.client.InputRole;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#checkbox">checkbox</a>
@@ -30,26 +26,28 @@ import elemental2.dom.HTMLElement;
  * @see Role
  * @see Roles
  */
-public interface CheckboxRole extends InputRole {
+public interface CheckboxRole
+    extends InputRole {
+
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-checked">
-   * aria-checked</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-checked</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaCheckedState(HTMLElement element);
+  String getAriaCheckedState(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-checked">
    * aria-checked</a> attribute from the {@code element}.
    */
-  void removeAriaCheckedState(HTMLElement element);
+  void removeAriaCheckedState(Element element);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-checked">
    * aria-checked</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaCheckedState(HTMLElement element, CheckedValue value);
+  void setAriaCheckedState(Element element,
+      CheckedValue value);
 }

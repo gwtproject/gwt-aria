@@ -17,10 +17,6 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.RegionRole;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
-
 /**
  * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#landmark">landmark</a>
  * role in the ARIA specification.
@@ -28,5 +24,7 @@ import org.gwtproject.aria.client.Roles;
  * @see Role
  * @see Roles
  */
-public interface LandmarkRole extends RegionRole {
+public interface LandmarkRole
+    extends RegionRole {
+
 }

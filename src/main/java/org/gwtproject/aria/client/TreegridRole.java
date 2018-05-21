@@ -17,11 +17,6 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.GridRole;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
-import org.gwtproject.aria.client.TreeRole;
-
 /**
  * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#treegrid">treegrid</a>
  * role in the ARIA specification.
@@ -29,5 +24,8 @@ import org.gwtproject.aria.client.TreeRole;
  * @see Role
  * @see Roles
  */
-public interface TreegridRole extends GridRole, TreeRole {
+public interface TreegridRole
+    extends GridRole,
+    TreeRole {
+
 }

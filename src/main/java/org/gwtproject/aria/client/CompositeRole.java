@@ -17,11 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.Id;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
-import org.gwtproject.aria.client.WidgetRole;
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#composite">composite</a>
@@ -30,26 +26,29 @@ import elemental2.dom.HTMLElement;
  * @see Role
  * @see Roles
  */
-public interface CompositeRole extends WidgetRole {
+public interface CompositeRole
+    extends WidgetRole {
+
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-activedescendant">
-   * aria-activedescendant</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-activedescendant</a> attribute for the {@code element} or "" if no such attribute is
+   * present.
    */
-  String getAriaActivedescendantProperty(HTMLElement element);
+  String getAriaActivedescendantProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-activedescendant">
    * aria-activedescendant</a> attribute from the {@code element}.
    */
-  void removeAriaActivedescendantProperty(HTMLElement element);
+  void removeAriaActivedescendantProperty(Element element);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-activedescendant">
    * aria-activedescendant</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaActivedescendantProperty(HTMLElement element, Id value);
+  void setAriaActivedescendantProperty(Element element,
+      Id value);
 }

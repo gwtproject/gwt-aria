@@ -17,48 +17,50 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.OrientationValue;
-import org.gwtproject.aria.client.Property;
-import org.gwtproject.aria.client.SeparatorRole;
-import org.gwtproject.aria.client.State;
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * <p>Implements {@link SeparatorRole}.</p>
  */
-class SeparatorRoleImpl extends org.gwtproject.aria.client.RoleImpl implements SeparatorRole {
+class SeparatorRoleImpl
+    extends RoleImpl
+    implements SeparatorRole {
+
   SeparatorRoleImpl(String roleName) {
     super(roleName);
   }
 
   @Override
-  public String getAriaExpandedState(HTMLElement element) {
+  public String getAriaExpandedState(Element element) {
     return State.EXPANDED.get(element);
   }
 
   @Override
-  public String getAriaOrientationProperty(HTMLElement element) {
+  public String getAriaOrientationProperty(Element element) {
     return Property.ORIENTATION.get(element);
   }
 
   @Override
-  public void removeAriaExpandedState(HTMLElement element) {
+  public void removeAriaExpandedState(Element element) {
     State.EXPANDED.remove(element);
   }
 
   @Override
-  public void removeAriaOrientationProperty(HTMLElement element) {
+  public void removeAriaOrientationProperty(Element element) {
     Property.ORIENTATION.remove(element);
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaExpandedState(Element element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 
   @Override
-  public void setAriaOrientationProperty(HTMLElement element, OrientationValue value) {
-    Property.ORIENTATION.set(element, value);
+  public void setAriaOrientationProperty(Element element,
+      OrientationValue value) {
+    Property.ORIENTATION.set(element,
+        value);
   }
 }

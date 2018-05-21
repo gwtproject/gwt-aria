@@ -17,77 +17,84 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.GridcellRole;
-import org.gwtproject.aria.client.Property;
-import org.gwtproject.aria.client.State;
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * <p>Implements {@link GridcellRole}.</p>
  */
-class GridcellRoleImpl extends org.gwtproject.aria.client.RoleImpl implements GridcellRole {
+class GridcellRoleImpl
+    extends RoleImpl
+    implements GridcellRole {
+
   GridcellRoleImpl(String roleName) {
     super(roleName);
   }
 
   @Override
-  public String getAriaExpandedState(HTMLElement element) {
+  public String getAriaExpandedState(Element element) {
     return State.EXPANDED.get(element);
   }
 
   @Override
-  public String getAriaReadonlyProperty(HTMLElement element) {
-    return Property.READONLY.get(element);
-  }
-
-  @Override
-  public String getAriaRequiredProperty(HTMLElement element) {
-    return Property.REQUIRED.get(element);
-  }
-
-  @Override
-  public String getAriaSelectedState(HTMLElement element) {
-    return State.SELECTED.get(element);
-  }
-
-  @Override
-  public void removeAriaExpandedState(HTMLElement element) {
+  public void removeAriaExpandedState(Element element) {
     State.EXPANDED.remove(element);
   }
 
   @Override
-  public void removeAriaReadonlyProperty(HTMLElement element) {
+  public void setAriaExpandedState(Element element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
+  }
+
+  @Override
+  public String getAriaReadonlyProperty(Element element) {
+    return Property.READONLY.get(element);
+  }
+
+  @Override
+  public String getAriaRequiredProperty(Element element) {
+    return Property.REQUIRED.get(element);
+  }
+
+  @Override
+  public String getAriaSelectedState(Element element) {
+    return State.SELECTED.get(element);
+  }
+
+  @Override
+  public void removeAriaReadonlyProperty(Element element) {
     Property.READONLY.remove(element);
   }
 
   @Override
-  public void removeAriaRequiredProperty(HTMLElement element) {
+  public void removeAriaRequiredProperty(Element element) {
     Property.REQUIRED.remove(element);
   }
 
   @Override
-  public void removeAriaSelectedState(HTMLElement element) {
+  public void removeAriaSelectedState(Element element) {
     State.SELECTED.remove(element);
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaReadonlyProperty(Element element,
+      boolean value) {
+    Property.READONLY.set(element,
+        value);
   }
 
   @Override
-  public void setAriaReadonlyProperty(HTMLElement element, boolean value) {
-    Property.READONLY.set(element, value);
+  public void setAriaRequiredProperty(Element element,
+      boolean value) {
+    Property.REQUIRED.set(element,
+        value);
   }
 
   @Override
-  public void setAriaRequiredProperty(HTMLElement element, boolean value) {
-    Property.REQUIRED.set(element, value);
-  }
-
-  @Override
-  public void setAriaSelectedState(HTMLElement element, SelectedValue value) {
-    State.SELECTED.set(element, value);
+  public void setAriaSelectedState(Element element,
+      SelectedValue value) {
+    State.SELECTED.set(element,
+        value);
   }
 }

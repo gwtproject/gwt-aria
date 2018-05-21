@@ -17,25 +17,27 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.AriaAttributeType;
-
 /**
  * Property enum for 'aria-sort' values.
  */
-public enum SortValue implements AriaAttributeType {
-   ASCENDING, DESCENDING, NONE, OTHER;
+public enum SortValue
+    implements AriaAttributeType {
+  ASCENDING,
+  DESCENDING,
+  NONE,
+  OTHER;
 
   @Override
   public String getAriaValue() {
     switch (this) {
-        case ASCENDING:
-          return "ascending";
-        case DESCENDING:
-          return "descending";
-        case NONE:
-          return "none";
-        case OTHER:
-          return "other";
+      case ASCENDING:
+        return "ascending";
+      case DESCENDING:
+        return "descending";
+      case NONE:
+        return "none";
+      case OTHER:
+        return "other";
     }
     return null; // not reachable
   }

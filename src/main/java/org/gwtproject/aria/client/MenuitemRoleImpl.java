@@ -17,12 +17,13 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.MenuitemRole;
-
 /**
  * <p>Implements {@link MenuitemRole}.</p>
  */
-class MenuitemRoleImpl extends RoleImpl implements MenuitemRole {
+class MenuitemRoleImpl
+    extends RoleImpl
+    implements MenuitemRole {
+
   MenuitemRoleImpl(String roleName) {
     super(roleName);
   }

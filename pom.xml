@@ -43,10 +43,15 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.google.elemental2</groupId>
-      <artifactId>elemental2-dom</artifactId>
-      <version>${elemental2.version}</version>
+      <groupId>org.gwtproject.dom</groupId>
+      <artifactId>gwt-dom</artifactId>
+      <version>${dom.version}</version>
     </dependency>
+    <!--<dependency>-->
+      <!--<groupId>com.google.elemental2</groupId>-->
+      <!--<artifactId>elemental2-dom</artifactId>-->
+      <!--<version>${elemental2.version}</version>-->
+    <!--</dependency>-->
 
     <!-- only for testing -->
     <dependency>

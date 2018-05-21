@@ -17,7 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#row">row</a> role in the
@@ -35,35 +35,35 @@ public interface RowRole
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-level">
    * aria-level</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaLevelProperty(HTMLElement element);
+  String getAriaLevelProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-selected">
    * aria-selected</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaSelectedState(HTMLElement element);
+  String getAriaSelectedState(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-level">
    * aria-level</a> attribute from the {@code element}.
    */
-  void removeAriaLevelProperty(HTMLElement element);
+  void removeAriaLevelProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-selected">
    * aria-selected</a> attribute from the {@code element}.
    */
-  void removeAriaSelectedState(HTMLElement element);
+  void removeAriaSelectedState(Element element);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-level">
    * aria-level</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaLevelProperty(HTMLElement element,
+  void setAriaLevelProperty(Element element,
       int value);
 
   /**
@@ -71,6 +71,6 @@ public interface RowRole
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-selected">
    * aria-selected</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaSelectedState(HTMLElement element,
+  void setAriaSelectedState(Element element,
       SelectedValue value);
 }

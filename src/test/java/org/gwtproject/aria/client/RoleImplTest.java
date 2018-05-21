@@ -14,18 +14,17 @@
 
 package org.gwtproject.aria.client;
 
-import static elemental2.dom.DomGlobal.document;
-
 import com.google.gwt.junit.client.GWTTestCase;
-import elemental2.dom.HTMLAnchorElement;
-import elemental2.dom.HTMLDivElement;
+import org.gwtproject.dom.client.AnchorElement;
+import org.gwtproject.dom.client.DivElement;
+import org.gwtproject.dom.client.Document;
 
 /**
  * Tests generic role methods implemented in {@link org.gwtproject.aria.client.RoleImpl}.
  */
 public class RoleImplTest
   extends GWTTestCase {
-  private HTMLDivElement div;
+  private DivElement div;
   private RegionRole     regionRole;
 
   @Override
@@ -97,8 +96,8 @@ public class RoleImplTest
   public void testSetGetRemoveExtraAttributes() {
     // Older versions of IE do not support tabIndex on divs, so use an anchor
     // element instead.
-    HTMLAnchorElement anchor = createAnchor();
-    document.body.appendChild(anchor);
+    AnchorElement anchor = createAnchor();
+    Document.get().getBody().appendChild(anchor);
 
     // Some versions of IE default to "0" instead of ""
     assertTrue("".equals(regionRole.getTabindexExtraAttribute(div))
@@ -112,21 +111,21 @@ public class RoleImplTest
     assertTrue("".equals(regionRole.getTabindexExtraAttribute(div))
                || "0".equals(regionRole.getTabindexExtraAttribute(div)));
 
-    anchor.parentNode.removeChild(anchor);
+    anchor.getParentElement().removeChild(anchor);
   }
 
-  private HTMLAnchorElement createAnchor() {
-    return (HTMLAnchorElement) document.createElement("a");
+  private AnchorElement createAnchor() {
+    return Document.get().createAnchorElement();
   }
 
   @Override
   protected void gwtSetUp()
     throws Exception {
     super.gwtSetUp();
-    div = (HTMLDivElement) document.createElement("div");
+    div = Document.get().createDivElement();
     div.setAttribute("id",
                      "test1");
-    document.body.appendChild(div);
+    Document.get().getBody().appendChild(div);
     regionRole = Roles.getRegionRole();
   }
 
@@ -134,6 +133,6 @@ public class RoleImplTest
   protected void gwtTearDown()
     throws Exception {
     super.gwtTearDown();
-    div.parentNode.removeChild(div);
+    div.getParentElement().removeChild(div);
   }
 }

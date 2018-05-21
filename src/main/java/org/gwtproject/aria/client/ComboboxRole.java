@@ -17,7 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#combobox">combobox</a>
@@ -34,35 +34,35 @@ public interface ComboboxRole
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-autocomplete">
    * aria-autocomplete</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaAutocompleteProperty(HTMLElement element);
+  String getAriaAutocompleteProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">
    * aria-required</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaRequiredProperty(HTMLElement element);
+  String getAriaRequiredProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-autocomplete">
    * aria-autocomplete</a> attribute from the {@code element}.
    */
-  void removeAriaAutocompleteProperty(HTMLElement element);
+  void removeAriaAutocompleteProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">
    * aria-required</a> attribute from the {@code element}.
    */
-  void removeAriaRequiredProperty(HTMLElement element);
+  void removeAriaRequiredProperty(Element element);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-autocomplete">
    * aria-autocomplete</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaAutocompleteProperty(HTMLElement element,
+  void setAriaAutocompleteProperty(Element element,
       AutocompleteValue value);
 
   /**
@@ -70,6 +70,6 @@ public interface ComboboxRole
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">
    * aria-required</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaRequiredProperty(HTMLElement element,
+  void setAriaRequiredProperty(Element element,
       boolean value);
 }

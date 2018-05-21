@@ -17,7 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#option">option</a> role
@@ -34,63 +34,63 @@ public interface OptionRole
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-checked">
    * aria-checked</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaCheckedState(HTMLElement element);
+  String getAriaCheckedState(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-posinset">
    * aria-posinset</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaPosinsetProperty(HTMLElement element);
+  String getAriaPosinsetProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-selected">
    * aria-selected</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaSelectedState(HTMLElement element);
+  String getAriaSelectedState(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-setsize">
    * aria-setsize</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaSetsizeProperty(HTMLElement element);
+  String getAriaSetsizeProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-checked">
    * aria-checked</a> attribute from the {@code element}.
    */
-  void removeAriaCheckedState(HTMLElement element);
+  void removeAriaCheckedState(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-posinset">
    * aria-posinset</a> attribute from the {@code element}.
    */
-  void removeAriaPosinsetProperty(HTMLElement element);
+  void removeAriaPosinsetProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-selected">
    * aria-selected</a> attribute from the {@code element}.
    */
-  void removeAriaSelectedState(HTMLElement element);
+  void removeAriaSelectedState(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-setsize">
    * aria-setsize</a> attribute from the {@code element}.
    */
-  void removeAriaSetsizeProperty(HTMLElement element);
+  void removeAriaSetsizeProperty(Element element);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-checked">
    * aria-checked</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaCheckedState(HTMLElement element,
+  void setAriaCheckedState(Element element,
       CheckedValue value);
 
   /**
@@ -98,7 +98,7 @@ public interface OptionRole
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-posinset">
    * aria-posinset</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaPosinsetProperty(HTMLElement element,
+  void setAriaPosinsetProperty(Element element,
       int value);
 
   /**
@@ -106,7 +106,7 @@ public interface OptionRole
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-selected">
    * aria-selected</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaSelectedState(HTMLElement element,
+  void setAriaSelectedState(Element element,
       SelectedValue value);
 
   /**
@@ -114,6 +114,6 @@ public interface OptionRole
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-setsize">
    * aria-setsize</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaSetsizeProperty(HTMLElement element,
+  void setAriaSetsizeProperty(Element element,
       int value);
 }

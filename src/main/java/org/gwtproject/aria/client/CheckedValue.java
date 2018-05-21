@@ -32,7 +32,7 @@ public enum CheckedValue
    *
    * @param value Boolean value for which we want to get the corresponding enum constant.
    */
-  public static org.gwtproject.aria.client.CheckedValue of(boolean value) {
+  public static CheckedValue of(boolean value) {
     return value ? TRUE : FALSE;
   }
 

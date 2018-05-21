@@ -17,7 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * <p>Implements {@link TreeitemRole}.</p>
@@ -31,102 +31,102 @@ class TreeitemRoleImpl
   }
 
   @Override
-  public String getAriaCheckedState(HTMLElement element) {
+  public String getAriaCheckedState(Element element) {
     return State.CHECKED.get(element);
   }
 
   @Override
-  public String getAriaSelectedState(HTMLElement element) {
+  public String getAriaSelectedState(Element element) {
     return State.SELECTED.get(element);
   }
 
   @Override
-  public void removeAriaCheckedState(HTMLElement element) {
+  public void removeAriaCheckedState(Element element) {
     State.CHECKED.remove(element);
   }
 
   @Override
-  public void removeAriaSelectedState(HTMLElement element) {
+  public void removeAriaSelectedState(Element element) {
     State.SELECTED.remove(element);
   }
 
   @Override
-  public void setAriaCheckedState(HTMLElement element,
+  public void setAriaCheckedState(Element element,
       CheckedValue value) {
     State.CHECKED.set(element,
         value);
   }
 
   @Override
-  public void setAriaSelectedState(HTMLElement element,
+  public void setAriaSelectedState(Element element,
       SelectedValue value) {
     State.SELECTED.set(element,
         value);
   }
 
   @Override
-  public String getAriaExpandedState(HTMLElement element) {
+  public String getAriaExpandedState(Element element) {
     return State.EXPANDED.get(element);
   }
 
   @Override
-  public void removeAriaExpandedState(HTMLElement element) {
+  public void removeAriaExpandedState(Element element) {
     State.EXPANDED.remove(element);
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element,
+  public void setAriaExpandedState(Element element,
       ExpandedValue value) {
     State.EXPANDED.set(element,
         value);
   }
 
   @Override
-  public String getAriaLevelProperty(HTMLElement element) {
+  public String getAriaLevelProperty(Element element) {
     return Property.LEVEL.get(element);
   }
 
   @Override
-  public String getAriaPosinsetProperty(HTMLElement element) {
+  public String getAriaPosinsetProperty(Element element) {
     return Property.POSINSET.get(element);
   }
 
   @Override
-  public String getAriaSetsizeProperty(HTMLElement element) {
+  public String getAriaSetsizeProperty(Element element) {
     return Property.SETSIZE.get(element);
   }
 
   @Override
-  public void removeAriaLevelProperty(HTMLElement element) {
+  public void removeAriaLevelProperty(Element element) {
     Property.LEVEL.remove(element);
   }
 
   @Override
-  public void removeAriaPosinsetProperty(HTMLElement element) {
+  public void removeAriaPosinsetProperty(Element element) {
     Property.POSINSET.remove(element);
   }
 
   @Override
-  public void removeAriaSetsizeProperty(HTMLElement element) {
+  public void removeAriaSetsizeProperty(Element element) {
     Property.SETSIZE.remove(element);
   }
 
   @Override
-  public void setAriaLevelProperty(HTMLElement element,
+  public void setAriaLevelProperty(Element element,
       int value) {
     Property.LEVEL.set(element,
         value);
   }
 
   @Override
-  public void setAriaPosinsetProperty(HTMLElement element,
+  public void setAriaPosinsetProperty(Element element,
       int value) {
     Property.POSINSET.set(element,
         value);
   }
 
   @Override
-  public void setAriaSetsizeProperty(HTMLElement element,
+  public void setAriaSetsizeProperty(Element element,
       int value) {
     Property.SETSIZE.set(element,
         value);

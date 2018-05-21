@@ -14,16 +14,15 @@
 
 package org.gwtproject.aria.client;
 
-import static elemental2.dom.DomGlobal.document;
-
 import com.google.gwt.junit.client.GWTTestCase;
-import elemental2.dom.HTMLDivElement;
+import org.gwtproject.dom.client.DivElement;
+import org.gwtproject.dom.client.Document;
 
 /**
  * Tests {@link Attribute} ARIA class
  */
 public class AttributeTest extends GWTTestCase {
-  private HTMLDivElement div;
+  private DivElement div;
   private Attribute<OrientationValue> attribute1;
   private Attribute<Boolean> attribute2;
   private Attribute<String> attribute3;
@@ -71,16 +70,16 @@ public class AttributeTest extends GWTTestCase {
     attribute5.remove(div);
     assertEquals("", attribute5.get(div));
 
-    HTMLDivElement ref1 = createDiv();
-    ref1.id="ref1";
-    HTMLDivElement ref2 = createDiv();
-    ref2.id="ref2";
+    DivElement ref1 = createDiv();
+    ref1.setId("ref1");
+    DivElement ref2 = createDiv();
+    ref2.setId("ref2");
     attribute5.set(div, Id.of(ref1), Id.of(ref2));
     assertEquals("ref1 ref2", attribute5.get(div));
   }
 
-  private HTMLDivElement createDiv() {
-    return (HTMLDivElement) document.createElement("div");
+  private DivElement createDiv() {
+    return Document.get().createDivElement();
   }
 
   public void testSetDefaultValue_noSet() {
@@ -97,7 +96,7 @@ public class AttributeTest extends GWTTestCase {
     super.gwtSetUp();
     div = createDiv();
     div.setAttribute("id", "test1");
-    document.body.appendChild(div);
+    Document.get().getBody().appendChild(div);
     attribute1 = new AriaValueAttribute<>("attr1", "vertical");
     attribute2 = new PrimitiveValueAttribute<>("attr2", "true");
     attribute3 = new PrimitiveValueAttribute<>("attr3");
@@ -108,6 +107,6 @@ public class AttributeTest extends GWTTestCase {
   @Override
   protected void gwtTearDown() throws Exception {
     super.gwtTearDown();
-    div.parentNode.removeChild(div);
+    div.getParentElement().removeChild(div);
   }
 }

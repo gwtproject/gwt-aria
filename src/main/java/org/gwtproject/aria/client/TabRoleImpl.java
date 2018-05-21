@@ -17,7 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * <p>Implements {@link TabRole}.</p>
@@ -31,34 +31,34 @@ class TabRoleImpl
   }
 
   @Override
-  public String getAriaExpandedState(HTMLElement element) {
+  public String getAriaExpandedState(Element element) {
     return State.EXPANDED.get(element);
   }
 
   @Override
-  public void removeAriaExpandedState(HTMLElement element) {
+  public void removeAriaExpandedState(Element element) {
     State.EXPANDED.remove(element);
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element,
+  public void setAriaExpandedState(Element element,
       ExpandedValue value) {
     State.EXPANDED.set(element,
         value);
   }
 
   @Override
-  public String getAriaSelectedState(HTMLElement element) {
+  public String getAriaSelectedState(Element element) {
     return State.SELECTED.get(element);
   }
 
   @Override
-  public void removeAriaSelectedState(HTMLElement element) {
+  public void removeAriaSelectedState(Element element) {
     State.SELECTED.remove(element);
   }
 
   @Override
-  public void setAriaSelectedState(HTMLElement element,
+  public void setAriaSelectedState(Element element,
       SelectedValue value) {
     State.SELECTED.set(element,
         value);

@@ -17,7 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#columnheader">columnheader</a>
@@ -36,20 +36,20 @@ public interface ColumnheaderRole
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-sort">
    * aria-sort</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaSortProperty(HTMLElement element);
+  String getAriaSortProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-sort">
    * aria-sort</a> attribute from the {@code element}.
    */
-  void removeAriaSortProperty(HTMLElement element);
+  void removeAriaSortProperty(Element element);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-sort">
    * aria-sort</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaSortProperty(HTMLElement element,
+  void setAriaSortProperty(Element element,
       SortValue value);
 }

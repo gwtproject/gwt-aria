@@ -17,7 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -513,7 +513,7 @@ public final class Roles {
    * if a WAI_ARIA role is among the role tokens in the 'role' attribute token list, a {@link Role}
    * corresponding the WAI-ARIA role is returned.
    */
-  public static Role roleOf(HTMLElement element) {
+  public static Role roleOf(Element element) {
     assert element != null : "Element cannot be null.";
     String roleAttributeValue = element.hasAttribute("role") ? element.getAttribute("role") : "";
     return Arrays.stream(roleAttributeValue.split("\\s+")).map(ROLES_MAP::get)

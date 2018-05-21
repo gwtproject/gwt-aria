@@ -17,7 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * <p>Implements {@link ListitemRole}.</p>
@@ -31,68 +31,68 @@ class ListitemRoleImpl
   }
 
   @Override
-  public String getAriaExpandedState(HTMLElement element) {
+  public String getAriaExpandedState(Element element) {
     return State.EXPANDED.get(element);
   }
 
   @Override
-  public void removeAriaExpandedState(HTMLElement element) {
+  public void removeAriaExpandedState(Element element) {
     State.EXPANDED.remove(element);
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element,
+  public void setAriaExpandedState(Element element,
       ExpandedValue value) {
     State.EXPANDED.set(element,
         value);
   }
 
   @Override
-  public String getAriaLevelProperty(HTMLElement element) {
+  public String getAriaLevelProperty(Element element) {
     return Property.LEVEL.get(element);
   }
 
   @Override
-  public String getAriaPosinsetProperty(HTMLElement element) {
+  public String getAriaPosinsetProperty(Element element) {
     return Property.POSINSET.get(element);
   }
 
   @Override
-  public String getAriaSetsizeProperty(HTMLElement element) {
+  public String getAriaSetsizeProperty(Element element) {
     return Property.SETSIZE.get(element);
   }
 
   @Override
-  public void removeAriaLevelProperty(HTMLElement element) {
+  public void removeAriaLevelProperty(Element element) {
     Property.LEVEL.remove(element);
   }
 
   @Override
-  public void removeAriaPosinsetProperty(HTMLElement element) {
+  public void removeAriaPosinsetProperty(Element element) {
     Property.POSINSET.remove(element);
   }
 
   @Override
-  public void removeAriaSetsizeProperty(HTMLElement element) {
+  public void removeAriaSetsizeProperty(Element element) {
     Property.SETSIZE.remove(element);
   }
 
   @Override
-  public void setAriaLevelProperty(HTMLElement element,
+  public void setAriaLevelProperty(Element element,
       int value) {
     Property.LEVEL.set(element,
         value);
   }
 
   @Override
-  public void setAriaPosinsetProperty(HTMLElement element,
+  public void setAriaPosinsetProperty(Element element,
       int value) {
     Property.POSINSET.set(element,
         value);
   }
 
   @Override
-  public void setAriaSetsizeProperty(HTMLElement element,
+  public void setAriaSetsizeProperty(Element element,
       int value) {
     Property.SETSIZE.set(element,
         value);

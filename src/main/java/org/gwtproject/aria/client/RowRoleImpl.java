@@ -17,7 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * <p>Implements {@link RowRole}.</p>
@@ -31,68 +31,68 @@ class RowRoleImpl
   }
 
   @Override
-  public String getAriaActivedescendantProperty(HTMLElement element) {
+  public String getAriaActivedescendantProperty(Element element) {
     return Property.ACTIVEDESCENDANT.get(element);
   }
 
   @Override
-  public void removeAriaActivedescendantProperty(HTMLElement element) {
+  public void removeAriaActivedescendantProperty(Element element) {
     Property.ACTIVEDESCENDANT.remove(element);
   }
 
   @Override
-  public void setAriaActivedescendantProperty(HTMLElement element,
+  public void setAriaActivedescendantProperty(Element element,
       Id value) {
     Property.ACTIVEDESCENDANT.set(element,
         value);
   }
 
   @Override
-  public String getAriaExpandedState(HTMLElement element) {
+  public String getAriaExpandedState(Element element) {
     return State.EXPANDED.get(element);
   }
 
   @Override
-  public void removeAriaExpandedState(HTMLElement element) {
+  public void removeAriaExpandedState(Element element) {
     State.EXPANDED.remove(element);
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element,
+  public void setAriaExpandedState(Element element,
       ExpandedValue value) {
     State.EXPANDED.set(element,
         value);
   }
 
   @Override
-  public String getAriaLevelProperty(HTMLElement element) {
+  public String getAriaLevelProperty(Element element) {
     return Property.LEVEL.get(element);
   }
 
   @Override
-  public String getAriaSelectedState(HTMLElement element) {
+  public String getAriaSelectedState(Element element) {
     return State.SELECTED.get(element);
   }
 
   @Override
-  public void removeAriaLevelProperty(HTMLElement element) {
+  public void removeAriaLevelProperty(Element element) {
     Property.LEVEL.remove(element);
   }
 
   @Override
-  public void removeAriaSelectedState(HTMLElement element) {
+  public void removeAriaSelectedState(Element element) {
     State.SELECTED.remove(element);
   }
 
   @Override
-  public void setAriaLevelProperty(HTMLElement element,
+  public void setAriaLevelProperty(Element element,
       int value) {
     Property.LEVEL.set(element,
         value);
   }
 
   @Override
-  public void setAriaSelectedState(HTMLElement element,
+  public void setAriaSelectedState(Element element,
       SelectedValue value) {
     State.SELECTED.set(element,
         value);

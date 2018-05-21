@@ -17,11 +17,11 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * <p>Class representing ARIA state/property attribute. Contains methods for setting, getting,
- * removing ARIA attributes for an HTML {@link elemental2.dom.Element}.</p>
+ * removing ARIA attributes for an HTML {@link org.gwtproject.dom.client.Element}.</p>
  *
  * <p>For more details about ARIA states and properties check the W3C ARIA documentation
  * <a href="http://www.w3.org/TR/wai-aria/states_and_properties"> Supported States and Properties
@@ -64,7 +64,7 @@ public abstract class Attribute<T> {
    * @param element HTML element
    * @return The attribute value for {@code element}
    */
-  public String get(HTMLElement element) {
+  public String get(Element element) {
     assert element != null : "Element cannot be null.";
     return element.hasAttribute(name) ? element.getAttribute(name) : "";
   }
@@ -83,7 +83,7 @@ public abstract class Attribute<T> {
    *
    * @param element HTM element
    */
-  public void remove(HTMLElement element) {
+  public void remove(Element element) {
     assert element != null : "Element cannot be null.";
     element.removeAttribute(name);
   }
@@ -94,7 +94,7 @@ public abstract class Attribute<T> {
    * @param element HTML element
    * @param values Attribute value
    */
-  public void set(HTMLElement element,
+  public void set(Element element,
       T... values) {
     assert element != null : "Element cannot be null.";
     assert values.length > 0;
@@ -130,7 +130,7 @@ public abstract class Attribute<T> {
    *
    * @param element HTML element
    */
-  public void setDefault(HTMLElement element) {
+  public void setDefault(Element element) {
     assert element != null : "Element cannot be null.";
     assert defaultValue != null && !defaultValue.isEmpty() : "Default value cannot be null.";
     element.setAttribute(name,

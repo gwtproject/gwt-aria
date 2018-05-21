@@ -17,7 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#tab">tab</a> role in the
@@ -35,20 +35,20 @@ public interface TabRole
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-selected">
    * aria-selected</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaSelectedState(HTMLElement element);
+  String getAriaSelectedState(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-selected">
    * aria-selected</a> attribute from the {@code element}.
    */
-  void removeAriaSelectedState(HTMLElement element);
+  void removeAriaSelectedState(Element element);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-selected">
    * aria-selected</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaSelectedState(HTMLElement element,
+  void setAriaSelectedState(Element element,
       SelectedValue value);
 }

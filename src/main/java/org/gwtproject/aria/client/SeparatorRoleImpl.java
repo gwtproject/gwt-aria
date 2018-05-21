@@ -17,7 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * <p>Implements {@link SeparatorRole}.</p>
@@ -31,34 +31,34 @@ class SeparatorRoleImpl
   }
 
   @Override
-  public String getAriaExpandedState(HTMLElement element) {
+  public String getAriaExpandedState(Element element) {
     return State.EXPANDED.get(element);
   }
 
   @Override
-  public String getAriaOrientationProperty(HTMLElement element) {
+  public String getAriaOrientationProperty(Element element) {
     return Property.ORIENTATION.get(element);
   }
 
   @Override
-  public void removeAriaExpandedState(HTMLElement element) {
+  public void removeAriaExpandedState(Element element) {
     State.EXPANDED.remove(element);
   }
 
   @Override
-  public void removeAriaOrientationProperty(HTMLElement element) {
+  public void removeAriaOrientationProperty(Element element) {
     Property.ORIENTATION.remove(element);
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element,
+  public void setAriaExpandedState(Element element,
       ExpandedValue value) {
     State.EXPANDED.set(element,
         value);
   }
 
   @Override
-  public void setAriaOrientationProperty(HTMLElement element,
+  public void setAriaOrientationProperty(Element element,
       OrientationValue value) {
     Property.ORIENTATION.set(element,
         value);

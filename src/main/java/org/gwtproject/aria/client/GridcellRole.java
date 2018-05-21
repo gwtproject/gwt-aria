@@ -17,7 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#gridcell">gridcell</a>
@@ -35,49 +35,49 @@ public interface GridcellRole
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-readonly">
    * aria-readonly</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaReadonlyProperty(HTMLElement element);
+  String getAriaReadonlyProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">
    * aria-required</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaRequiredProperty(HTMLElement element);
+  String getAriaRequiredProperty(Element element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-selected">
    * aria-selected</a> attribute for the {@code element} or "" if no such attribute is present.
    */
-  String getAriaSelectedState(HTMLElement element);
+  String getAriaSelectedState(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-readonly">
    * aria-readonly</a> attribute from the {@code element}.
    */
-  void removeAriaReadonlyProperty(HTMLElement element);
+  void removeAriaReadonlyProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">
    * aria-required</a> attribute from the {@code element}.
    */
-  void removeAriaRequiredProperty(HTMLElement element);
+  void removeAriaRequiredProperty(Element element);
 
   /**
    * Removes the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-selected">
    * aria-selected</a> attribute from the {@code element}.
    */
-  void removeAriaSelectedState(HTMLElement element);
+  void removeAriaSelectedState(Element element);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-readonly">
    * aria-readonly</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaReadonlyProperty(HTMLElement element,
+  void setAriaReadonlyProperty(Element element,
       boolean value);
 
   /**
@@ -85,7 +85,7 @@ public interface GridcellRole
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">
    * aria-required</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaRequiredProperty(HTMLElement element,
+  void setAriaRequiredProperty(Element element,
       boolean value);
 
   /**
@@ -93,6 +93,6 @@ public interface GridcellRole
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-selected">
    * aria-selected</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaSelectedState(HTMLElement element,
+  void setAriaSelectedState(Element element,
       SelectedValue value);
 }

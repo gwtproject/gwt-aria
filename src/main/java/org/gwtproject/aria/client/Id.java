@@ -17,7 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * Id reference attribute type.
@@ -32,9 +32,9 @@ public class Id
    *
    * @param element Element with a unique id value set
    */
-  private Id(HTMLElement element) {
+  private Id(Element element) {
     assert element != null : "Element cannot be null";
-    init(element.id);
+    init(element.getId());
   }
 
   private Id(String elementId) {
@@ -46,7 +46,7 @@ public class Id
    *
    * @param element A DOM element which should have a non empty, unique 'id' attribute set.
    */
-  public static Id of(HTMLElement element) {
+  public static Id of(Element element) {
     return new Id(element);
   }
 

@@ -17,7 +17,7 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import elemental2.dom.HTMLElement;
+import org.gwtproject.dom.client.Element;
 
 /**
  * <p>Implements {@link ProgressbarRole}.</p>
@@ -31,68 +31,68 @@ class ProgressbarRoleImpl
   }
 
   @Override
-  public String getAriaValuemaxProperty(HTMLElement element) {
+  public String getAriaValuemaxProperty(Element element) {
     return Property.VALUEMAX.get(element);
   }
 
   @Override
-  public String getAriaValueminProperty(HTMLElement element) {
+  public String getAriaValueminProperty(Element element) {
     return Property.VALUEMIN.get(element);
   }
 
   @Override
-  public String getAriaValuenowProperty(HTMLElement element) {
+  public String getAriaValuenowProperty(Element element) {
     return Property.VALUENOW.get(element);
   }
 
   @Override
-  public String getAriaValuetextProperty(HTMLElement element) {
+  public String getAriaValuetextProperty(Element element) {
     return Property.VALUETEXT.get(element);
   }
 
   @Override
-  public void removeAriaValuemaxProperty(HTMLElement element) {
+  public void removeAriaValuemaxProperty(Element element) {
     Property.VALUEMAX.remove(element);
   }
 
   @Override
-  public void removeAriaValueminProperty(HTMLElement element) {
+  public void removeAriaValueminProperty(Element element) {
     Property.VALUEMIN.remove(element);
   }
 
   @Override
-  public void removeAriaValuenowProperty(HTMLElement element) {
+  public void removeAriaValuenowProperty(Element element) {
     Property.VALUENOW.remove(element);
   }
 
   @Override
-  public void removeAriaValuetextProperty(HTMLElement element) {
+  public void removeAriaValuetextProperty(Element element) {
     Property.VALUETEXT.remove(element);
   }
 
   @Override
-  public void setAriaValuemaxProperty(HTMLElement element,
+  public void setAriaValuemaxProperty(Element element,
       Number value) {
     Property.VALUEMAX.set(element,
         value);
   }
 
   @Override
-  public void setAriaValueminProperty(HTMLElement element,
+  public void setAriaValueminProperty(Element element,
       Number value) {
     Property.VALUEMIN.set(element,
         value);
   }
 
   @Override
-  public void setAriaValuenowProperty(HTMLElement element,
+  public void setAriaValuenowProperty(Element element,
       Number value) {
     Property.VALUENOW.set(element,
         value);
   }
 
   @Override
-  public void setAriaValuetextProperty(HTMLElement element,
+  public void setAriaValuetextProperty(Element element,
       String value) {
     Property.VALUETEXT.set(element,
         value);

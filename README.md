@@ -2,5 +2,5 @@
 
 Module used to include aria classes.
 
-[travis]: https://travis-ci.org/frankhossfeld/gwt-aria
-[travis-img]: https://travis-ci.org/frankhossfeld/gwt-aria.svg?branch=master
+[travis]: https://travis-ci.org/vegegoku//gwt-aria
+[travis-img]: https://travis-ci.org/vegegoku//gwt-aria.svg?branch=master

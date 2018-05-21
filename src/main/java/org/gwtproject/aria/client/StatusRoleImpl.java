@@ -17,15 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.State;
-import org.gwtproject.aria.client.StatusRole;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link StatusRole}.</p>
  */
-class StatusRoleImpl extends org.gwtproject.aria.client.RoleImpl implements StatusRole {
+class StatusRoleImpl
+    extends RoleImpl
+    implements StatusRole {
+
   StatusRoleImpl(String roleName) {
     super(roleName);
   }
@@ -41,7 +41,9 @@ class StatusRoleImpl extends org.gwtproject.aria.client.RoleImpl implements Stat
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 }

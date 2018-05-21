@@ -17,46 +17,43 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.Role;
 import elemental2.dom.HTMLElement;
 
 /**
- * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#option">option</a>
- * role in the ARIA specification.
+ * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#option">option</a> role
+ * in the ARIA specification.
  *
  * @see Role
  * @see Roles
  */
-public interface OptionRole extends InputRole {
+public interface OptionRole
+    extends InputRole {
+
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-checked">
-   * aria-checked</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-checked</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaCheckedState(HTMLElement element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-posinset">
-   * aria-posinset</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-posinset</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaPosinsetProperty(HTMLElement element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-selected">
-   * aria-selected</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-selected</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaSelectedState(HTMLElement element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-setsize">
-   * aria-setsize</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-setsize</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaSetsizeProperty(HTMLElement element);
 
@@ -93,26 +90,30 @@ public interface OptionRole extends InputRole {
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-checked">
    * aria-checked</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaCheckedState(HTMLElement element, CheckedValue value);
+  void setAriaCheckedState(HTMLElement element,
+      CheckedValue value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-posinset">
    * aria-posinset</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaPosinsetProperty(HTMLElement element, int value);
+  void setAriaPosinsetProperty(HTMLElement element,
+      int value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-selected">
    * aria-selected</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaSelectedState(HTMLElement element, SelectedValue value);
+  void setAriaSelectedState(HTMLElement element,
+      SelectedValue value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-setsize">
    * aria-setsize</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaSetsizeProperty(HTMLElement element, int value);
+  void setAriaSetsizeProperty(HTMLElement element,
+      int value);
 }

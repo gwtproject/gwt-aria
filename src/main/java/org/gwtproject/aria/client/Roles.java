@@ -17,39 +17,11 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ArticleRole;
-import org.gwtproject.aria.client.CheckboxRole;
-import org.gwtproject.aria.client.ComboboxRole;
-import org.gwtproject.aria.client.DialogRole;
-import org.gwtproject.aria.client.DocumentRole;
-import org.gwtproject.aria.client.FormRole;
-import org.gwtproject.aria.client.GridcellRole;
-import org.gwtproject.aria.client.ListboxRole;
-import org.gwtproject.aria.client.LogRole;
-import org.gwtproject.aria.client.MainRole;
-import org.gwtproject.aria.client.MathRole;
-import org.gwtproject.aria.client.MenubarRole;
-import org.gwtproject.aria.client.MenuitemRole;
-import org.gwtproject.aria.client.NoteRole;
-import org.gwtproject.aria.client.OptionRole;
-import org.gwtproject.aria.client.PresentationRole;
-import org.gwtproject.aria.client.ProgressbarRole;
-import org.gwtproject.aria.client.RegionRole;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.StructureRole;
-import org.gwtproject.aria.client.TabRole;
-import org.gwtproject.aria.client.TablistRole;
-import org.gwtproject.aria.client.TextboxRole;
-import org.gwtproject.aria.client.ToolbarRole;
-import org.gwtproject.aria.client.TooltipRole;
-import org.gwtproject.aria.client.TreeRole;
-import org.gwtproject.aria.client.TreegridRole;
-import org.gwtproject.aria.client.TreeitemRole;
-import org.gwtproject.aria.client.WidgetRole;
 import elemental2.dom.HTMLElement;
-
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 /**
  * <p>A factory providing each concrete role in the ARIA specification. Each role implements
@@ -66,8 +38,8 @@ import java.util.Map;
  * </pre>
  *
  * <p>Most ARIA properties have a prefix of "aria-" and only affect screen readers, but there is
- * one exception: the "tabindex" property is the same one used for tab order in regular widgets.
- * For example, to set tabindex to 0 for the button:
+ * one exception: the "tabindex" property is the same one used for tab order in regular widgets. For
+ * example, to set tabindex to 0 for the button:
  * </p>
  *
  * <pre>
@@ -83,9 +55,9 @@ import java.util.Map;
  *
  * <p>ARIA distinguishes between properties (which change rarely and could be set in static HTML)
  * and states (which need to be updated in response to user input). This distinction can get a bit
- * blurry when a GWT app updates the DOM dynamically. Generally you should update ARIA
- * attributes at the same time that you change the CSS styles on a DOM node, so that a screen
- * reader will see the same state as someone viewing the page visually.</p>
+ * blurry when a GWT app updates the DOM dynamically. Generally you should update ARIA attributes at
+ * the same time that you change the CSS styles on a DOM node, so that a screen reader will see the
+ * same state as someone viewing the page visually.</p>
  *
  * <p>The role interfaces form a hierarchy whose root is the {@link Role} interface, which contains
  * generic methods that aren't specific to a role. Some abstract roles include:</p>
@@ -101,43 +73,44 @@ import java.util.Map;
  * @see <a href="http://www.w3.org/TR/wai-aria/roles">the W3C specification</a>
  */
 public final class Roles {
+
   private static final AlertdialogRole ALERTDIALOG = new AlertdialogRoleImpl("alertdialog");
   private static final AlertRole ALERT = new AlertRoleImpl("alert");
   private static final ApplicationRole APPLICATION = new ApplicationRoleImpl("application");
   private static final ArticleRole ARTICLE = new ArticleRoleImpl("article");
-  private static final BannerRole BANNER = new org.gwtproject.aria.client.BannerRoleImpl("banner");
-  private static final ButtonRole BUTTON = new org.gwtproject.aria.client.ButtonRoleImpl("button");
-  private static final CheckboxRole CHECKBOX = new org.gwtproject.aria.client.CheckboxRoleImpl("checkbox");
+  private static final BannerRole BANNER = new BannerRoleImpl("banner");
+  private static final ButtonRole BUTTON = new ButtonRoleImpl("button");
+  private static final CheckboxRole CHECKBOX = new CheckboxRoleImpl("checkbox");
   private static final ColumnheaderRole COLUMNHEADER = new ColumnheaderRoleImpl("columnheader");
-  private static final ComboboxRole COMBOBOX = new org.gwtproject.aria.client.ComboboxRoleImpl("combobox");
-  private static final ComplementaryRole COMPLEMENTARY = new org.gwtproject.aria.client.ComplementaryRoleImpl("complementary");
+  private static final ComboboxRole COMBOBOX = new ComboboxRoleImpl("combobox");
+  private static final ComplementaryRole COMPLEMENTARY = new ComplementaryRoleImpl("complementary");
   private static final ContentinfoRole CONTENTINFO = new ContentinfoRoleImpl("contentinfo");
-  private static final DefinitionRole DEFINITION = new org.gwtproject.aria.client.DefinitionRoleImpl("definition");
-  private static final DialogRole DIALOG = new org.gwtproject.aria.client.DialogRoleImpl("dialog");
-  private static final DirectoryRole DIRECTORY = new org.gwtproject.aria.client.DirectoryRoleImpl("directory");
-  private static final DocumentRole DOCUMENT = new org.gwtproject.aria.client.DocumentRoleImpl("document");
+  private static final DefinitionRole DEFINITION = new DefinitionRoleImpl("definition");
+  private static final DialogRole DIALOG = new DialogRoleImpl("dialog");
+  private static final DirectoryRole DIRECTORY = new DirectoryRoleImpl("directory");
+  private static final DocumentRole DOCUMENT = new DocumentRoleImpl("document");
   private static final FormRole FORM = new FormRoleImpl("form");
   private static final GridcellRole GRIDCELL = new GridcellRoleImpl("gridcell");
-  private static final GridRole GRID = new org.gwtproject.aria.client.GridRoleImpl("grid");
-  private static final GroupRole GROUP = new org.gwtproject.aria.client.GroupRoleImpl("group");
+  private static final GridRole GRID = new GridRoleImpl("grid");
+  private static final GroupRole GROUP = new GroupRoleImpl("group");
   private static final HeadingRole HEADING = new HeadingRoleImpl("heading");
   private static final ImgRole IMG = new ImgRoleImpl("img");
   private static final LinkRole LINK = new LinkRoleImpl("link");
-  private static final ListboxRole LISTBOX = new org.gwtproject.aria.client.ListboxRoleImpl("listbox");
-  private static final ListitemRole LISTITEM = new org.gwtproject.aria.client.ListitemRoleImpl("listitem");
-  private static final ListRole LIST = new org.gwtproject.aria.client.ListRoleImpl("list");
-  private static final LogRole LOG = new org.gwtproject.aria.client.LogRoleImpl("log");
-  private static final MainRole MAIN = new org.gwtproject.aria.client.MainRoleImpl("main");
-  private static final MarqueeRole MARQUEE = new org.gwtproject.aria.client.MarqueeRoleImpl("marquee");
+  private static final ListboxRole LISTBOX = new ListboxRoleImpl("listbox");
+  private static final ListitemRole LISTITEM = new ListitemRoleImpl("listitem");
+  private static final ListRole LIST = new ListRoleImpl("list");
+  private static final LogRole LOG = new LogRoleImpl("log");
+  private static final MainRole MAIN = new MainRoleImpl("main");
+  private static final MarqueeRole MARQUEE = new MarqueeRoleImpl("marquee");
   private static final MathRole MATH = new MathRoleImpl("math");
-  private static final MenubarRole MENUBAR = new org.gwtproject.aria.client.MenubarRoleImpl("menubar");
+  private static final MenubarRole MENUBAR = new MenubarRoleImpl("menubar");
   private static final MenuitemcheckboxRole MENUITEMCHECKBOX = new MenuitemcheckboxRoleImpl("menuitemcheckbox");
   private static final MenuitemradioRole MENUITEMRADIO = new MenuitemradioRoleImpl("menuitemradio");
-  private static final MenuitemRole MENUITEM = new org.gwtproject.aria.client.MenuitemRoleImpl("menuitem");
+  private static final MenuitemRole MENUITEM = new MenuitemRoleImpl("menuitem");
   private static final MenuRole MENU = new MenuRoleImpl("menu");
-  private static final NavigationRole NAVIGATION = new org.gwtproject.aria.client.NavigationRoleImpl("navigation");
+  private static final NavigationRole NAVIGATION = new NavigationRoleImpl("navigation");
   private static final NoteRole NOTE = new NoteRoleImpl("note");
-  private static final OptionRole OPTION = new org.gwtproject.aria.client.OptionRoleImpl("option");
+  private static final OptionRole OPTION = new OptionRoleImpl("option");
   private static final PresentationRole PRESENTATION = new PresentationRoleImpl("presentation");
   private static final ProgressbarRole PROGRESSBAR = new ProgressbarRoleImpl("progressbar");
   private static final RadiogroupRole RADIOGROUP = new RadiogroupRoleImpl("radiogroup");
@@ -145,88 +118,149 @@ public final class Roles {
   private static final RegionRole REGION = new RegionRoleImpl("region");
   private static final RowgroupRole ROWGROUP = new RowgroupRoleImpl("rowgroup");
   private static final RowheaderRole ROWHEADER = new RowheaderRoleImpl("rowheader");
-  private static final RowRole ROW = new org.gwtproject.aria.client.RowRoleImpl("row");
+  private static final RowRole ROW = new RowRoleImpl("row");
   private static final ScrollbarRole SCROLLBAR = new ScrollbarRoleImpl("scrollbar");
   private static final SearchRole SEARCH = new SearchRoleImpl("search");
   private static final SeparatorRole SEPARATOR = new SeparatorRoleImpl("separator");
-  private static final SliderRole SLIDER = new org.gwtproject.aria.client.SliderRoleImpl("slider");
-  private static final SpinbuttonRole SPINBUTTON = new org.gwtproject.aria.client.SpinbuttonRoleImpl("spinbutton");
+  private static final SliderRole SLIDER = new SliderRoleImpl("slider");
+  private static final SpinbuttonRole SPINBUTTON = new SpinbuttonRoleImpl("spinbutton");
   private static final StatusRole STATUS = new StatusRoleImpl("status");
   private static final TablistRole TABLIST = new TablistRoleImpl("tablist");
   private static final TabpanelRole TABPANEL = new TabpanelRoleImpl("tabpanel");
-  private static final TabRole TAB = new org.gwtproject.aria.client.TabRoleImpl("tab");
-  private static final TextboxRole TEXTBOX = new org.gwtproject.aria.client.TextboxRoleImpl("textbox");
-  private static final TimerRole TIMER = new org.gwtproject.aria.client.TimerRoleImpl("timer");
+  private static final TabRole TAB = new TabRoleImpl("tab");
+  private static final TextboxRole TEXTBOX = new TextboxRoleImpl("textbox");
+  private static final TimerRole TIMER = new TimerRoleImpl("timer");
   private static final ToolbarRole TOOLBAR = new ToolbarRoleImpl("toolbar");
-  private static final TooltipRole TOOLTIP = new org.gwtproject.aria.client.TooltipRoleImpl("tooltip");
+  private static final TooltipRole TOOLTIP = new TooltipRoleImpl("tooltip");
   private static final TreegridRole TREEGRID = new TreegridRoleImpl("treegrid");
   private static final TreeitemRole TREEITEM = new TreeitemRoleImpl("treeitem");
-  private static final TreeRole TREE = new org.gwtproject.aria.client.TreeRoleImpl("tree");
+  private static final TreeRole TREE = new TreeRoleImpl("tree");
 
   private static final Map<String, Role> ROLES_MAP = new HashMap<String, Role>();
 
   static {
-    ROLES_MAP.put("region", REGION);
-    ROLES_MAP.put("alert", ALERT);
-    ROLES_MAP.put("dialog", DIALOG);
-    ROLES_MAP.put("alertdialog", ALERTDIALOG);
-    ROLES_MAP.put("application", APPLICATION);
-    ROLES_MAP.put("document", DOCUMENT);
-    ROLES_MAP.put("article", ARTICLE);
-    ROLES_MAP.put("banner", BANNER);
-    ROLES_MAP.put("button", BUTTON);
-    ROLES_MAP.put("checkbox", CHECKBOX);
-    ROLES_MAP.put("gridcell", GRIDCELL);
-    ROLES_MAP.put("columnheader", COLUMNHEADER);
-    ROLES_MAP.put("group", GROUP);
-    ROLES_MAP.put("combobox", COMBOBOX);
-    ROLES_MAP.put("complementary", COMPLEMENTARY);
-    ROLES_MAP.put("contentinfo", CONTENTINFO);
-    ROLES_MAP.put("definition", DEFINITION);
-    ROLES_MAP.put("list", LIST);
-    ROLES_MAP.put("directory", DIRECTORY);
-    ROLES_MAP.put("form", FORM);
-    ROLES_MAP.put("grid", GRID);
-    ROLES_MAP.put("heading", HEADING);
-    ROLES_MAP.put("img", IMG);
-    ROLES_MAP.put("link", LINK);
-    ROLES_MAP.put("listbox", LISTBOX);
-    ROLES_MAP.put("listitem", LISTITEM);
-    ROLES_MAP.put("log", LOG);
-    ROLES_MAP.put("main", MAIN);
-    ROLES_MAP.put("marquee", MARQUEE);
-    ROLES_MAP.put("math", MATH);
-    ROLES_MAP.put("menu", MENU);
-    ROLES_MAP.put("menubar", MENUBAR);
-    ROLES_MAP.put("menuitem", MENUITEM);
-    ROLES_MAP.put("menuitemcheckbox", MENUITEMCHECKBOX);
-    ROLES_MAP.put("option", OPTION);
-    ROLES_MAP.put("radio", RADIO);
-    ROLES_MAP.put("menuitemradio", MENUITEMRADIO);
-    ROLES_MAP.put("navigation", NAVIGATION);
-    ROLES_MAP.put("note", NOTE);
-    ROLES_MAP.put("presentation", PRESENTATION);
-    ROLES_MAP.put("progressbar", PROGRESSBAR);
-    ROLES_MAP.put("radiogroup", RADIOGROUP);
-    ROLES_MAP.put("row", ROW);
-    ROLES_MAP.put("rowgroup", ROWGROUP);
-    ROLES_MAP.put("rowheader", ROWHEADER);
-    ROLES_MAP.put("search", SEARCH);
-    ROLES_MAP.put("separator", SEPARATOR);
-    ROLES_MAP.put("scrollbar", SCROLLBAR);
-    ROLES_MAP.put("slider", SLIDER);
-    ROLES_MAP.put("spinbutton", SPINBUTTON);
-    ROLES_MAP.put("status", STATUS);
-    ROLES_MAP.put("tab", TAB);
-    ROLES_MAP.put("tablist", TABLIST);
-    ROLES_MAP.put("tabpanel", TABPANEL);
-    ROLES_MAP.put("textbox", TEXTBOX);
-    ROLES_MAP.put("timer", TIMER);
-    ROLES_MAP.put("toolbar", TOOLBAR);
-    ROLES_MAP.put("tooltip", TOOLTIP);
-    ROLES_MAP.put("tree", TREE);
-    ROLES_MAP.put("treegrid", TREEGRID);
-    ROLES_MAP.put("treeitem", TREEITEM);
+    ROLES_MAP.put("region",
+        REGION);
+    ROLES_MAP.put("alert",
+        ALERT);
+    ROLES_MAP.put("dialog",
+        DIALOG);
+    ROLES_MAP.put("alertdialog",
+        ALERTDIALOG);
+    ROLES_MAP.put("application",
+        APPLICATION);
+    ROLES_MAP.put("document",
+        DOCUMENT);
+    ROLES_MAP.put("article",
+        ARTICLE);
+    ROLES_MAP.put("banner",
+        BANNER);
+    ROLES_MAP.put("button",
+        BUTTON);
+    ROLES_MAP.put("checkbox",
+        CHECKBOX);
+    ROLES_MAP.put("gridcell",
+        GRIDCELL);
+    ROLES_MAP.put("columnheader",
+        COLUMNHEADER);
+    ROLES_MAP.put("group",
+        GROUP);
+    ROLES_MAP.put("combobox",
+        COMBOBOX);
+    ROLES_MAP.put("complementary",
+        COMPLEMENTARY);
+    ROLES_MAP.put("contentinfo",
+        CONTENTINFO);
+    ROLES_MAP.put("definition",
+        DEFINITION);
+    ROLES_MAP.put("list",
+        LIST);
+    ROLES_MAP.put("directory",
+        DIRECTORY);
+    ROLES_MAP.put("form",
+        FORM);
+    ROLES_MAP.put("grid",
+        GRID);
+    ROLES_MAP.put("heading",
+        HEADING);
+    ROLES_MAP.put("img",
+        IMG);
+    ROLES_MAP.put("link",
+        LINK);
+    ROLES_MAP.put("listbox",
+        LISTBOX);
+    ROLES_MAP.put("listitem",
+        LISTITEM);
+    ROLES_MAP.put("log",
+        LOG);
+    ROLES_MAP.put("main",
+        MAIN);
+    ROLES_MAP.put("marquee",
+        MARQUEE);
+    ROLES_MAP.put("math",
+        MATH);
+    ROLES_MAP.put("menu",
+        MENU);
+    ROLES_MAP.put("menubar",
+        MENUBAR);
+    ROLES_MAP.put("menuitem",
+        MENUITEM);
+    ROLES_MAP.put("menuitemcheckbox",
+        MENUITEMCHECKBOX);
+    ROLES_MAP.put("option",
+        OPTION);
+    ROLES_MAP.put("radio",
+        RADIO);
+    ROLES_MAP.put("menuitemradio",
+        MENUITEMRADIO);
+    ROLES_MAP.put("navigation",
+        NAVIGATION);
+    ROLES_MAP.put("note",
+        NOTE);
+    ROLES_MAP.put("presentation",
+        PRESENTATION);
+    ROLES_MAP.put("progressbar",
+        PROGRESSBAR);
+    ROLES_MAP.put("radiogroup",
+        RADIOGROUP);
+    ROLES_MAP.put("row",
+        ROW);
+    ROLES_MAP.put("rowgroup",
+        ROWGROUP);
+    ROLES_MAP.put("rowheader",
+        ROWHEADER);
+    ROLES_MAP.put("search",
+        SEARCH);
+    ROLES_MAP.put("separator",
+        SEPARATOR);
+    ROLES_MAP.put("scrollbar",
+        SCROLLBAR);
+    ROLES_MAP.put("slider",
+        SLIDER);
+    ROLES_MAP.put("spinbutton",
+        SPINBUTTON);
+    ROLES_MAP.put("status",
+        STATUS);
+    ROLES_MAP.put("tab",
+        TAB);
+    ROLES_MAP.put("tablist",
+        TABLIST);
+    ROLES_MAP.put("tabpanel",
+        TABPANEL);
+    ROLES_MAP.put("textbox",
+        TEXTBOX);
+    ROLES_MAP.put("timer",
+        TIMER);
+    ROLES_MAP.put("toolbar",
+        TOOLBAR);
+    ROLES_MAP.put("tooltip",
+        TOOLTIP);
+    ROLES_MAP.put("tree",
+        TREE);
+    ROLES_MAP.put("treegrid",
+        TREEGRID);
+    ROLES_MAP.put("treeitem",
+        TREEITEM);
   }
 
   public static AlertdialogRole getAlertdialogRole() {
@@ -474,20 +508,15 @@ public final class Roles {
   }
 
   /**
-   * Returns the WAI-ARIA role for the {@code element}. If no 'role' attribute is set to the
-   * {@code element} or if the set role tokens do not include a WAI-ARIA role,
-   * null is returned. Otherwise, if a WAI_ARIA role is among the role tokens in the 'role'
-   * attribute token list, a {@link Role} corresponding the WAI-ARIA role is returned.
+   * Returns the WAI-ARIA role for the {@code element}. If no 'role' attribute is set to the {@code
+   * element} or if the set role tokens do not include a WAI-ARIA role, null is returned. Otherwise,
+   * if a WAI_ARIA role is among the role tokens in the 'role' attribute token list, a {@link Role}
+   * corresponding the WAI-ARIA role is returned.
    */
   public static Role roleOf(HTMLElement element) {
     assert element != null : "Element cannot be null.";
-    String roleAttributeValue = element.getAttribute("role");
-    for (String testRoleName : roleAttributeValue.split("\\s+")) {
-      Role role = ROLES_MAP.get(testRoleName);
-      if (role != null) {
-        return role;
-      }
-    }
-    return null;
+    String roleAttributeValue = element.hasAttribute("role") ? element.getAttribute("role") : "";
+    return Arrays.stream(roleAttributeValue.split("\\s+")).map(ROLES_MAP::get)
+        .filter(Objects::nonNull).findFirst().orElse(null);
   }
 }

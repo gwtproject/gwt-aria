@@ -17,25 +17,27 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.AriaAttributeType;
-
 /**
  * Property enum for 'aria-relevant' values.
  */
-public enum RelevantValue implements AriaAttributeType {
-   ADDITIONS, REMOVALS, TEXT, ALL;
+public enum RelevantValue
+    implements AriaAttributeType {
+  ADDITIONS,
+  REMOVALS,
+  TEXT,
+  ALL;
 
   @Override
   public String getAriaValue() {
     switch (this) {
-        case ADDITIONS:
-          return "additions";
-        case REMOVALS:
-          return "removals";
-        case TEXT:
-          return "text";
-        case ALL:
-          return "all";
+      case ADDITIONS:
+        return "additions";
+      case REMOVALS:
+        return "removals";
+      case TEXT:
+        return "text";
+      case ALL:
+        return "all";
     }
     return null; // not reachable
   }

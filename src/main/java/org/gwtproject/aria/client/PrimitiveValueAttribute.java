@@ -17,18 +17,20 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.Attribute;
-
 /**
  * Primitive type attribute. The primitive types are: boolean, string, int, number.
  */
-class PrimitiveValueAttribute<T> extends Attribute<T> {
+class PrimitiveValueAttribute<T>
+    extends Attribute<T> {
+
   public PrimitiveValueAttribute(String name) {
     super(name);
   }
 
-  public PrimitiveValueAttribute(String name, String defaultValue) {
-    super(name, defaultValue);
+  public PrimitiveValueAttribute(String name,
+      String defaultValue) {
+    super(name,
+        defaultValue);
   }
 
   @Override

@@ -17,16 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.GridcellRole;
-import org.gwtproject.aria.client.Property;
-import org.gwtproject.aria.client.State;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link GridcellRole}.</p>
  */
-class GridcellRoleImpl extends org.gwtproject.aria.client.RoleImpl implements GridcellRole {
+class GridcellRoleImpl
+    extends RoleImpl
+    implements GridcellRole {
+
   GridcellRoleImpl(String roleName) {
     super(roleName);
   }
@@ -34,6 +33,18 @@ class GridcellRoleImpl extends org.gwtproject.aria.client.RoleImpl implements Gr
   @Override
   public String getAriaExpandedState(HTMLElement element) {
     return State.EXPANDED.get(element);
+  }
+
+  @Override
+  public void removeAriaExpandedState(HTMLElement element) {
+    State.EXPANDED.remove(element);
+  }
+
+  @Override
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 
   @Override
@@ -52,11 +63,6 @@ class GridcellRoleImpl extends org.gwtproject.aria.client.RoleImpl implements Gr
   }
 
   @Override
-  public void removeAriaExpandedState(HTMLElement element) {
-    State.EXPANDED.remove(element);
-  }
-
-  @Override
   public void removeAriaReadonlyProperty(HTMLElement element) {
     Property.READONLY.remove(element);
   }
@@ -72,22 +78,23 @@ class GridcellRoleImpl extends org.gwtproject.aria.client.RoleImpl implements Gr
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaReadonlyProperty(HTMLElement element,
+      boolean value) {
+    Property.READONLY.set(element,
+        value);
   }
 
   @Override
-  public void setAriaReadonlyProperty(HTMLElement element, boolean value) {
-    Property.READONLY.set(element, value);
+  public void setAriaRequiredProperty(HTMLElement element,
+      boolean value) {
+    Property.REQUIRED.set(element,
+        value);
   }
 
   @Override
-  public void setAriaRequiredProperty(HTMLElement element, boolean value) {
-    Property.REQUIRED.set(element, value);
-  }
-
-  @Override
-  public void setAriaSelectedState(HTMLElement element, SelectedValue value) {
-    State.SELECTED.set(element, value);
+  public void setAriaSelectedState(HTMLElement element,
+      SelectedValue value) {
+    State.SELECTED.set(element,
+        value);
   }
 }

@@ -17,29 +17,33 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.AriaAttributeType;
-
 /**
  * Property enum for 'aria-dropeffect' values.
  */
-public enum DropeffectValue implements AriaAttributeType {
-   COPY, MOVE, LINK, EXECUTE, POPUP, NONE;
+public enum DropeffectValue
+    implements AriaAttributeType {
+  COPY,
+  MOVE,
+  LINK,
+  EXECUTE,
+  POPUP,
+  NONE;
 
   @Override
   public String getAriaValue() {
     switch (this) {
-        case COPY:
-          return "copy";
-        case MOVE:
-          return "move";
-        case LINK:
-          return "link";
-        case EXECUTE:
-          return "execute";
-        case POPUP:
-          return "popup";
-        case NONE:
-          return "none";
+      case COPY:
+        return "copy";
+      case MOVE:
+        return "move";
+      case LINK:
+        return "link";
+      case EXECUTE:
+        return "execute";
+      case POPUP:
+        return "popup";
+      case NONE:
+        return "none";
     }
     return null; // not reachable
   }

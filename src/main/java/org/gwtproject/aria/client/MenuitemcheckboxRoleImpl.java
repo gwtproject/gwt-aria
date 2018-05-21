@@ -17,15 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.CheckedValue;
-import org.gwtproject.aria.client.MenuitemcheckboxRole;
-import org.gwtproject.aria.client.State;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link MenuitemcheckboxRole}.</p>
  */
-class MenuitemcheckboxRoleImpl extends org.gwtproject.aria.client.RoleImpl implements MenuitemcheckboxRole {
+class MenuitemcheckboxRoleImpl
+    extends RoleImpl
+    implements MenuitemcheckboxRole {
+
   MenuitemcheckboxRoleImpl(String roleName) {
     super(roleName);
   }
@@ -41,7 +41,9 @@ class MenuitemcheckboxRoleImpl extends org.gwtproject.aria.client.RoleImpl imple
   }
 
   @Override
-  public void setAriaCheckedState(HTMLElement element, CheckedValue value) {
-    State.CHECKED.set(element, value);
+  public void setAriaCheckedState(HTMLElement element,
+      CheckedValue value) {
+    State.CHECKED.set(element,
+        value);
   }
 }

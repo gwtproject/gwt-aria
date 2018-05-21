@@ -22,7 +22,10 @@ import elemental2.dom.HTMLElement;
 /**
  * <p>Implements {@link GroupRole}.</p>
  */
-class GroupRoleImpl extends RoleImpl implements GroupRole {
+class GroupRoleImpl
+    extends RoleImpl
+    implements GroupRole {
+
   GroupRoleImpl(String roleName) {
     super(roleName);
   }
@@ -33,13 +36,20 @@ class GroupRoleImpl extends RoleImpl implements GroupRole {
   }
 
   @Override
-  public String getAriaExpandedState(HTMLElement element) {
-    return State.EXPANDED.get(element);
+  public void removeAriaActivedescendantProperty(HTMLElement element) {
+    Property.ACTIVEDESCENDANT.remove(element);
   }
 
   @Override
-  public void removeAriaActivedescendantProperty(HTMLElement element) {
-    Property.ACTIVEDESCENDANT.remove(element);
+  public void setAriaActivedescendantProperty(HTMLElement element,
+      Id value) {
+    Property.ACTIVEDESCENDANT.set(element,
+        value);
+  }
+
+  @Override
+  public String getAriaExpandedState(HTMLElement element) {
+    return State.EXPANDED.get(element);
   }
 
   @Override
@@ -48,12 +58,9 @@ class GroupRoleImpl extends RoleImpl implements GroupRole {
   }
 
   @Override
-  public void setAriaActivedescendantProperty(HTMLElement element, Id value) {
-    Property.ACTIVEDESCENDANT.set(element, value);
-  }
-
-  @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 }

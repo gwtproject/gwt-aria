@@ -17,10 +17,6 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.GridcellRole;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
-import org.gwtproject.aria.client.WidgetRole;
 import elemental2.dom.HTMLElement;
 
 /**
@@ -30,12 +26,15 @@ import elemental2.dom.HTMLElement;
  * @see Role
  * @see Roles
  */
-public interface ColumnheaderRole extends GridcellRole, SectionheadRole, WidgetRole {
+public interface ColumnheaderRole
+    extends GridcellRole,
+    SectionheadRole,
+    WidgetRole {
+
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-sort">
-   * aria-sort</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-sort</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaSortProperty(HTMLElement element);
 
@@ -51,5 +50,6 @@ public interface ColumnheaderRole extends GridcellRole, SectionheadRole, WidgetR
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-sort">
    * aria-sort</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaSortProperty(HTMLElement element, SortValue value);
+  void setAriaSortProperty(HTMLElement element,
+      SortValue value);
 }

@@ -17,17 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.Id;
-import org.gwtproject.aria.client.Property;
-import org.gwtproject.aria.client.State;
-import org.gwtproject.aria.client.ToolbarRole;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link ToolbarRole}.</p>
  */
-class ToolbarRoleImpl extends RoleImpl implements ToolbarRole {
+class ToolbarRoleImpl
+    extends RoleImpl
+    implements ToolbarRole {
+
   ToolbarRoleImpl(String roleName) {
     super(roleName);
   }
@@ -38,13 +36,20 @@ class ToolbarRoleImpl extends RoleImpl implements ToolbarRole {
   }
 
   @Override
-  public String getAriaExpandedState(HTMLElement element) {
-    return State.EXPANDED.get(element);
+  public void removeAriaActivedescendantProperty(HTMLElement element) {
+    Property.ACTIVEDESCENDANT.remove(element);
   }
 
   @Override
-  public void removeAriaActivedescendantProperty(HTMLElement element) {
-    Property.ACTIVEDESCENDANT.remove(element);
+  public void setAriaActivedescendantProperty(HTMLElement element,
+      Id value) {
+    Property.ACTIVEDESCENDANT.set(element,
+        value);
+  }
+
+  @Override
+  public String getAriaExpandedState(HTMLElement element) {
+    return State.EXPANDED.get(element);
   }
 
   @Override
@@ -53,12 +58,9 @@ class ToolbarRoleImpl extends RoleImpl implements ToolbarRole {
   }
 
   @Override
-  public void setAriaActivedescendantProperty(HTMLElement element, Id value) {
-    Property.ACTIVEDESCENDANT.set(element, value);
-  }
-
-  @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 }

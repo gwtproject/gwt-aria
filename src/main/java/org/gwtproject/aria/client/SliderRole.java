@@ -17,26 +17,23 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.InputRole;
-import org.gwtproject.aria.client.OrientationValue;
-import org.gwtproject.aria.client.RangeRole;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
 import elemental2.dom.HTMLElement;
 
 /**
- * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#slider">slider</a>
- * role in the ARIA specification.
+ * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#slider">slider</a> role
+ * in the ARIA specification.
  *
  * @see Role
  * @see Roles
  */
-public interface SliderRole extends InputRole, RangeRole {
+public interface SliderRole
+    extends InputRole,
+    RangeRole {
+
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-orientation">
-   * aria-orientation</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-orientation</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaOrientationProperty(HTMLElement element);
 
@@ -52,5 +49,6 @@ public interface SliderRole extends InputRole, RangeRole {
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-orientation">
    * aria-orientation</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaOrientationProperty(HTMLElement element, OrientationValue value);
+  void setAriaOrientationProperty(HTMLElement element,
+      OrientationValue value);
 }

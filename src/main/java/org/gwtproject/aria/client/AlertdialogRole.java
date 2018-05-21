@@ -17,11 +17,6 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.AlertRole;
-import org.gwtproject.aria.client.DialogRole;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
-
 /**
  * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#alertdialog">alertdialog</a>
  * role in the ARIA specification.
@@ -29,5 +24,8 @@ import org.gwtproject.aria.client.Roles;
  * @see Role
  * @see Roles
  */
-public interface AlertdialogRole extends AlertRole, DialogRole {
+public interface AlertdialogRole
+    extends AlertRole,
+    DialogRole {
+
 }

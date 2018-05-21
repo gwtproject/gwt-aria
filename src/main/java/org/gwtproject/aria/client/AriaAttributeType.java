@@ -21,5 +21,6 @@ package org.gwtproject.aria.client;
  * Interface that is and needs to be implemented by ALL non primitive attribute types
  */
 public interface AriaAttributeType {
+
   String getAriaValue();
 }

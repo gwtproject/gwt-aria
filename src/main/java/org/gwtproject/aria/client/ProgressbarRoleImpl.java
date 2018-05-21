@@ -17,14 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ProgressbarRole;
-import org.gwtproject.aria.client.Property;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link ProgressbarRole}.</p>
  */
-class ProgressbarRoleImpl extends org.gwtproject.aria.client.RoleImpl implements ProgressbarRole {
+class ProgressbarRoleImpl
+    extends RoleImpl
+    implements ProgressbarRole {
+
   ProgressbarRoleImpl(String roleName) {
     super(roleName);
   }
@@ -70,22 +71,30 @@ class ProgressbarRoleImpl extends org.gwtproject.aria.client.RoleImpl implements
   }
 
   @Override
-  public void setAriaValuemaxProperty(HTMLElement element, Number value) {
-    Property.VALUEMAX.set(element, value);
+  public void setAriaValuemaxProperty(HTMLElement element,
+      Number value) {
+    Property.VALUEMAX.set(element,
+        value);
   }
 
   @Override
-  public void setAriaValueminProperty(HTMLElement element, Number value) {
-    Property.VALUEMIN.set(element, value);
+  public void setAriaValueminProperty(HTMLElement element,
+      Number value) {
+    Property.VALUEMIN.set(element,
+        value);
   }
 
   @Override
-  public void setAriaValuenowProperty(HTMLElement element, Number value) {
-    Property.VALUENOW.set(element, value);
+  public void setAriaValuenowProperty(HTMLElement element,
+      Number value) {
+    Property.VALUENOW.set(element,
+        value);
   }
 
   @Override
-  public void setAriaValuetextProperty(HTMLElement element, String value) {
-    Property.VALUETEXT.set(element, value);
+  public void setAriaValuetextProperty(HTMLElement element,
+      String value) {
+    Property.VALUETEXT.set(element,
+        value);
   }
 }

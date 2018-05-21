@@ -17,15 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.State;
-import org.gwtproject.aria.client.TooltipRole;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link TooltipRole}.</p>
  */
-class TooltipRoleImpl extends RoleImpl implements TooltipRole {
+class TooltipRoleImpl
+    extends RoleImpl
+    implements TooltipRole {
+
   TooltipRoleImpl(String roleName) {
     super(roleName);
   }
@@ -41,7 +41,9 @@ class TooltipRoleImpl extends RoleImpl implements TooltipRole {
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 }

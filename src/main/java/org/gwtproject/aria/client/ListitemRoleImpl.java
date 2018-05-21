@@ -22,7 +22,10 @@ import elemental2.dom.HTMLElement;
 /**
  * <p>Implements {@link ListitemRole}.</p>
  */
-class ListitemRoleImpl extends RoleImpl implements ListitemRole {
+class ListitemRoleImpl
+    extends RoleImpl
+    implements ListitemRole {
+
   ListitemRoleImpl(String roleName) {
     super(roleName);
   }
@@ -30,6 +33,18 @@ class ListitemRoleImpl extends RoleImpl implements ListitemRole {
   @Override
   public String getAriaExpandedState(HTMLElement element) {
     return State.EXPANDED.get(element);
+  }
+
+  @Override
+  public void removeAriaExpandedState(HTMLElement element) {
+    State.EXPANDED.remove(element);
+  }
+
+  @Override
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 
   @Override
@@ -48,11 +63,6 @@ class ListitemRoleImpl extends RoleImpl implements ListitemRole {
   }
 
   @Override
-  public void removeAriaExpandedState(HTMLElement element) {
-    State.EXPANDED.remove(element);
-  }
-
-  @Override
   public void removeAriaLevelProperty(HTMLElement element) {
     Property.LEVEL.remove(element);
   }
@@ -68,22 +78,23 @@ class ListitemRoleImpl extends RoleImpl implements ListitemRole {
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaLevelProperty(HTMLElement element,
+      int value) {
+    Property.LEVEL.set(element,
+        value);
   }
 
   @Override
-  public void setAriaLevelProperty(HTMLElement element, int value) {
-    Property.LEVEL.set(element, value);
+  public void setAriaPosinsetProperty(HTMLElement element,
+      int value) {
+    Property.POSINSET.set(element,
+        value);
   }
 
   @Override
-  public void setAriaPosinsetProperty(HTMLElement element, int value) {
-    Property.POSINSET.set(element, value);
-  }
-
-  @Override
-  public void setAriaSetsizeProperty(HTMLElement element, int value) {
-    Property.SETSIZE.set(element, value);
+  public void setAriaSetsizeProperty(HTMLElement element,
+      int value) {
+    Property.SETSIZE.set(element,
+        value);
   }
 }

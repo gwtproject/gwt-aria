@@ -17,54 +17,51 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.Role;
 import elemental2.dom.HTMLElement;
 
 /**
- * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#textbox">textbox</a>
- * role in the ARIA specification.
+ * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#textbox">textbox</a> role
+ * in the ARIA specification.
  *
  * @see Role
  * @see Roles
  */
-public interface TextboxRole extends InputRole {
+public interface TextboxRole
+    extends InputRole {
+
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-activedescendant">
-   * aria-activedescendant</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-activedescendant</a> attribute for the {@code element} or "" if no such attribute is
+   * present.
    */
   String getAriaActivedescendantProperty(HTMLElement element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-autocomplete">
-   * aria-autocomplete</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-autocomplete</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaAutocompleteProperty(HTMLElement element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-multiline">
-   * aria-multiline</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-multiline</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaMultilineProperty(HTMLElement element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-readonly">
-   * aria-readonly</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-readonly</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaReadonlyProperty(HTMLElement element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">
-   * aria-required</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-required</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaRequiredProperty(HTMLElement element);
 
@@ -108,33 +105,38 @@ public interface TextboxRole extends InputRole {
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-activedescendant">
    * aria-activedescendant</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaActivedescendantProperty(HTMLElement element, Id value);
+  void setAriaActivedescendantProperty(HTMLElement element,
+      Id value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-autocomplete">
    * aria-autocomplete</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaAutocompleteProperty(HTMLElement element, AutocompleteValue value);
+  void setAriaAutocompleteProperty(HTMLElement element,
+      AutocompleteValue value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-multiline">
    * aria-multiline</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaMultilineProperty(HTMLElement element, boolean value);
+  void setAriaMultilineProperty(HTMLElement element,
+      boolean value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-readonly">
    * aria-readonly</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaReadonlyProperty(HTMLElement element, boolean value);
+  void setAriaReadonlyProperty(HTMLElement element,
+      boolean value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">
    * aria-required</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaRequiredProperty(HTMLElement element, boolean value);
+  void setAriaRequiredProperty(HTMLElement element,
+      boolean value);
 }

@@ -17,10 +17,6 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.CheckedValue;
-import org.gwtproject.aria.client.InputRole;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
 import elemental2.dom.HTMLElement;
 
 /**
@@ -30,12 +26,13 @@ import elemental2.dom.HTMLElement;
  * @see Role
  * @see Roles
  */
-public interface CheckboxRole extends InputRole {
+public interface CheckboxRole
+    extends InputRole {
+
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-checked">
-   * aria-checked</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-checked</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaCheckedState(HTMLElement element);
 
@@ -51,5 +48,6 @@ public interface CheckboxRole extends InputRole {
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-checked">
    * aria-checked</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaCheckedState(HTMLElement element, CheckedValue value);
+  void setAriaCheckedState(HTMLElement element,
+      CheckedValue value);
 }

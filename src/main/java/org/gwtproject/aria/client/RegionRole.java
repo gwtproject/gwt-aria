@@ -17,16 +17,14 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
-import org.gwtproject.aria.client.SectionRole;
-
 /**
- * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#region">region</a>
- * role in the ARIA specification.
+ * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#region">region</a> role
+ * in the ARIA specification.
  *
  * @see Role
  * @see Roles
  */
-public interface RegionRole extends SectionRole {
+public interface RegionRole
+    extends SectionRole {
+
 }

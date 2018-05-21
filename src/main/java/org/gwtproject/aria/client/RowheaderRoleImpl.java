@@ -17,18 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.Property;
-import org.gwtproject.aria.client.RowheaderRole;
-import org.gwtproject.aria.client.SelectedValue;
-import org.gwtproject.aria.client.SortValue;
-import org.gwtproject.aria.client.State;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link RowheaderRole}.</p>
  */
-class RowheaderRoleImpl extends org.gwtproject.aria.client.RoleImpl implements RowheaderRole {
+class RowheaderRoleImpl
+    extends RoleImpl
+    implements RowheaderRole {
+
   RowheaderRoleImpl(String roleName) {
     super(roleName);
   }
@@ -36,6 +33,18 @@ class RowheaderRoleImpl extends org.gwtproject.aria.client.RoleImpl implements R
   @Override
   public String getAriaExpandedState(HTMLElement element) {
     return State.EXPANDED.get(element);
+  }
+
+  @Override
+  public void removeAriaExpandedState(HTMLElement element) {
+    State.EXPANDED.remove(element);
+  }
+
+  @Override
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 
   @Override
@@ -54,16 +63,6 @@ class RowheaderRoleImpl extends org.gwtproject.aria.client.RoleImpl implements R
   }
 
   @Override
-  public String getAriaSortProperty(HTMLElement element) {
-    return Property.SORT.get(element);
-  }
-
-  @Override
-  public void removeAriaExpandedState(HTMLElement element) {
-    State.EXPANDED.remove(element);
-  }
-
-  @Override
   public void removeAriaReadonlyProperty(HTMLElement element) {
     Property.READONLY.remove(element);
   }
@@ -79,32 +78,40 @@ class RowheaderRoleImpl extends org.gwtproject.aria.client.RoleImpl implements R
   }
 
   @Override
+  public void setAriaReadonlyProperty(HTMLElement element,
+      boolean value) {
+    Property.READONLY.set(element,
+        value);
+  }
+
+  @Override
+  public void setAriaRequiredProperty(HTMLElement element,
+      boolean value) {
+    Property.REQUIRED.set(element,
+        value);
+  }
+
+  @Override
+  public void setAriaSelectedState(HTMLElement element,
+      SelectedValue value) {
+    State.SELECTED.set(element,
+        value);
+  }
+
+  @Override
+  public String getAriaSortProperty(HTMLElement element) {
+    return Property.SORT.get(element);
+  }
+
+  @Override
   public void removeAriaSortProperty(HTMLElement element) {
     Property.SORT.remove(element);
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
-  }
-
-  @Override
-  public void setAriaReadonlyProperty(HTMLElement element, boolean value) {
-    Property.READONLY.set(element, value);
-  }
-
-  @Override
-  public void setAriaRequiredProperty(HTMLElement element, boolean value) {
-    Property.REQUIRED.set(element, value);
-  }
-
-  @Override
-  public void setAriaSelectedState(HTMLElement element, SelectedValue value) {
-    State.SELECTED.set(element, value);
-  }
-
-  @Override
-  public void setAriaSortProperty(HTMLElement element, SortValue value) {
-    Property.SORT.set(element, value);
+  public void setAriaSortProperty(HTMLElement element,
+      SortValue value) {
+    Property.SORT.set(element,
+        value);
   }
 }

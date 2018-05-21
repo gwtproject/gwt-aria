@@ -17,15 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.LinkRole;
-import org.gwtproject.aria.client.State;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link LinkRole}.</p>
  */
-class LinkRoleImpl extends org.gwtproject.aria.client.RoleImpl implements LinkRole {
+class LinkRoleImpl
+    extends RoleImpl
+    implements LinkRole {
+
   LinkRoleImpl(String roleName) {
     super(roleName);
   }
@@ -41,7 +41,9 @@ class LinkRoleImpl extends org.gwtproject.aria.client.RoleImpl implements LinkRo
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 }

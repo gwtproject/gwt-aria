@@ -17,13 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link ButtonRole}.</p>
  */
-class ButtonRoleImpl extends RoleImpl implements ButtonRole {
+class ButtonRoleImpl
+    extends RoleImpl
+    implements ButtonRole {
+
   ButtonRoleImpl(String roleName) {
     super(roleName);
   }
@@ -49,12 +51,16 @@ class ButtonRoleImpl extends RoleImpl implements ButtonRole {
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 
   @Override
-  public void setAriaPressedState(HTMLElement element, PressedValue value) {
-    State.PRESSED.set(element, value);
+  public void setAriaPressedState(HTMLElement element,
+      PressedValue value) {
+    State.PRESSED.set(element,
+        value);
   }
 }

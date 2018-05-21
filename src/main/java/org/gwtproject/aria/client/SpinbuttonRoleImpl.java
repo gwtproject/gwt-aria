@@ -17,14 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.Property;
-import org.gwtproject.aria.client.SpinbuttonRole;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link SpinbuttonRole}.</p>
  */
-class SpinbuttonRoleImpl extends RoleImpl implements SpinbuttonRole {
+class SpinbuttonRoleImpl
+    extends RoleImpl
+    implements SpinbuttonRole {
+
   SpinbuttonRoleImpl(String roleName) {
     super(roleName);
   }
@@ -32,6 +33,18 @@ class SpinbuttonRoleImpl extends RoleImpl implements SpinbuttonRole {
   @Override
   public String getAriaRequiredProperty(HTMLElement element) {
     return Property.REQUIRED.get(element);
+  }
+
+  @Override
+  public void removeAriaRequiredProperty(HTMLElement element) {
+    Property.REQUIRED.remove(element);
+  }
+
+  @Override
+  public void setAriaRequiredProperty(HTMLElement element,
+      boolean value) {
+    Property.REQUIRED.set(element,
+        value);
   }
 
   @Override
@@ -55,11 +68,6 @@ class SpinbuttonRoleImpl extends RoleImpl implements SpinbuttonRole {
   }
 
   @Override
-  public void removeAriaRequiredProperty(HTMLElement element) {
-    Property.REQUIRED.remove(element);
-  }
-
-  @Override
   public void removeAriaValuemaxProperty(HTMLElement element) {
     Property.VALUEMAX.remove(element);
   }
@@ -80,27 +88,30 @@ class SpinbuttonRoleImpl extends RoleImpl implements SpinbuttonRole {
   }
 
   @Override
-  public void setAriaRequiredProperty(HTMLElement element, boolean value) {
-    Property.REQUIRED.set(element, value);
+  public void setAriaValuemaxProperty(HTMLElement element,
+      Number value) {
+    Property.VALUEMAX.set(element,
+        value);
   }
 
   @Override
-  public void setAriaValuemaxProperty(HTMLElement element, Number value) {
-    Property.VALUEMAX.set(element, value);
+  public void setAriaValueminProperty(HTMLElement element,
+      Number value) {
+    Property.VALUEMIN.set(element,
+        value);
   }
 
   @Override
-  public void setAriaValueminProperty(HTMLElement element, Number value) {
-    Property.VALUEMIN.set(element, value);
+  public void setAriaValuenowProperty(HTMLElement element,
+      Number value) {
+    Property.VALUENOW.set(element,
+        value);
   }
 
   @Override
-  public void setAriaValuenowProperty(HTMLElement element, Number value) {
-    Property.VALUENOW.set(element, value);
-  }
-
-  @Override
-  public void setAriaValuetextProperty(HTMLElement element, String value) {
-    Property.VALUETEXT.set(element, value);
+  public void setAriaValuetextProperty(HTMLElement element,
+      String value) {
+    Property.VALUETEXT.set(element,
+        value);
   }
 }

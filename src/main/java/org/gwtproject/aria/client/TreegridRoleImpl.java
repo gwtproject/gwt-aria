@@ -17,17 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.Id;
-import org.gwtproject.aria.client.Property;
-import org.gwtproject.aria.client.State;
-import org.gwtproject.aria.client.TreegridRole;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link TreegridRole}.</p>
  */
-class TreegridRoleImpl extends org.gwtproject.aria.client.RoleImpl implements TreegridRole {
+class TreegridRoleImpl
+    extends RoleImpl
+    implements TreegridRole {
+
   TreegridRoleImpl(String roleName) {
     super(roleName);
   }
@@ -38,8 +36,32 @@ class TreegridRoleImpl extends org.gwtproject.aria.client.RoleImpl implements Tr
   }
 
   @Override
+  public void removeAriaActivedescendantProperty(HTMLElement element) {
+    Property.ACTIVEDESCENDANT.remove(element);
+  }
+
+  @Override
+  public void setAriaActivedescendantProperty(HTMLElement element,
+      Id value) {
+    Property.ACTIVEDESCENDANT.set(element,
+        value);
+  }
+
+  @Override
   public String getAriaExpandedState(HTMLElement element) {
     return State.EXPANDED.get(element);
+  }
+
+  @Override
+  public void removeAriaExpandedState(HTMLElement element) {
+    State.EXPANDED.remove(element);
+  }
+
+  @Override
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 
   @Override
@@ -58,21 +80,6 @@ class TreegridRoleImpl extends org.gwtproject.aria.client.RoleImpl implements Tr
   }
 
   @Override
-  public String getAriaRequiredProperty(HTMLElement element) {
-    return Property.REQUIRED.get(element);
-  }
-
-  @Override
-  public void removeAriaActivedescendantProperty(HTMLElement element) {
-    Property.ACTIVEDESCENDANT.remove(element);
-  }
-
-  @Override
-  public void removeAriaExpandedState(HTMLElement element) {
-    State.EXPANDED.remove(element);
-  }
-
-  @Override
   public void removeAriaLevelProperty(HTMLElement element) {
     Property.LEVEL.remove(element);
   }
@@ -88,37 +95,40 @@ class TreegridRoleImpl extends org.gwtproject.aria.client.RoleImpl implements Tr
   }
 
   @Override
+  public void setAriaLevelProperty(HTMLElement element,
+      int value) {
+    Property.LEVEL.set(element,
+        value);
+  }
+
+  @Override
+  public void setAriaMultiselectableProperty(HTMLElement element,
+      boolean value) {
+    Property.MULTISELECTABLE.set(element,
+        value);
+  }
+
+  @Override
+  public void setAriaReadonlyProperty(HTMLElement element,
+      boolean value) {
+    Property.READONLY.set(element,
+        value);
+  }
+
+  @Override
+  public String getAriaRequiredProperty(HTMLElement element) {
+    return Property.REQUIRED.get(element);
+  }
+
+  @Override
   public void removeAriaRequiredProperty(HTMLElement element) {
     Property.REQUIRED.remove(element);
   }
 
   @Override
-  public void setAriaActivedescendantProperty(HTMLElement element, Id value) {
-    Property.ACTIVEDESCENDANT.set(element, value);
-  }
-
-  @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
-  }
-
-  @Override
-  public void setAriaLevelProperty(HTMLElement element, int value) {
-    Property.LEVEL.set(element, value);
-  }
-
-  @Override
-  public void setAriaMultiselectableProperty(HTMLElement element, boolean value) {
-    Property.MULTISELECTABLE.set(element, value);
-  }
-
-  @Override
-  public void setAriaReadonlyProperty(HTMLElement element, boolean value) {
-    Property.READONLY.set(element, value);
-  }
-
-  @Override
-  public void setAriaRequiredProperty(HTMLElement element, boolean value) {
-    Property.REQUIRED.set(element, value);
+  public void setAriaRequiredProperty(HTMLElement element,
+      boolean value) {
+    Property.REQUIRED.set(element,
+        value);
   }
 }

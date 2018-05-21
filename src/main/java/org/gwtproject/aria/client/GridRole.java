@@ -17,41 +17,38 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.CompositeRole;
-import org.gwtproject.aria.client.RegionRole;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
 import elemental2.dom.HTMLElement;
 
 /**
- * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#grid">grid</a>
- * role in the ARIA specification.
+ * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#grid">grid</a> role in
+ * the ARIA specification.
  *
  * @see Role
  * @see Roles
  */
-public interface GridRole extends CompositeRole, RegionRole {
+public interface GridRole
+    extends CompositeRole,
+    RegionRole {
+
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-level">
-   * aria-level</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-level</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaLevelProperty(HTMLElement element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-multiselectable">
-   * aria-multiselectable</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-multiselectable</a> attribute for the {@code element} or "" if no such attribute is
+   * present.
    */
   String getAriaMultiselectableProperty(HTMLElement element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-readonly">
-   * aria-readonly</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-readonly</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaReadonlyProperty(HTMLElement element);
 
@@ -81,19 +78,22 @@ public interface GridRole extends CompositeRole, RegionRole {
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-level">
    * aria-level</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaLevelProperty(HTMLElement element, int value);
+  void setAriaLevelProperty(HTMLElement element,
+      int value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-multiselectable">
    * aria-multiselectable</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaMultiselectableProperty(HTMLElement element, boolean value);
+  void setAriaMultiselectableProperty(HTMLElement element,
+      boolean value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-readonly">
    * aria-readonly</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaReadonlyProperty(HTMLElement element, boolean value);
+  void setAriaReadonlyProperty(HTMLElement element,
+      boolean value);
 }

@@ -17,10 +17,6 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.RangeRole;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
-
 /**
  * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#progressbar">progressbar</a>
  * role in the ARIA specification.
@@ -28,5 +24,7 @@ import org.gwtproject.aria.client.Roles;
  * @see Role
  * @see Roles
  */
-public interface ProgressbarRole extends RangeRole {
+public interface ProgressbarRole
+    extends RangeRole {
+
 }

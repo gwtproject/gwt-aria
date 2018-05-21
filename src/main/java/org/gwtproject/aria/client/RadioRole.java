@@ -17,17 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.CheckboxRole;
-import org.gwtproject.aria.client.OptionRole;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
-
 /**
- * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#radio">radio</a>
- * role in the ARIA specification.
+ * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#radio">radio</a> role in
+ * the ARIA specification.
  *
  * @see Role
  * @see Roles
  */
-public interface RadioRole extends CheckboxRole, OptionRole {
+public interface RadioRole
+    extends CheckboxRole,
+    OptionRole {
+
 }

@@ -17,15 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.OrientationValue;
-import org.gwtproject.aria.client.Property;
-import org.gwtproject.aria.client.SliderRole;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link SliderRole}.</p>
  */
-class SliderRoleImpl extends RoleImpl implements SliderRole {
+class SliderRoleImpl
+    extends RoleImpl
+    implements SliderRole {
+
   SliderRoleImpl(String roleName) {
     super(roleName);
   }
@@ -33,6 +33,18 @@ class SliderRoleImpl extends RoleImpl implements SliderRole {
   @Override
   public String getAriaOrientationProperty(HTMLElement element) {
     return Property.ORIENTATION.get(element);
+  }
+
+  @Override
+  public void removeAriaOrientationProperty(HTMLElement element) {
+    Property.ORIENTATION.remove(element);
+  }
+
+  @Override
+  public void setAriaOrientationProperty(HTMLElement element,
+      OrientationValue value) {
+    Property.ORIENTATION.set(element,
+        value);
   }
 
   @Override
@@ -56,11 +68,6 @@ class SliderRoleImpl extends RoleImpl implements SliderRole {
   }
 
   @Override
-  public void removeAriaOrientationProperty(HTMLElement element) {
-    Property.ORIENTATION.remove(element);
-  }
-
-  @Override
   public void removeAriaValuemaxProperty(HTMLElement element) {
     Property.VALUEMAX.remove(element);
   }
@@ -81,27 +88,30 @@ class SliderRoleImpl extends RoleImpl implements SliderRole {
   }
 
   @Override
-  public void setAriaOrientationProperty(HTMLElement element, OrientationValue value) {
-    Property.ORIENTATION.set(element, value);
+  public void setAriaValuemaxProperty(HTMLElement element,
+      Number value) {
+    Property.VALUEMAX.set(element,
+        value);
   }
 
   @Override
-  public void setAriaValuemaxProperty(HTMLElement element, Number value) {
-    Property.VALUEMAX.set(element, value);
+  public void setAriaValueminProperty(HTMLElement element,
+      Number value) {
+    Property.VALUEMIN.set(element,
+        value);
   }
 
   @Override
-  public void setAriaValueminProperty(HTMLElement element, Number value) {
-    Property.VALUEMIN.set(element, value);
+  public void setAriaValuenowProperty(HTMLElement element,
+      Number value) {
+    Property.VALUENOW.set(element,
+        value);
   }
 
   @Override
-  public void setAriaValuenowProperty(HTMLElement element, Number value) {
-    Property.VALUENOW.set(element, value);
-  }
-
-  @Override
-  public void setAriaValuetextProperty(HTMLElement element, String value) {
-    Property.VALUETEXT.set(element, value);
+  public void setAriaValuetextProperty(HTMLElement element,
+      String value) {
+    Property.VALUETEXT.set(element,
+        value);
   }
 }

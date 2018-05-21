@@ -17,17 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.Id;
-import org.gwtproject.aria.client.Property;
-import org.gwtproject.aria.client.RadiogroupRole;
-import org.gwtproject.aria.client.State;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link RadiogroupRole}.</p>
  */
-class RadiogroupRoleImpl extends RoleImpl implements RadiogroupRole {
+class RadiogroupRoleImpl
+    extends RoleImpl
+    implements RadiogroupRole {
+
   RadiogroupRoleImpl(String roleName) {
     super(roleName);
   }
@@ -38,18 +36,20 @@ class RadiogroupRoleImpl extends RoleImpl implements RadiogroupRole {
   }
 
   @Override
-  public String getAriaExpandedState(HTMLElement element) {
-    return State.EXPANDED.get(element);
-  }
-
-  @Override
-  public String getAriaRequiredProperty(HTMLElement element) {
-    return Property.REQUIRED.get(element);
-  }
-
-  @Override
   public void removeAriaActivedescendantProperty(HTMLElement element) {
     Property.ACTIVEDESCENDANT.remove(element);
+  }
+
+  @Override
+  public void setAriaActivedescendantProperty(HTMLElement element,
+      Id value) {
+    Property.ACTIVEDESCENDANT.set(element,
+        value);
+  }
+
+  @Override
+  public String getAriaExpandedState(HTMLElement element) {
+    return State.EXPANDED.get(element);
   }
 
   @Override
@@ -58,22 +58,26 @@ class RadiogroupRoleImpl extends RoleImpl implements RadiogroupRole {
   }
 
   @Override
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
+  }
+
+  @Override
+  public String getAriaRequiredProperty(HTMLElement element) {
+    return Property.REQUIRED.get(element);
+  }
+
+  @Override
   public void removeAriaRequiredProperty(HTMLElement element) {
     Property.REQUIRED.remove(element);
   }
 
   @Override
-  public void setAriaActivedescendantProperty(HTMLElement element, Id value) {
-    Property.ACTIVEDESCENDANT.set(element, value);
-  }
-
-  @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
-  }
-
-  @Override
-  public void setAriaRequiredProperty(HTMLElement element, boolean value) {
-    Property.REQUIRED.set(element, value);
+  public void setAriaRequiredProperty(HTMLElement element,
+      boolean value) {
+    Property.REQUIRED.set(element,
+        value);
   }
 }

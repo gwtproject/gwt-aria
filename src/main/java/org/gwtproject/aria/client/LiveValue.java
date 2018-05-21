@@ -17,23 +17,24 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.AriaAttributeType;
-
 /**
  * Property enum for 'aria-live' values.
  */
-public enum LiveValue implements AriaAttributeType {
-   OFF, POLITE, ASSERTIVE;
+public enum LiveValue
+    implements AriaAttributeType {
+  OFF,
+  POLITE,
+  ASSERTIVE;
 
   @Override
   public String getAriaValue() {
     switch (this) {
-        case OFF:
-          return "off";
-        case POLITE:
-          return "polite";
-        case ASSERTIVE:
-          return "assertive";
+      case OFF:
+        return "off";
+      case POLITE:
+        return "polite";
+      case ASSERTIVE:
+        return "assertive";
     }
     return null; // not reachable
   }

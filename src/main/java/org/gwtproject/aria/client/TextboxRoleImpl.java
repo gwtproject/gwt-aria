@@ -22,7 +22,10 @@ import elemental2.dom.HTMLElement;
 /**
  * <p>Implements {@link TextboxRole}.</p>
  */
-class TextboxRoleImpl extends RoleImpl implements TextboxRole {
+class TextboxRoleImpl
+    extends RoleImpl
+    implements TextboxRole {
+
   TextboxRoleImpl(String roleName) {
     super(roleName);
   }
@@ -78,27 +81,37 @@ class TextboxRoleImpl extends RoleImpl implements TextboxRole {
   }
 
   @Override
-  public void setAriaActivedescendantProperty(HTMLElement element, Id value) {
-    Property.ACTIVEDESCENDANT.set(element, value);
+  public void setAriaActivedescendantProperty(HTMLElement element,
+      Id value) {
+    Property.ACTIVEDESCENDANT.set(element,
+        value);
   }
 
   @Override
-  public void setAriaAutocompleteProperty(HTMLElement element, AutocompleteValue value) {
-    Property.AUTOCOMPLETE.set(element, value);
+  public void setAriaAutocompleteProperty(HTMLElement element,
+      AutocompleteValue value) {
+    Property.AUTOCOMPLETE.set(element,
+        value);
   }
 
   @Override
-  public void setAriaMultilineProperty(HTMLElement element, boolean value) {
-    Property.MULTILINE.set(element, value);
+  public void setAriaMultilineProperty(HTMLElement element,
+      boolean value) {
+    Property.MULTILINE.set(element,
+        value);
   }
 
   @Override
-  public void setAriaReadonlyProperty(HTMLElement element, boolean value) {
-    Property.READONLY.set(element, value);
+  public void setAriaReadonlyProperty(HTMLElement element,
+      boolean value) {
+    Property.READONLY.set(element,
+        value);
   }
 
   @Override
-  public void setAriaRequiredProperty(HTMLElement element, boolean value) {
-    Property.REQUIRED.set(element, value);
+  public void setAriaRequiredProperty(HTMLElement element,
+      boolean value) {
+    Property.REQUIRED.set(element,
+        value);
   }
 }

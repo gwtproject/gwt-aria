@@ -17,15 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ComboboxRole;
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.Property;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link ComboboxRole}.</p>
  */
-class ComboboxRoleImpl extends RoleImpl implements ComboboxRole {
+class ComboboxRoleImpl
+    extends RoleImpl
+    implements ComboboxRole {
+
   ComboboxRoleImpl(String roleName) {
     super(roleName);
   }
@@ -36,13 +36,20 @@ class ComboboxRoleImpl extends RoleImpl implements ComboboxRole {
   }
 
   @Override
-  public String getAriaAutocompleteProperty(HTMLElement element) {
-    return Property.AUTOCOMPLETE.get(element);
+  public void removeAriaActivedescendantProperty(HTMLElement element) {
+    Property.ACTIVEDESCENDANT.remove(element);
   }
 
   @Override
-  public String getAriaExpandedState(HTMLElement element) {
-    return State.EXPANDED.get(element);
+  public void setAriaActivedescendantProperty(HTMLElement element,
+      Id value) {
+    Property.ACTIVEDESCENDANT.set(element,
+        value);
+  }
+
+  @Override
+  public String getAriaAutocompleteProperty(HTMLElement element) {
+    return Property.AUTOCOMPLETE.get(element);
   }
 
   @Override
@@ -51,18 +58,8 @@ class ComboboxRoleImpl extends RoleImpl implements ComboboxRole {
   }
 
   @Override
-  public void removeAriaActivedescendantProperty(HTMLElement element) {
-    Property.ACTIVEDESCENDANT.remove(element);
-  }
-
-  @Override
   public void removeAriaAutocompleteProperty(HTMLElement element) {
     Property.AUTOCOMPLETE.remove(element);
-  }
-
-  @Override
-  public void removeAriaExpandedState(HTMLElement element) {
-    State.EXPANDED.remove(element);
   }
 
   @Override
@@ -71,22 +68,33 @@ class ComboboxRoleImpl extends RoleImpl implements ComboboxRole {
   }
 
   @Override
-  public void setAriaActivedescendantProperty(HTMLElement element, Id value) {
-    Property.ACTIVEDESCENDANT.set(element, value);
+  public void setAriaAutocompleteProperty(HTMLElement element,
+      AutocompleteValue value) {
+    Property.AUTOCOMPLETE.set(element,
+        value);
   }
 
   @Override
-  public void setAriaAutocompleteProperty(HTMLElement element, AutocompleteValue value) {
-    Property.AUTOCOMPLETE.set(element, value);
+  public void setAriaRequiredProperty(HTMLElement element,
+      boolean value) {
+    Property.REQUIRED.set(element,
+        value);
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public String getAriaExpandedState(HTMLElement element) {
+    return State.EXPANDED.get(element);
   }
 
   @Override
-  public void setAriaRequiredProperty(HTMLElement element, boolean value) {
-    Property.REQUIRED.set(element, value);
+  public void removeAriaExpandedState(HTMLElement element) {
+    State.EXPANDED.remove(element);
+  }
+
+  @Override
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 }

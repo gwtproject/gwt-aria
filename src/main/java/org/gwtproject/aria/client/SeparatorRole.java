@@ -17,11 +17,6 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.OrientationValue;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
-import org.gwtproject.aria.client.StructureRole;
 import elemental2.dom.HTMLElement;
 
 /**
@@ -31,20 +26,20 @@ import elemental2.dom.HTMLElement;
  * @see Role
  * @see Roles
  */
-public interface SeparatorRole extends StructureRole {
+public interface SeparatorRole
+    extends StructureRole {
+
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-expanded">
-   * aria-expanded</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-expanded</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaExpandedState(HTMLElement element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-orientation">
-   * aria-orientation</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-orientation</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaOrientationProperty(HTMLElement element);
 
@@ -67,12 +62,14 @@ public interface SeparatorRole extends StructureRole {
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-expanded">
    * aria-expanded</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaExpandedState(HTMLElement element, ExpandedValue value);
+  void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-orientation">
    * aria-orientation</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaOrientationProperty(HTMLElement element, OrientationValue value);
+  void setAriaOrientationProperty(HTMLElement element,
+      OrientationValue value);
 }

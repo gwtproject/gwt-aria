@@ -17,17 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.Id;
-import org.gwtproject.aria.client.Property;
-import org.gwtproject.aria.client.RowgroupRole;
-import org.gwtproject.aria.client.State;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link RowgroupRole}.</p>
  */
-class RowgroupRoleImpl extends org.gwtproject.aria.client.RoleImpl implements RowgroupRole {
+class RowgroupRoleImpl
+    extends RoleImpl
+    implements RowgroupRole {
+
   RowgroupRoleImpl(String roleName) {
     super(roleName);
   }
@@ -38,13 +36,20 @@ class RowgroupRoleImpl extends org.gwtproject.aria.client.RoleImpl implements Ro
   }
 
   @Override
-  public String getAriaExpandedState(HTMLElement element) {
-    return State.EXPANDED.get(element);
+  public void removeAriaActivedescendantProperty(HTMLElement element) {
+    Property.ACTIVEDESCENDANT.remove(element);
   }
 
   @Override
-  public void removeAriaActivedescendantProperty(HTMLElement element) {
-    Property.ACTIVEDESCENDANT.remove(element);
+  public void setAriaActivedescendantProperty(HTMLElement element,
+      Id value) {
+    Property.ACTIVEDESCENDANT.set(element,
+        value);
+  }
+
+  @Override
+  public String getAriaExpandedState(HTMLElement element) {
+    return State.EXPANDED.get(element);
   }
 
   @Override
@@ -53,12 +58,9 @@ class RowgroupRoleImpl extends org.gwtproject.aria.client.RoleImpl implements Ro
   }
 
   @Override
-  public void setAriaActivedescendantProperty(HTMLElement element, Id value) {
-    Property.ACTIVEDESCENDANT.set(element, value);
-  }
-
-  @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 }

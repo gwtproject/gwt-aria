@@ -17,16 +17,18 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.AriaAttributeType;
-
 /**
  * State enum for 'aria-checked' values.
  */
-public enum CheckedValue implements AriaAttributeType {
-  TRUE, FALSE, MIXED, UNDEFINED;
+public enum CheckedValue
+    implements AriaAttributeType {
+  TRUE,
+  FALSE,
+  MIXED,
+  UNDEFINED;
+
   /**
-   * Gets the enum constant corresponding to {@code value} for the token type
-   * CheckedValue.
+   * Gets the enum constant corresponding to {@code value} for the token type CheckedValue.
    *
    * @param value Boolean value for which we want to get the corresponding enum constant.
    */
@@ -37,14 +39,14 @@ public enum CheckedValue implements AriaAttributeType {
   @Override
   public String getAriaValue() {
     switch (this) {
-        case TRUE:
-          return "true";
-        case FALSE:
-          return "false";
-        case MIXED:
-          return "mixed";
-        case UNDEFINED:
-          return "undefined";
+      case TRUE:
+        return "true";
+      case FALSE:
+        return "false";
+      case MIXED:
+        return "mixed";
+      case UNDEFINED:
+        return "undefined";
     }
     return null; // not reachable
   }

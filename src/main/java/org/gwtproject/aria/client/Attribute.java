@@ -30,20 +30,9 @@ import elemental2.dom.HTMLElement;
  * @param <T> The attribute value type
  */
 public abstract class Attribute<T> {
+
   protected final String name;
   protected String defaultValue;
-
-  /**
-   * Constructs a state/property ARIA attribute with name {@code name} and {@code defaultValue}.
-   *
-   * @param name State/Property name
-   * @param defaultValue Default values
-   */
-  public Attribute(String name, String defaultValue) {
-    assert name != null : "Name cannot be null";
-    this.name = name;
-    this.defaultValue = defaultValue;
-  }
 
   /**
    * Constructs a state/property ARIA attribute with name {@code name} and null default value.
@@ -51,19 +40,33 @@ public abstract class Attribute<T> {
    * @param name State/Property name
    */
   public Attribute(String name) {
-    this(name, null);
+    this(name,
+        null);
   }
 
   /**
-   * Gets the HTML attribute value for the attribute with name {@code name} for element
-   * {@code element}
+   * Constructs a state/property ARIA attribute with name {@code name} and {@code defaultValue}.
+   *
+   * @param name State/Property name
+   * @param defaultValue Default values
+   */
+  public Attribute(String name,
+      String defaultValue) {
+    assert name != null : "Name cannot be null";
+    this.name = name;
+    this.defaultValue = defaultValue;
+  }
+
+  /**
+   * Gets the HTML attribute value for the attribute with name {@code name} for element {@code
+   * element}
    *
    * @param element HTML element
    * @return The attribute value for {@code element}
    */
   public String get(HTMLElement element) {
     assert element != null : "Element cannot be null.";
-    return element.getAttribute(name);
+    return element.hasAttribute(name) ? element.getAttribute(name) : "";
   }
 
   /**
@@ -91,11 +94,32 @@ public abstract class Attribute<T> {
    * @param element HTML element
    * @param values Attribute value
    */
-  public void set(HTMLElement element, T... values) {
+  public void set(HTMLElement element,
+      T... values) {
     assert element != null : "Element cannot be null.";
     assert values.length > 0;
-    element.setAttribute(name, getAriaValue(values));
+    element.setAttribute(name,
+        getAriaValue(values));
   }
+
+  private String getAriaValue(T... value) {
+    StringBuilder buf = new StringBuilder();
+    for (T item : value) {
+      buf.append(getSingleValue(item))
+          .append(" ");
+    }
+    return buf.toString()
+        .trim();
+  }
+
+  /**
+   * Gets the string representation of {@code value} to be set as an attribute value to an HTML
+   * element.
+   *
+   * @param value The item to be stringified
+   * @return the stringified representation of {@code value}
+   */
+  protected abstract String getSingleValue(T value);
 
   /**
    * Sets the state/property value to the defaultValue if not null. If a list of default values is
@@ -109,23 +133,7 @@ public abstract class Attribute<T> {
   public void setDefault(HTMLElement element) {
     assert element != null : "Element cannot be null.";
     assert defaultValue != null && !defaultValue.isEmpty() : "Default value cannot be null.";
-    element.setAttribute(name, defaultValue);
-  }
-
-  /**
-   * Gets the string representation of {@code value} to be set as an attribute value
-   * to an HTML element.
-   *
-   * @param value The item to be stringified
-   * @return the stringified representation of {@code value}
-   */
-  protected abstract String getSingleValue(T value);
-
-  private String getAriaValue(T... value) {
-    StringBuilder buf = new StringBuilder();
-    for (T item : value) {
-      buf.append(getSingleValue(item)).append(" ");
-    }
-    return buf.toString().trim();
+    element.setAttribute(name,
+        defaultValue);
   }
 }

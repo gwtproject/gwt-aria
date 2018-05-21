@@ -22,7 +22,10 @@ import elemental2.dom.HTMLElement;
 /**
  * <p>Implements {@link OptionRole}.</p>
  */
-class OptionRoleImpl extends RoleImpl implements OptionRole {
+class OptionRoleImpl
+    extends RoleImpl
+    implements OptionRole {
+
   OptionRoleImpl(String roleName) {
     super(roleName);
   }
@@ -68,22 +71,30 @@ class OptionRoleImpl extends RoleImpl implements OptionRole {
   }
 
   @Override
-  public void setAriaCheckedState(HTMLElement element, CheckedValue value) {
-    State.CHECKED.set(element, value);
+  public void setAriaCheckedState(HTMLElement element,
+      CheckedValue value) {
+    State.CHECKED.set(element,
+        value);
   }
 
   @Override
-  public void setAriaPosinsetProperty(HTMLElement element, int value) {
-    Property.POSINSET.set(element, value);
+  public void setAriaPosinsetProperty(HTMLElement element,
+      int value) {
+    Property.POSINSET.set(element,
+        value);
   }
 
   @Override
-  public void setAriaSelectedState(HTMLElement element, SelectedValue value) {
-    State.SELECTED.set(element, value);
+  public void setAriaSelectedState(HTMLElement element,
+      SelectedValue value) {
+    State.SELECTED.set(element,
+        value);
   }
 
   @Override
-  public void setAriaSetsizeProperty(HTMLElement element, int value) {
-    Property.SETSIZE.set(element, value);
+  public void setAriaSetsizeProperty(HTMLElement element,
+      int value) {
+    Property.SETSIZE.set(element,
+        value);
   }
 }

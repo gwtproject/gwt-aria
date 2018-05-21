@@ -17,25 +17,27 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.AriaAttributeType;
-
 /**
  * Property enum for 'aria-autocomplete' values.
  */
-public enum AutocompleteValue implements AriaAttributeType {
-   INLINE, LIST, BOTH, NONE;
+public enum AutocompleteValue
+    implements AriaAttributeType {
+  INLINE,
+  LIST,
+  BOTH,
+  NONE;
 
   @Override
   public String getAriaValue() {
     switch (this) {
-        case INLINE:
-          return "inline";
-        case LIST:
-          return "list";
-        case BOTH:
-          return "both";
-        case NONE:
-          return "none";
+      case INLINE:
+        return "inline";
+      case LIST:
+        return "list";
+      case BOTH:
+        return "both";
+      case NONE:
+        return "none";
     }
     return null; // not reachable
   }

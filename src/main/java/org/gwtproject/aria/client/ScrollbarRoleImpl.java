@@ -17,16 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.Id;
-import org.gwtproject.aria.client.OrientationValue;
-import org.gwtproject.aria.client.Property;
-import org.gwtproject.aria.client.ScrollbarRole;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link ScrollbarRole}.</p>
  */
-class ScrollbarRoleImpl extends RoleImpl implements ScrollbarRole {
+class ScrollbarRoleImpl
+    extends RoleImpl
+    implements ScrollbarRole {
+
   ScrollbarRoleImpl(String roleName) {
     super(roleName);
   }
@@ -37,8 +36,32 @@ class ScrollbarRoleImpl extends RoleImpl implements ScrollbarRole {
   }
 
   @Override
+  public void removeAriaControlsProperty(HTMLElement element) {
+    Property.CONTROLS.remove(element);
+  }
+
+  @Override
+  public void setAriaControlsProperty(HTMLElement element,
+      Id... value) {
+    Property.CONTROLS.set(element,
+        value);
+  }
+
+  @Override
   public String getAriaOrientationProperty(HTMLElement element) {
     return Property.ORIENTATION.get(element);
+  }
+
+  @Override
+  public void removeAriaOrientationProperty(HTMLElement element) {
+    Property.ORIENTATION.remove(element);
+  }
+
+  @Override
+  public void setAriaOrientationProperty(HTMLElement element,
+      OrientationValue value) {
+    Property.ORIENTATION.set(element,
+        value);
   }
 
   @Override
@@ -62,16 +85,6 @@ class ScrollbarRoleImpl extends RoleImpl implements ScrollbarRole {
   }
 
   @Override
-  public void removeAriaControlsProperty(HTMLElement element) {
-    Property.CONTROLS.remove(element);
-  }
-
-  @Override
-  public void removeAriaOrientationProperty(HTMLElement element) {
-    Property.ORIENTATION.remove(element);
-  }
-
-  @Override
   public void removeAriaValuemaxProperty(HTMLElement element) {
     Property.VALUEMAX.remove(element);
   }
@@ -92,32 +105,30 @@ class ScrollbarRoleImpl extends RoleImpl implements ScrollbarRole {
   }
 
   @Override
-  public void setAriaControlsProperty(HTMLElement element, Id... value) {
-    Property.CONTROLS.set(element, value);
+  public void setAriaValuemaxProperty(HTMLElement element,
+      Number value) {
+    Property.VALUEMAX.set(element,
+        value);
   }
 
   @Override
-  public void setAriaOrientationProperty(HTMLElement element, OrientationValue value) {
-    Property.ORIENTATION.set(element, value);
+  public void setAriaValueminProperty(HTMLElement element,
+      Number value) {
+    Property.VALUEMIN.set(element,
+        value);
   }
 
   @Override
-  public void setAriaValuemaxProperty(HTMLElement element, Number value) {
-    Property.VALUEMAX.set(element, value);
+  public void setAriaValuenowProperty(HTMLElement element,
+      Number value) {
+    Property.VALUENOW.set(element,
+        value);
   }
 
   @Override
-  public void setAriaValueminProperty(HTMLElement element, Number value) {
-    Property.VALUEMIN.set(element, value);
-  }
-
-  @Override
-  public void setAriaValuenowProperty(HTMLElement element, Number value) {
-    Property.VALUENOW.set(element, value);
-  }
-
-  @Override
-  public void setAriaValuetextProperty(HTMLElement element, String value) {
-    Property.VALUETEXT.set(element, value);
+  public void setAriaValuetextProperty(HTMLElement element,
+      String value) {
+    Property.VALUETEXT.set(element,
+        value);
   }
 }

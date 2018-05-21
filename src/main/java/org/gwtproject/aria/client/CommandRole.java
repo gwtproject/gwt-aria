@@ -17,16 +17,14 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
-import org.gwtproject.aria.client.WidgetRole;
-
 /**
- * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#command">command</a>
- * role in the ARIA specification.
+ * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#command">command</a> role
+ * in the ARIA specification.
  *
  * @see Role
  * @see Roles
  */
-public interface CommandRole extends WidgetRole {
+public interface CommandRole
+    extends WidgetRole {
+
 }

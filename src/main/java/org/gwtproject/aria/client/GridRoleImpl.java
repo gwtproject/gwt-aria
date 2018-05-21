@@ -17,13 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link GridRole}.</p>
  */
-class GridRoleImpl extends RoleImpl implements GridRole {
+class GridRoleImpl
+    extends RoleImpl
+    implements GridRole {
+
   GridRoleImpl(String roleName) {
     super(roleName);
   }
@@ -34,8 +36,32 @@ class GridRoleImpl extends RoleImpl implements GridRole {
   }
 
   @Override
+  public void removeAriaActivedescendantProperty(HTMLElement element) {
+    Property.ACTIVEDESCENDANT.remove(element);
+  }
+
+  @Override
+  public void setAriaActivedescendantProperty(HTMLElement element,
+      Id value) {
+    Property.ACTIVEDESCENDANT.set(element,
+        value);
+  }
+
+  @Override
   public String getAriaExpandedState(HTMLElement element) {
     return State.EXPANDED.get(element);
+  }
+
+  @Override
+  public void removeAriaExpandedState(HTMLElement element) {
+    State.EXPANDED.remove(element);
+  }
+
+  @Override
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 
   @Override
@@ -54,16 +80,6 @@ class GridRoleImpl extends RoleImpl implements GridRole {
   }
 
   @Override
-  public void removeAriaActivedescendantProperty(HTMLElement element) {
-    Property.ACTIVEDESCENDANT.remove(element);
-  }
-
-  @Override
-  public void removeAriaExpandedState(HTMLElement element) {
-    State.EXPANDED.remove(element);
-  }
-
-  @Override
   public void removeAriaLevelProperty(HTMLElement element) {
     Property.LEVEL.remove(element);
   }
@@ -79,27 +95,23 @@ class GridRoleImpl extends RoleImpl implements GridRole {
   }
 
   @Override
-  public void setAriaActivedescendantProperty(HTMLElement element, Id value) {
-    Property.ACTIVEDESCENDANT.set(element, value);
+  public void setAriaLevelProperty(HTMLElement element,
+      int value) {
+    Property.LEVEL.set(element,
+        value);
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaMultiselectableProperty(HTMLElement element,
+      boolean value) {
+    Property.MULTISELECTABLE.set(element,
+        value);
   }
 
   @Override
-  public void setAriaLevelProperty(HTMLElement element, int value) {
-    Property.LEVEL.set(element, value);
-  }
-
-  @Override
-  public void setAriaMultiselectableProperty(HTMLElement element, boolean value) {
-    Property.MULTISELECTABLE.set(element, value);
-  }
-
-  @Override
-  public void setAriaReadonlyProperty(HTMLElement element, boolean value) {
-    Property.READONLY.set(element, value);
+  public void setAriaReadonlyProperty(HTMLElement element,
+      boolean value) {
+    Property.READONLY.set(element,
+        value);
   }
 }

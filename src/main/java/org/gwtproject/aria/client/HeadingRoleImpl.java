@@ -17,16 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.HeadingRole;
-import org.gwtproject.aria.client.Property;
-import org.gwtproject.aria.client.State;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link HeadingRole}.</p>
  */
-class HeadingRoleImpl extends org.gwtproject.aria.client.RoleImpl implements HeadingRole {
+class HeadingRoleImpl
+    extends RoleImpl
+    implements HeadingRole {
+
   HeadingRoleImpl(String roleName) {
     super(roleName);
   }
@@ -37,13 +36,20 @@ class HeadingRoleImpl extends org.gwtproject.aria.client.RoleImpl implements Hea
   }
 
   @Override
-  public String getAriaLevelProperty(HTMLElement element) {
-    return Property.LEVEL.get(element);
+  public void removeAriaExpandedState(HTMLElement element) {
+    State.EXPANDED.remove(element);
   }
 
   @Override
-  public void removeAriaExpandedState(HTMLElement element) {
-    State.EXPANDED.remove(element);
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
+  }
+
+  @Override
+  public String getAriaLevelProperty(HTMLElement element) {
+    return Property.LEVEL.get(element);
   }
 
   @Override
@@ -52,12 +58,9 @@ class HeadingRoleImpl extends org.gwtproject.aria.client.RoleImpl implements Hea
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
-  }
-
-  @Override
-  public void setAriaLevelProperty(HTMLElement element, int value) {
-    Property.LEVEL.set(element, value);
+  public void setAriaLevelProperty(HTMLElement element,
+      int value) {
+    Property.LEVEL.set(element,
+        value);
   }
 }

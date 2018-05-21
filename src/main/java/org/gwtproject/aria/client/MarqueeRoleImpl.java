@@ -17,15 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.MarqueeRole;
-import org.gwtproject.aria.client.State;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link MarqueeRole}.</p>
  */
-class MarqueeRoleImpl extends RoleImpl implements MarqueeRole {
+class MarqueeRoleImpl
+    extends RoleImpl
+    implements MarqueeRole {
+
   MarqueeRoleImpl(String roleName) {
     super(roleName);
   }
@@ -41,7 +41,9 @@ class MarqueeRoleImpl extends RoleImpl implements MarqueeRole {
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 }

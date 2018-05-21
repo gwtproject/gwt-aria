@@ -17,25 +17,27 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.AriaAttributeType;
-
 /**
  * State enum for 'aria-invalid' values.
  */
-public enum InvalidValue implements AriaAttributeType {
-   GRAMMAR, FALSE, SPELLING, TRUE;
+public enum InvalidValue
+    implements AriaAttributeType {
+  GRAMMAR,
+  FALSE,
+  SPELLING,
+  TRUE;
 
   @Override
   public String getAriaValue() {
     switch (this) {
-        case GRAMMAR:
-          return "grammar";
-        case FALSE:
-          return "false";
-        case SPELLING:
-          return "spelling";
-        case TRUE:
-          return "true";
+      case GRAMMAR:
+        return "grammar";
+      case FALSE:
+        return "false";
+      case SPELLING:
+        return "spelling";
+      case TRUE:
+        return "true";
     }
     return null; // not reachable
   }

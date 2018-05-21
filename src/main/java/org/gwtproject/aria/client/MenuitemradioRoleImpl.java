@@ -17,17 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.CheckedValue;
-import org.gwtproject.aria.client.MenuitemradioRole;
-import org.gwtproject.aria.client.Property;
-import org.gwtproject.aria.client.SelectedValue;
-import org.gwtproject.aria.client.State;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link MenuitemradioRole}.</p>
  */
-class MenuitemradioRoleImpl extends org.gwtproject.aria.client.RoleImpl implements MenuitemradioRole {
+class MenuitemradioRoleImpl
+    extends RoleImpl
+    implements MenuitemradioRole {
+
   MenuitemradioRoleImpl(String roleName) {
     super(roleName);
   }
@@ -35,6 +33,18 @@ class MenuitemradioRoleImpl extends org.gwtproject.aria.client.RoleImpl implemen
   @Override
   public String getAriaCheckedState(HTMLElement element) {
     return State.CHECKED.get(element);
+  }
+
+  @Override
+  public void removeAriaCheckedState(HTMLElement element) {
+    State.CHECKED.remove(element);
+  }
+
+  @Override
+  public void setAriaCheckedState(HTMLElement element,
+      CheckedValue value) {
+    State.CHECKED.set(element,
+        value);
   }
 
   @Override
@@ -53,11 +63,6 @@ class MenuitemradioRoleImpl extends org.gwtproject.aria.client.RoleImpl implemen
   }
 
   @Override
-  public void removeAriaCheckedState(HTMLElement element) {
-    State.CHECKED.remove(element);
-  }
-
-  @Override
   public void removeAriaPosinsetProperty(HTMLElement element) {
     Property.POSINSET.remove(element);
   }
@@ -73,22 +78,23 @@ class MenuitemradioRoleImpl extends org.gwtproject.aria.client.RoleImpl implemen
   }
 
   @Override
-  public void setAriaCheckedState(HTMLElement element, CheckedValue value) {
-    State.CHECKED.set(element, value);
+  public void setAriaPosinsetProperty(HTMLElement element,
+      int value) {
+    Property.POSINSET.set(element,
+        value);
   }
 
   @Override
-  public void setAriaPosinsetProperty(HTMLElement element, int value) {
-    Property.POSINSET.set(element, value);
+  public void setAriaSelectedState(HTMLElement element,
+      SelectedValue value) {
+    State.SELECTED.set(element,
+        value);
   }
 
   @Override
-  public void setAriaSelectedState(HTMLElement element, SelectedValue value) {
-    State.SELECTED.set(element, value);
-  }
-
-  @Override
-  public void setAriaSetsizeProperty(HTMLElement element, int value) {
-    Property.SETSIZE.set(element, value);
+  public void setAriaSetsizeProperty(HTMLElement element,
+      int value) {
+    Property.SETSIZE.set(element,
+        value);
   }
 }

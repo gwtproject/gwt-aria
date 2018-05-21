@@ -17,15 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.FormRole;
-import org.gwtproject.aria.client.State;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link FormRole}.</p>
  */
-class FormRoleImpl extends org.gwtproject.aria.client.RoleImpl implements FormRole {
+class FormRoleImpl
+    extends RoleImpl
+    implements FormRole {
+
   FormRoleImpl(String roleName) {
     super(roleName);
   }
@@ -41,7 +41,9 @@ class FormRoleImpl extends org.gwtproject.aria.client.RoleImpl implements FormRo
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 }

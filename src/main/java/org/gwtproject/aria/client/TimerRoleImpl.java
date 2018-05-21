@@ -17,15 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.State;
-import org.gwtproject.aria.client.TimerRole;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link TimerRole}.</p>
  */
-class TimerRoleImpl extends RoleImpl implements TimerRole {
+class TimerRoleImpl
+    extends RoleImpl
+    implements TimerRole {
+
   TimerRoleImpl(String roleName) {
     super(roleName);
   }
@@ -41,7 +41,9 @@ class TimerRoleImpl extends RoleImpl implements TimerRole {
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 }

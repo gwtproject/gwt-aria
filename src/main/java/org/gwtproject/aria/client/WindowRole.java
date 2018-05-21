@@ -17,24 +17,22 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
 import elemental2.dom.HTMLElement;
 
 /**
- * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#window">window</a>
- * role in the ARIA specification.
+ * A type that represents the <a href="http://www.w3.org/TR/wai-aria/roles#window">window</a> role
+ * in the ARIA specification.
  *
  * @see Role
  * @see Roles
  */
-public interface WindowRole extends Role {
+public interface WindowRole
+    extends Role {
+
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-expanded">
-   * aria-expanded</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-expanded</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaExpandedState(HTMLElement element);
 
@@ -50,5 +48,6 @@ public interface WindowRole extends Role {
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-expanded">
    * aria-expanded</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaExpandedState(HTMLElement element, ExpandedValue value);
+  void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value);
 }

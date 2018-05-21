@@ -17,15 +17,15 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.ExpandedValue;
-import org.gwtproject.aria.client.NavigationRole;
-import org.gwtproject.aria.client.State;
 import elemental2.dom.HTMLElement;
 
 /**
  * <p>Implements {@link NavigationRole}.</p>
  */
-class NavigationRoleImpl extends RoleImpl implements NavigationRole {
+class NavigationRoleImpl
+    extends RoleImpl
+    implements NavigationRole {
+
   NavigationRoleImpl(String roleName) {
     super(roleName);
   }
@@ -41,7 +41,9 @@ class NavigationRoleImpl extends RoleImpl implements NavigationRole {
   }
 
   @Override
-  public void setAriaExpandedState(HTMLElement element, ExpandedValue value) {
-    State.EXPANDED.set(element, value);
+  public void setAriaExpandedState(HTMLElement element,
+      ExpandedValue value) {
+    State.EXPANDED.set(element,
+        value);
   }
 }

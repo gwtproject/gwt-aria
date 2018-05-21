@@ -17,10 +17,6 @@ package org.gwtproject.aria.client;
 // This is auto-generated code.  Do not manually edit! //
 /////////////////////////////////////////////////////////
 
-import org.gwtproject.aria.client.AutocompleteValue;
-import org.gwtproject.aria.client.Role;
-import org.gwtproject.aria.client.Roles;
-import org.gwtproject.aria.client.SelectRole;
 import elemental2.dom.HTMLElement;
 
 /**
@@ -30,20 +26,20 @@ import elemental2.dom.HTMLElement;
  * @see Role
  * @see Roles
  */
-public interface ComboboxRole extends SelectRole {
+public interface ComboboxRole
+    extends SelectRole {
+
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-autocomplete">
-   * aria-autocomplete</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-autocomplete</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaAutocompleteProperty(HTMLElement element);
 
   /**
    * Returns the value of the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">
-   * aria-required</a> attribute for the {@code element} or "" if no
-   * such attribute is present.
+   * aria-required</a> attribute for the {@code element} or "" if no such attribute is present.
    */
   String getAriaRequiredProperty(HTMLElement element);
 
@@ -66,12 +62,14 @@ public interface ComboboxRole extends SelectRole {
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-autocomplete">
    * aria-autocomplete</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaAutocompleteProperty(HTMLElement element, AutocompleteValue value);
+  void setAriaAutocompleteProperty(HTMLElement element,
+      AutocompleteValue value);
 
   /**
    * Sets the
    * <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-required">
    * aria-required</a> attribute for the {@code element} to the given {@code value}.
    */
-  void setAriaRequiredProperty(HTMLElement element, boolean value);
+  void setAriaRequiredProperty(HTMLElement element,
+      boolean value);
 }

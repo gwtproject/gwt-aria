@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.gwtproject.aria</groupId>
+  <artifactId>j2cl-tests</artifactId>
+
+  <version>1.0-SNAPSHOT</version>
+
+  <properties>
+    <elemental2-dom.version>1.0.0-RC1</elemental2-dom.version>
+    <elemental2-pronise.version>1.0.0-RC1</elemental2-pronise.version>
+    <gwttestcase.emul.version>0.3-SNAPSHOT</gwttestcase.emul.version>
+    <jsinterop.base.version>1.0.0-SNAPSHOT</jsinterop.base.version>
+    <junit.emul.version>0.3-SNAPSHOT</junit.emul.version>
+    <j2cl.junit-annotations.version>0.3-SNAPSHOT</j2cl.junit-annotations.version>
+
+    <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
+    <maven.j2cl.plugin>0.8-SNAPSHOT</maven.j2cl.plugin>
+ </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.gwtproject.aria</groupId>
+      <artifactId>gwt-aria</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+    <!-- transitive dependencies that aren't correctly available at runtime -->
+<!--    <dependency>-->
+<!--      <groupId>com.google.elemental2</groupId>-->
+<!--      <artifactId>elemental2-promise</artifactId>-->
+<!--      <version>${elemental2-pronise.version}</version>-->
+<!--      <scope>test</scope>-->
+<!--    </dependency>-->
+<!--    <dependency>-->
+<!--      <groupId>com.google.elemental2</groupId>-->
+<!--      <artifactId>elemental2-dom</artifactId>-->
+<!--      <version>${elemental2-dom.version}</version>-->
+<!--      <scope>test</scope>-->
+<!--    </dependency>-->
+
+    <!-- As the other projects are gwt2, we need to explicitly depend on a j2cl-compatible version of jsinterop-base -->
+    <dependency>
+      <groupId>com.vertispan.jsinterop</groupId>
+      <artifactId>base</artifactId>
+      <version>${jsinterop.base.version}</version>
+    </dependency>
+
+    <!-- library under test -->
+    <dependency>
+      <groupId>org.gwtproject.aria</groupId>
+      <artifactId>gwt-aria</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- test dependencies -->
+    <dependency>
+      <groupId>com.vertispan.j2cl</groupId>
+      <artifactId>junit-annotations</artifactId>
+      <version>${j2cl.junit-annotations.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.vertispan.j2cl</groupId>
+      <artifactId>gwttestcase-emul</artifactId>
+      <version>0.3-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.vertispan.j2cl</groupId>
+      <artifactId>gwttestcase-emul</artifactId>
+      <version>${gwttestcase.emul.version}</version>
+      <classifier>sources</classifier>
+    </dependency>
+    <dependency>
+      <groupId>com.vertispan.j2cl</groupId>
+      <artifactId>junit-emul</artifactId>
+      <version>${junit.emul.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.vertispan.j2cl</groupId>
+      <artifactId>junit-emul</artifactId>
+      <version>${junit.emul.version}</version>
+      <classifier>sources</classifier>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.vertispan.j2cl</groupId>
+        <artifactId>j2cl-maven-plugin</artifactId>
+        <version>${maven.j2cl.plugin}</version>
+        <executions>
+          <execution>
+            <id>test</id>
+            <goals>
+              <goal>test</goal>
+            </goals>
+            <configuration>
+              <tests>
+                <test>org.gwtproject.timer.aria.AriaTest</test>
+              </tests>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${maven.deploy.plugin}</version>
+          <configuration>
+            <skip>true</skip>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>vertispan-releases</id>
+      <name>Vertispan hosted artifacts-releases</name>
+      <url>https://repo.vertispan.com/j2cl</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <distributionManagement>
+    <repository>
+      <id>vertispan-releases</id>
+      <name>Vertispan hosted artifacts-releases</name>
+      <url>https://repo.vertispan.com/j2cl</url>
+    </repository>
+    <snapshotRepository>
+      <id>vertispan-snapshots</id>
+      <name>Vertispan hosted artifacts-snapshots</name>
+      <url>https://repo.vertispan.com/j2cl</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>

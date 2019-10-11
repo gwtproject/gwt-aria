@@ -1,25 +1,40 @@
+/*
+ * Copyright © ${year} ${name}
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package org.gwtproject.aria.client;
+
+import static junit.framework.TestCase.assertEquals;
 
 import com.google.j2cl.junit.apt.J2clTestInput;
 import org.gwtproject.dom.client.DivElement;
 import org.gwtproject.dom.client.Document;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.TestCase.assertEquals;
-
-@J2clTestInput(AttributeTest.class)
-public class AttributeTest {
-  private DivElement                  div;
+@J2clTestInput(AttributeJ2clTest.class)
+public class AttributeJ2clTest {
+  private DivElement div;
   private Attribute<OrientationValue> attribute1;
-  private Attribute<Boolean>          attribute2;
-  private Attribute<String>           attribute3;
-  private Attribute<RelevantValue>    attribute4;
-  private Attribute<Id>               attribute5;
+  private Attribute<Boolean> attribute2;
+  private Attribute<String> attribute3;
+  private Attribute<RelevantValue> attribute4;
+  private Attribute<Id> attribute5;
 
   @Test
   public void testSetGetRemove_booleanValue() {
+    System.out.println("testSetGetRemove_booleanValue()");
     attribute2.setDefault(div);
     attribute2.set(div, false);
     attribute2.set(div, true);
@@ -32,6 +47,7 @@ public class AttributeTest {
 
   @Test
   public void testSetGetRemove_tokenValue() {
+    System.out.println("testSetGetRemove_tokenValue()");
     attribute1.setDefault(div);
     assertEquals(OrientationValue.VERTICAL.getAriaValue(), attribute1.get(div));
     attribute1.remove(div);
@@ -42,9 +58,11 @@ public class AttributeTest {
 
   @Test
   public void testSetGetRemove_tokenListValue() {
+    System.out.println("testSetGetRemove_tokenListValue()");
     attribute4.setDefault(div);
-    assertEquals(RelevantValue.ADDITIONS.getAriaValue() + " " + RelevantValue.TEXT.getAriaValue(),
-                 attribute4.get(div));
+    assertEquals(
+        RelevantValue.ADDITIONS.getAriaValue() + " " + RelevantValue.TEXT.getAriaValue(),
+        attribute4.get(div));
     attribute4.remove(div);
     assertEquals("", attribute1.get(div));
     attribute4.set(div, RelevantValue.REMOVALS);
@@ -53,6 +71,7 @@ public class AttributeTest {
 
   @Test
   public void testSetGetRemove_idrefValue() {
+    System.out.println("testSetGetRemove_idrefValue()");
     attribute5.set(div, Id.of("1"), Id.of("2"));
     assertEquals("1 2", attribute5.get(div));
     attribute5.remove(div);
@@ -80,8 +99,8 @@ public class AttributeTest {
     }
   }
 
-  @Before
-  protected void setUp() {
+  public void setUp() throws Exception {
+    System.out.println("gwtSetUp");
     div = createDiv();
     div.setAttribute("id", "test1");
     Document.get().getBody().appendChild(div);
@@ -92,8 +111,8 @@ public class AttributeTest {
     attribute5 = new AriaValueAttribute<>("attr5", "");
   }
 
-  @After
-  protected void teardown() {
+  public void teardown() {
+    System.out.println("gwtTeardown");
     div.getParentElement().removeChild(div);
   }
 }

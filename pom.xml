@@ -10,9 +10,9 @@
   <packaging>pom</packaging>
 
   <name>GWT Aria Parent</name>
-
   <description>...</description>
   <url>https://github.com/gwtproject/gwt-aria</url>
+
   <organization>
     <name>The GWT Authors</name>
     <url>https://github.com/gwtproject</url>
@@ -41,6 +41,8 @@
   </scm>
 
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
     <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
   </properties>
 

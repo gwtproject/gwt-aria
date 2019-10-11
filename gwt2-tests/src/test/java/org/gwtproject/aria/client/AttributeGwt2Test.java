@@ -1,27 +1,26 @@
 /*
- * Copyright 2012 Google Inc.
+ * Copyright © ${year} ${name}
  *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
- * in compliance with the License. You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software distributed under the License
- * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
- * or implied. See the License for the specific language governing permissions and limitations under
- * the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
-
 package org.gwtproject.aria.client;
 
 import com.google.gwt.junit.client.GWTTestCase;
 import org.gwtproject.dom.client.DivElement;
 import org.gwtproject.dom.client.Document;
 
-/**
- * Tests {@link Attribute} ARIA class
- */
-public class AttributeTest extends GWTTestCase {
+/** Tests {@link Attribute} ARIA class */
+public class AttributeGwt2Test extends GWTTestCase {
   private DivElement div;
   private Attribute<OrientationValue> attribute1;
   private Attribute<Boolean> attribute2;
@@ -56,7 +55,8 @@ public class AttributeTest extends GWTTestCase {
 
   public void testSetGetRemove_tokenListValue() {
     attribute4.setDefault(div);
-    assertEquals(RelevantValue.ADDITIONS.getAriaValue() + " " + RelevantValue.TEXT.getAriaValue(),
+    assertEquals(
+        RelevantValue.ADDITIONS.getAriaValue() + " " + RelevantValue.TEXT.getAriaValue(),
         attribute4.get(div));
     attribute4.remove(div);
     assertEquals("", attribute1.get(div));

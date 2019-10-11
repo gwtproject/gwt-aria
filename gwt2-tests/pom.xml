@@ -10,17 +10,26 @@
   <packaging>gwt-lib</packaging>
 
   <properties>
-    <gwt.version>2.8.2</gwt.version>
-    <junit.version>4.12</junit.version>
-
-    <maven.compiler.plugin>3.6.1</maven.compiler.plugin>
-    <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
-    <maven.gwt.plugin>1.0-rc-10</maven.gwt.plugin>
-    <maven.jar.plugin>3.1.2</maven.jar.plugin>
-    <maven.source.plugin>3.1.0</maven.source.plugin>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+
+    <maven.compiler.plugin>3.6.1</maven.compiler.plugin>
+    <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
+    <maven.fmt.plugin>2.5.1</maven.fmt.plugin>
+    <maven.gwt.plugin>1.0-rc-10</maven.gwt.plugin>
+    <maven.install.plugin>3.0.0-M1</maven.install.plugin>
+    <maven.jar.plugin>3.1.2</maven.jar.plugin>
+    <maven.licence.plugin>3.0</maven.licence.plugin>
+    <maven.source.plugin>3.1.0</maven.source.plugin>
+
+    <!-- CI -->
+    <vertispan.j2cl.repo.url>https://repo.vertispan.com/j2cl/</vertispan.j2cl.repo.url>
+    <google.snapshot.repo.url>https://oss.sonatype.org/content/repositories/google-snapshots/</google.snapshot.repo.url>
+
+    <gwt.version>2.8.2</gwt.version>
+    <junit.version>4.12</junit.version>
   </properties>
 
   <dependencies>
@@ -57,20 +66,65 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${maven.compiler.plugin}</version>
         <configuration>
+          <encoding>${project.build.sourceEncoding}</encoding>
           <source>${maven.compiler.source}</source>
           <target>${maven.compiler.target}</target>
         </configuration>
       </plugin>
+
       <plugin>
         <groupId>net.ltgt.gwt.maven</groupId>
         <artifactId>gwt-maven-plugin</artifactId>
         <version>${maven.gwt.plugin}</version>
         <extensions>true</extensions>
         <configuration>
-          <sourceLevel>1.8</sourceLevel>
+          <sourceLevel>${maven.compiler.source}</sourceLevel>
           <failOnError>true</failOnError>
           <moduleName>org.gwtproject.aria.AriaTest</moduleName>
         </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>com.coveo</groupId>
+        <artifactId>fmt-maven-plugin</artifactId>
+        <version>${maven.fmt.plugin}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.mycila</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+        <version>${maven.licence.plugin}</version>
+        <configuration>
+          <header>LICENSE.header</header>
+          <encoding>${project.build.sourceEncoding}</encoding>
+          <skipExistingHeaders>true</skipExistingHeaders>
+          <mapping>
+            <java>SLASHSTAR_STYLE</java>
+          </mapping>
+          <excludes>
+            <exclude>LICENSE.header</exclude>
+            <exclude>**/*.xml</exclude>
+            <exclude>src/test/resources/**</exclude>
+            <exclude>src/main/resources/**</exclude>
+          </excludes>
+          <properties>
+            <year>${project.inceptionYear}</year>
+            <name>${project.organization.name}</name>
+          </properties>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
 
       <plugin>
@@ -79,24 +133,23 @@
         <version>${maven.jar.plugin}</version>
         <executions>
           <execution>
-            <goals>
-              <goal>test-jar</goal>
-            </goals>
+            <id>default-jar</id>
+            <phase>none</phase>
+            <configuration>
+              <finalName>unwanted</finalName>
+              <classifier>unwanted</classifier>
+            </configuration>
           </execution>
         </executions>
       </plugin>
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <version>${maven.source.plugin}</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>test-jar</goal>
-            </goals>
-          </execution>
-        </executions>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>${maven.install.plugin}</version>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
       </plugin>
     </plugins>
 
@@ -113,4 +166,25 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>vertispan-releases</id>
+      <name>Vertispan hosted artifacts-releases</name>
+      <url>${vertispan.j2cl.repo.url}</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <distributionManagement>
+    <repository>
+      <id>vertispan-releases</id>
+      <name>Vertispan hosted artifacts-releases</name>
+      <url>${vertispan.j2cl.repo.url}</url>
+    </repository>
+    <snapshotRepository>
+      <id>vertispan-snapshots</id>
+      <name>Vertispan hosted artifacts-snapshots</name>
+      <url>${vertispan.j2cl.repo.url}</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>

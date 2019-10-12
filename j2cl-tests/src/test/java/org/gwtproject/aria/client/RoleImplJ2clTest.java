@@ -26,51 +26,73 @@ import static junit.framework.TestCase.assertTrue;
 
 @J2clTestInput(RoleImplJ2clTest.class)
 public class RoleImplJ2clTest {
+
   private DivElement div;
-  private  RegionRole regionRole;
+  private RegionRole regionRole;
 
   @Test
   public void testSetGetRemoveRole() {
-    assertEquals(null, Roles.roleOf(div));
+    assertEquals(null,
+                 Roles.roleOf(div));
     regionRole.set(div);
-    assertEquals(regionRole, Roles.roleOf(div));
+    assertEquals(regionRole,
+                 Roles.roleOf(div));
     regionRole.remove(div);
-    assertEquals(null, Roles.roleOf(div));
-    div.setAttribute("role", "region fallback1 fallback2");
-    assertEquals(regionRole, Roles.roleOf(div));
-    div.setAttribute("role", "fallback1 region fallback2");
-    assertEquals(regionRole, Roles.roleOf(div));
-    div.setAttribute("role", "fallback1 fallback2 fallback3");
-    assertEquals(null, Roles.roleOf(div));
+    assertEquals(null,
+                 Roles.roleOf(div));
+    div.setAttribute("role",
+                     "region fallback1 fallback2");
+    assertEquals(regionRole,
+                 Roles.roleOf(div));
+    div.setAttribute("role",
+                     "fallback1 region fallback2");
+    assertEquals(regionRole,
+                 Roles.roleOf(div));
+    div.setAttribute("role",
+                     "fallback1 fallback2 fallback3");
+    assertEquals(null,
+                 Roles.roleOf(div));
   }
 
   @Test
   public void testSetGetRemoveProperty() {
-    assertEquals("", regionRole.getAriaLabelledbyProperty(div));
-    regionRole.setAriaLabelledbyProperty(div, Id.of("test1"));
-    assertEquals("test1", regionRole.getAriaLabelledbyProperty(div));
+    assertEquals("",
+                 regionRole.getAriaLabelledbyProperty(div));
+    regionRole.setAriaLabelledbyProperty(div,
+                                         Id.of("test1"));
+    assertEquals("test1",
+                 regionRole.getAriaLabelledbyProperty(div));
     regionRole.removeAriaLabelledbyProperty(div);
-    assertEquals("", regionRole.getAriaLabelledbyProperty(div));
+    assertEquals("",
+                 regionRole.getAriaLabelledbyProperty(div));
   }
 
   @Test
   public void testSetGetRemoveNmtokensProperty() {
     ButtonRole buttonRole = Roles.getButtonRole();
-    assertEquals("", buttonRole.getAriaDropeffectProperty(div));
-    regionRole.setAriaDropeffectProperty(
-        div, org.gwtproject.aria.client.DropeffectValue.COPY, DropeffectValue.MOVE);
-    assertEquals("copy move", regionRole.getAriaDropeffectProperty(div));
+    assertEquals("",
+                 buttonRole.getAriaDropeffectProperty(div));
+    regionRole.setAriaDropeffectProperty(div,
+                                         org.gwtproject.aria.client.DropeffectValue.COPY,
+                                         DropeffectValue.MOVE);
+    assertEquals("copy move",
+                 regionRole.getAriaDropeffectProperty(div));
     regionRole.removeAriaDropeffectProperty(div);
-    assertEquals("", regionRole.getAriaDropeffectProperty(div));
+    assertEquals("",
+                 regionRole.getAriaDropeffectProperty(div));
   }
 
   @Test
   public void testSetGetRemoveState() {
-    assertEquals("", regionRole.getAriaInvalidState(div));
-    regionRole.setAriaInvalidState(div, org.gwtproject.aria.client.InvalidValue.GRAMMAR);
-    assertEquals(InvalidValue.GRAMMAR.getAriaValue(), regionRole.getAriaInvalidState(div));
+    assertEquals("",
+                 regionRole.getAriaInvalidState(div));
+    regionRole.setAriaInvalidState(div,
+                                   org.gwtproject.aria.client.InvalidValue.GRAMMAR);
+    assertEquals(InvalidValue.GRAMMAR.getAriaValue(),
+                 regionRole.getAriaInvalidState(div));
     regionRole.removeAriaInvalidState(div);
-    assertEquals("", regionRole.getAriaInvalidState(div));
+    assertEquals("",
+                 regionRole.getAriaInvalidState(div));
   }
 
   @Test
@@ -78,36 +100,45 @@ public class RoleImplJ2clTest {
     // Older versions of IE do not support tabIndex on divs, so use an anchor
     // element instead.
     AnchorElement anchor = createAnchor();
-    Document.get().getBody().appendChild(anchor);
+    Document.get()
+            .getBody()
+            .appendChild(anchor);
 
     // Some versions of IE default to "0" instead of ""
-    assertTrue(
-        "".equals(regionRole.getTabindexExtraAttribute(div))
-        || "0".equals(regionRole.getTabindexExtraAttribute(div)));
-    regionRole.setTabindexExtraAttribute(anchor, 1);
-    assertEquals("1", regionRole.getTabindexExtraAttribute(anchor));
+    assertTrue("".equals(regionRole.getTabindexExtraAttribute(div)) || "0".equals(regionRole.getTabindexExtraAttribute(div)));
+    regionRole.setTabindexExtraAttribute(anchor,
+                                         1);
+    assertEquals("1",
+                 regionRole.getTabindexExtraAttribute(anchor));
     regionRole.removeTabindexExtraAttribute(anchor);
     // Some versions of IE default to "0" instead of ""
-    assertTrue(
-        "".equals(regionRole.getTabindexExtraAttribute(div))
-        || "0".equals(regionRole.getTabindexExtraAttribute(div)));
+    assertTrue("".equals(regionRole.getTabindexExtraAttribute(div)) || "0".equals(regionRole.getTabindexExtraAttribute(div)));
 
-    anchor.getParentElement().removeChild(anchor);
+    anchor.getParentElement()
+          .removeChild(anchor);
   }
 
   private AnchorElement createAnchor() {
-    return Document.get().createAnchorElement();
+    return Document.get()
+                   .createAnchorElement();
   }
 
-  public void setUp() throws Exception {
-    div = Document.get().createDivElement();
-    div.setAttribute("id", "test1");
-    Document.get().getBody().appendChild(div);
+  public void setUp()
+      throws Exception {
+    div = Document.get()
+                  .createDivElement();
+    div.setAttribute("id",
+                     "test1");
+    Document.get()
+            .getBody()
+            .appendChild(div);
     regionRole = Roles.getRegionRole();
   }
 
-  public void tearDown() throws Exception {
-    div.getParentElement().removeChild(div);
+  public void tearDown()
+      throws Exception {
+    div.getParentElement()
+       .removeChild(div);
   }
 
 }

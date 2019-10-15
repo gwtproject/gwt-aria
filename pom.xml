@@ -3,117 +3,67 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.gwtproject.aria</groupId>
-  <artifactId>gwt-aria</artifactId>
+  <artifactId>gwt-aria-parent</artifactId>
+
   <version>1.0-SNAPSHOT</version>
-  <packaging>gwt-lib</packaging>
+
+  <packaging>pom</packaging>
+
+  <name>GWT Aria Parent</name>
+  <description>...</description>
+  <url>https://github.com/gwtproject/gwt-aria</url>
+
+  <organization>
+    <name>The GWT Authors</name>
+    <url>https://github.com/gwtproject</url>
+  </organization>
+  <inceptionYear>2019</inceptionYear>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>The GWT Authors</name>
+      <organization>The GWT Project Authors</organization>
+      <url>https://github.com/gwtproject</url>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/gwtproject/gwt-aria.git</connection>
+    <developerConnection>scm:git:ssh://github.com/gwtproject/gwt-aria.git</developerConnection>
+    <url>https://github.com/gwtproject/gwt-aria/tree/master</url>
+  </scm>
 
   <properties>
-    <core.version>1.0-SNAPSHOT</core.version>
-    <dom.version>1.0-SNAPSHOT</dom.version>
-    <elemental2.version>1.0.0-RC1</elemental2.version>
-    <timer.version>1.0-SNAPSHOT</timer.version>
-
-    <!-- GWT 2.8 requires 1.8 -->
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-    <!-- CI -->
-    <vertispan.snapshot.repo.id>vertispan-snapshot-repository</vertispan.snapshot.repo.id>
-    <vertispan.snapshot.repo.name>Vertispan Snapshot Repository</vertispan.snapshot.repo.name>
-    <vertispan.snapshot.repo.url>https://repo.vertispan.com/gwt-snapshot/
-    </vertispan.snapshot.repo.url>
+    <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.gwtproject.dom</groupId>
-      <artifactId>gwt-dom</artifactId>
-      <version>${dom.version}</version>
-    </dependency>
-
-    <!-- only for testing -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+  <modules>
+    <module>gwt-aria</module>
+    <module>gwt2-tests</module>
+    <module>j2cl-tests</module>
+  </modules>
 
   <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.5.1</version>
-        <configuration>
-          <source>${maven.compiler.source}</source>
-          <target>${maven.compiler.target}</target>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>2.17</version>
-        <executions>
-          <execution>
-            <id>validate</id>
-            <phase>validate</phase>
-            <configuration>
-              <encoding>UTF-8</encoding>
-              <consoleOutput>true</consoleOutput>
-              <failsOnError>true</failsOnError>
-              <configLocation>checkstyle.xml</configLocation>
-            </configuration>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <!--
-        The integration-test phase runs after regular test phase (but before verify/install).
-        We use this to our advantage to peak at the compiled output from the GWTTestSuite
-         -->
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-failsafe-plugin</artifactId>
-        <version>2.20.1</version>
-        <configuration>
-          <includes>
-            <include>**/*.class</include>
-          </includes>
-          <groups>
-            org.gwtproject.aria.client.IntegrationTest
-          </groups>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>net.ltgt.gwt.maven</groupId>
-        <artifactId>gwt-maven-plugin</artifactId>
-        <version>1.0-rc-10</version>
-        <extensions>true</extensions>
-        <configuration>
-          <moduleName>org.gwtproject.aria.Aria</moduleName>
-          <testArgs>
-            <testArg>-style</testArg>
-            <testArg>PRETTY</testArg>
-          </testArgs>
-        </configuration>
-      </plugin>
-    </plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>${maven.deploy.plugin}</version>
+          <configuration>
+            <skip>true</skip>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
-
-  <repositories>
-    <repository>
-      <id>${vertispan.snapshot.repo.id}</id>
-      <name>${vertispan.snapshot.repo.name}</name>
-      <url>${vertispan.snapshot.repo.url}</url>
-    </repository>
-  </repositories>
 </project>

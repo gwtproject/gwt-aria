@@ -16,7 +16,6 @@
 
     <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
     <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
-    <maven.fmt.plugin>2.5.1</maven.fmt.plugin>
     <maven.install.plugin>3.0.0-M1</maven.install.plugin>
     <maven.jar.plugin>3.1.2</maven.jar.plugin>
     <maven.j2cl.plugin>0.8-SNAPSHOT</maven.j2cl.plugin>
@@ -181,19 +180,6 @@
                 <test>org.gwtproject.aria.client.RoleImplJ2clTest</test>
               </tests>
             </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>com.coveo</groupId>
-        <artifactId>fmt-maven-plugin</artifactId>
-        <version>${maven.fmt.plugin}</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>check</goal>
-            </goals>
           </execution>
         </executions>
       </plugin>

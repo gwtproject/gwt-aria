@@ -20,6 +20,7 @@ import static junit.framework.TestCase.assertEquals;
 import com.google.j2cl.junit.apt.J2clTestInput;
 import org.gwtproject.dom.client.DivElement;
 import org.gwtproject.dom.client.Document;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -99,6 +100,7 @@ public class AttributeJ2clTest {
     }
   }
 
+  @Before
   public void setUp() throws Exception {
     System.out.println("gwtSetUp");
     div = createDiv();
@@ -111,6 +113,7 @@ public class AttributeJ2clTest {
     attribute5 = new AriaValueAttribute<>("attr5", "");
   }
 
+  @After
   public void teardown() {
     System.out.println("gwtTeardown");
     div.getParentElement().removeChild(div);

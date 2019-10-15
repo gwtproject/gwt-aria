@@ -177,7 +177,7 @@
               </defines>
               <compilationLevel>BUNDLE</compilationLevel>
               <tests>
-<!--                <test>org.gwtproject.aria.client.AttributeJ2clTest</test>-->
+                <test>org.gwtproject.aria.client.AttributeJ2clTest</test>
                 <test>org.gwtproject.aria.client.RoleImplJ2clTest</test>
               </tests>
             </configuration>

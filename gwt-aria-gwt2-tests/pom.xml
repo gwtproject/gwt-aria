@@ -9,6 +9,38 @@
 
   <packaging>gwt-lib</packaging>
 
+  <name>GWT Aria - GWT 2 Tests</name>
+  <description>Test cases for the GWT 2 tests</description>
+  <url>https://github.com/gwtproject/gwt-aria</url>
+
+  <organization>
+    <name>The GWT Authors</name>
+    <url>https://github.com/gwtproject</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>The GWT Authors</name>
+      <organization>The GWT Project Authors</organization>
+      <url>https://github.com/gwtproject</url>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/gwtproject/gwt-aria.git</connection>
+    <developerConnection>scm:git:ssh://github.com/gwtproject/gwt-aria.git</developerConnection>
+    <url>https://github.com/gwtproject/gwt-aria/tree/master</url>
+  </scm>
+
+  <inceptionYear>2019</inceptionYear>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 

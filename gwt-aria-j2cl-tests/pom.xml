@@ -8,6 +8,38 @@
 
   <version>1.0-SNAPSHOT</version>
 
+  <name>GWT Aria - J2CL Tests</name>
+  <description>Test cases for the J2Cl tests</description>
+  <url>https://github.com/gwtproject/gwt-aria</url>
+
+  <organization>
+    <name>The GWT Authors</name>
+    <url>https://github.com/gwtproject</url>
+  </organization>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>The GWT Authors</name>
+      <organization>The GWT Project Authors</organization>
+      <url>https://github.com/gwtproject</url>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git://github.com/gwtproject/gwt-aria.git</connection>
+    <developerConnection>scm:git:ssh://github.com/gwtproject/gwt-aria.git</developerConnection>
+    <url>https://github.com/gwtproject/gwt-aria/tree/master</url>
+  </scm>
+
+  <inceptionYear>2019</inceptionYear>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
@@ -18,7 +50,7 @@
     <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
     <maven.install.plugin>3.0.0-M1</maven.install.plugin>
     <maven.jar.plugin>3.1.2</maven.jar.plugin>
-    <maven.j2cl.plugin>0.8-SNAPSHOT</maven.j2cl.plugin>
+    <maven.j2cl.plugin>0.11-SNAPSHOT</maven.j2cl.plugin>
     <maven.licence.plugin>3.0</maven.licence.plugin>
     <maven.surfire.plugin>3.0.0-M1</maven.surfire.plugin>
 
@@ -167,7 +199,7 @@
             <goals>
               <goal>test</goal>
             </goals>
-            <phase>test</phase>
+<!--            <phase>test</phase>-->
             <configuration>
               <defines>
                 <gwt.enableDebugId>true</gwt.enableDebugId>

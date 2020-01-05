@@ -49,8 +49,8 @@
 
   <modules>
     <module>gwt-aria</module>
-    <module>gwt2-tests</module>
-    <module>j2cl-tests</module>
+    <module>gwt-aria-gwt2-tests</module>
+    <module>gwt-aria-j2cl-tests</module>
   </modules>
 
   <build>

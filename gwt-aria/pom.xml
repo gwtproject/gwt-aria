@@ -4,10 +4,8 @@
 
   <groupId>org.gwtproject.aria</groupId>
   <artifactId>gwt-aria</artifactId>
-
   <version>1.0-SNAPSHOT</version>
-
-  <packaging>gwt-lib</packaging>
+  <packaging>jar</packaging>
 
   <name>GWT Aria</name>
 
@@ -50,14 +48,13 @@
     <maven.compiler.plugin>3.6.1</maven.compiler.plugin>
     <maven.deploy.plugin>3.0.0-M1</maven.deploy.plugin>
     <maven.gpg.plugin>1.6</maven.gpg.plugin>
-    <maven.gwt.plugin>1.0-rc-10</maven.gwt.plugin>
     <maven.javadoc.plugin>3.1.1</maven.javadoc.plugin>
     <maven.licence.plugin>3.0</maven.licence.plugin>
-    <maven.source.plugin>3.1.0</maven.source.plugin>
+    <maven.source.plugin>3.2.1</maven.source.plugin>
     <maven.surefire.plugin>2.22.2</maven.surefire.plugin>
 
     <core.version>1.0-SNAPSHOT</core.version>
-    <elemental2.dom.version>1.0-SNAPSHOT</elemental2.dom.version>
+    <dom.version>1.0-SNAPSHOT</dom.version>
     <elemental2.version>1.0.0-RC1</elemental2.version>
   </properties>
 
@@ -65,7 +62,7 @@
     <dependency>
       <groupId>org.gwtproject.dom</groupId>
       <artifactId>gwt-dom</artifactId>
-      <version>${elemental2.dom.version}</version>
+      <version>${dom.version}</version>
     </dependency>
     <dependency>
       <groupId>com.google.elemental2</groupId>
@@ -81,6 +78,24 @@
  </dependencies>
 
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/aria/**</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/aria/**</include>
+          <include>**/*.gwt.xml</include>
+          <include>**/*.html</include>
+          <include>**/public/**</include>
+        </includes>
+      </resource>
+    </resources>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -125,18 +140,6 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>net.ltgt.gwt.maven</groupId>
-        <artifactId>gwt-maven-plugin</artifactId>
-        <version>${maven.gwt.plugin}</version>
-        <extensions>true</extensions>
-        <configuration>
-          <moduleName>org.gwtproject.aria.Aria</moduleName>
-          <moduleShortName>aria</moduleShortName>
-          <sourceLevel>${maven.compiler.source}</sourceLevel>
-          <failOnError>true</failOnError>
-        </configuration>
       </plugin>
     </plugins>
   </build>

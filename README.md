@@ -1,55 +1,27 @@
 ![GWT3/J2CL compatible](https://img.shields.io/badge/GWT3/J2CL-compatible-brightgreen.svg)
 
-# gwt-aria
-
-** More description here **
-
-
-
-
-
-start here with updates ...
-
-A simplified, browser-safe timer class. This class serves the same purpose as java.util.Timer, but is simplified because of the single-threaded
-    environment.
-    To schedule a timer, simply create a subclass of it (overriding run) and call schedule or scheduleRepeating.
+# GWT Aria
+GWT Aria module for GWT 2 and J2CL.
 
 ### Dependency
 
-```
+```xml
 <dependency>
-    <groupId>org.gwtproject.timer</groupId>
-    <artifactId>gwt-timer</artifactId>
+    <groupId>org.gwtproject.aria</groupId>
+    <artifactId>gwt-aria</artifactId>
     <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
 
-### Samples
+### Instructions
+To build gwt-aria:
 
-```java
-new Timer() {
-    @Override
-    public void run() {
-        DomGlobal.console.info("this block run only once.");
-    }
-}.run();
+* run `mvn clean install`
 
+on the parent directory.
 
-new Timer() {
-    @Override
-    public void run() {
-        DomGlobal.console.info("this block run once after 1 second");
-    }
-}.schedule(1000);
+To run the j2cl tests:
 
-
-new Timer() {
-    @Override
-    public void run() {
-        DomGlobal.console.info("this block runs every 1 second");
-    }
-}.scheduleRepeating(1000);
-
-```
-
+* switch to the 'gwt-aria-j2cl-tests' directory
+* run `mvn j2cl:clean` & `mvn j2cl:test`
 

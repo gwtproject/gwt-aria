@@ -138,8 +138,9 @@
         <artifactId>j2cl-maven-plugin</artifactId>
         <version>${maven.j2cl.plugin}</version>
         <configuration>
-          <compilationLevel>ADVANCED</compilationLevel>
-<!--          <compilationLevel>BUNDLE</compilationLevel>-->
+<!-- TODO: as long as ADVANCED compilationLevel will remove Assertions, we stay with BUNDLE -->
+<!--          <compilationLevel>ADVANCED</compilationLevel>-->
+          <compilationLevel>BUNDLE</compilationLevel>
         </configuration>
         <executions>
           <!-- to run this from command line, use mvn j2cl:test@j2cl-test -->

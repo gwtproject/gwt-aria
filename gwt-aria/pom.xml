@@ -86,7 +86,7 @@
         <version>${maven.gwt.plugin}</version>
         <extensions>true</extensions>
         <configuration>
-          <moduleName>org.gwtproject.regexp.RegExp</moduleName>
+          <moduleName>org.gwtproject.aria.Aria</moduleName>
         </configuration>
       </plugin>
       <plugin>

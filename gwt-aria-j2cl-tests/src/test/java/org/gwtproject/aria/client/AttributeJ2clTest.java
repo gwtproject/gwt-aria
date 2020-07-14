@@ -1,5 +1,5 @@
 /*
- * Copyright © ${year} ${name}
+ * Copyright © 2019 The GWT Project Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,6 +26,7 @@ import org.junit.Test;
 
 @J2clTestInput(AttributeJ2clTest.class)
 public class AttributeJ2clTest {
+
   private DivElement div;
   private Attribute<OrientationValue> attribute1;
   private Attribute<Boolean> attribute2;

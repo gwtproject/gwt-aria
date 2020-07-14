@@ -1,5 +1,5 @@
 /*
- * Copyright © ${year} ${name}
+ * Copyright © 2019 The GWT Project Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,6 +21,7 @@ import org.gwtproject.dom.client.Document;
 
 /** Tests {@link Attribute} ARIA class */
 public class AttributeGwt2Test extends GWTTestCase {
+
   private DivElement div;
   private Attribute<OrientationValue> attribute1;
   private Attribute<Boolean> attribute2;
@@ -31,6 +32,29 @@ public class AttributeGwt2Test extends GWTTestCase {
   @Override
   public String getModuleName() {
     return "org.gwtproject.aria.AriaTest";
+  }
+
+  @Override
+  protected void gwtSetUp() throws Exception {
+    super.gwtSetUp();
+    div = createDiv();
+    div.setAttribute("id", "test1");
+    Document.get().getBody().appendChild(div);
+    attribute1 = new AriaValueAttribute<>("attr1", "vertical");
+    attribute2 = new PrimitiveValueAttribute<>("attr2", "true");
+    attribute3 = new PrimitiveValueAttribute<>("attr3");
+    attribute4 = new AriaValueAttribute<>("attr4", "additions text");
+    attribute5 = new AriaValueAttribute<>("attr5", "");
+  }
+
+  @Override
+  protected void gwtTearDown() throws Exception {
+    super.gwtTearDown();
+    div.getParentElement().removeChild(div);
+  }
+
+  private DivElement createDiv() {
+    return Document.get().createDivElement();
   }
 
   public void testSetGetRemove_booleanValue() {
@@ -78,10 +102,6 @@ public class AttributeGwt2Test extends GWTTestCase {
     assertEquals("ref1 ref2", attribute5.get(div));
   }
 
-  private DivElement createDiv() {
-    return Document.get().createDivElement();
-  }
-
   public void testSetDefaultValue_noSet() {
     try {
       attribute3.setDefault(div);
@@ -89,24 +109,5 @@ public class AttributeGwt2Test extends GWTTestCase {
     } catch (AssertionError e) {
       // Expected -- no default value for attribute3
     }
-  }
-
-  @Override
-  protected void gwtSetUp() throws Exception {
-    super.gwtSetUp();
-    div = createDiv();
-    div.setAttribute("id", "test1");
-    Document.get().getBody().appendChild(div);
-    attribute1 = new AriaValueAttribute<>("attr1", "vertical");
-    attribute2 = new PrimitiveValueAttribute<>("attr2", "true");
-    attribute3 = new PrimitiveValueAttribute<>("attr3");
-    attribute4 = new AriaValueAttribute<>("attr4", "additions text");
-    attribute5 = new AriaValueAttribute<>("attr5", "");
-  }
-
-  @Override
-  protected void gwtTearDown() throws Exception {
-    super.gwtTearDown();
-    div.getParentElement().removeChild(div);
   }
 }

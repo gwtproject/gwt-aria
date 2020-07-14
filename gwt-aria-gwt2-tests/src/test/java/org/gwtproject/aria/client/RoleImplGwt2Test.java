@@ -1,5 +1,5 @@
 /*
- * Copyright © ${year} ${name}
+ * Copyright © 2019 The GWT Project Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,12 +22,28 @@ import org.gwtproject.dom.client.Document;
 
 /** Tests generic role methods implemented in {@link org.gwtproject.aria.client.RoleImpl}. */
 public class RoleImplGwt2Test extends GWTTestCase {
+
   private DivElement div;
   private RegionRole regionRole;
 
   @Override
   public String getModuleName() {
     return "org.gwtproject.aria.AriaTest";
+  }
+
+  @Override
+  protected void gwtSetUp() throws Exception {
+    super.gwtSetUp();
+    div = Document.get().createDivElement();
+    div.setAttribute("id", "test1");
+    Document.get().getBody().appendChild(div);
+    regionRole = Roles.getRegionRole();
+  }
+
+  @Override
+  protected void gwtTearDown() throws Exception {
+    super.gwtTearDown();
+    div.getParentElement().removeChild(div);
   }
 
   public void testSetGetRemoveRole() {
@@ -93,20 +109,5 @@ public class RoleImplGwt2Test extends GWTTestCase {
 
   private AnchorElement createAnchor() {
     return Document.get().createAnchorElement();
-  }
-
-  @Override
-  protected void gwtSetUp() throws Exception {
-    super.gwtSetUp();
-    div = Document.get().createDivElement();
-    div.setAttribute("id", "test1");
-    Document.get().getBody().appendChild(div);
-    regionRole = Roles.getRegionRole();
-  }
-
-  @Override
-  protected void gwtTearDown() throws Exception {
-    super.gwtTearDown();
-    div.getParentElement().removeChild(div);
   }
 }

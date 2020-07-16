@@ -53,3 +53,4 @@ on the parent directory. This will build the artifact and run tests against the 
 
 GWT Aria depends on the following modules:
 * gwt-dom
+

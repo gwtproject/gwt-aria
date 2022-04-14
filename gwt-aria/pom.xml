@@ -50,7 +50,7 @@
     <maven.source.plugin>3.2.1</maven.source.plugin>
 
     <elemental2.version>1.1.0</elemental2.version>
-    <gwt-dom.version>1.0.0-RC1</gwt-dom.version>
+    <gwt-dom.version>1.0.0-RC2</gwt-dom.version>
   </properties>
 
   <dependencies>
